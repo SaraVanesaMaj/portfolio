@@ -9,6 +9,8 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 
+import SiteNav from "./components/SiteNav";
+
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
 
@@ -187,6 +189,44 @@ const projects = [
 ];
 
 
+type Project = (typeof projects)[number];
+
+function ProjectRowContent({
+  project,
+  hasPage,
+}: {
+  project: Project;
+  hasPage: boolean;
+}) {
+  return (
+    <>
+      <span className="projectNumber">
+        {project.number}
+      </span>
+
+      <div className="projectText">
+        <span className="projectType">
+          {project.type}
+          {!hasPage && " · CASE STUDY COMING SOON"}
+        </span>
+
+        <h3>{project.title}</h3>
+
+        <div className="projectSkills">
+          {project.skills.map((skill) => (
+            <span key={skill}>{skill}</span>
+          ))}
+        </div>
+      </div>
+
+      <span className="projectArrow">
+        {hasPage ? "↗" : ""}
+      </span>
+    </>
+  );
+}
+
+
 /* =========================================
    HOME
 ========================================= */
@@ -200,6 +240,17 @@ export default function Home() {
 
   useGSAP(
     () => {
+
+      /* Respect "reduce motion": leave everything visible and static */
+
+      if (
+        window.matchMedia(
+          "(prefers-reduced-motion: reduce)"
+        ).matches
+      ) {
+        return;
+      }
+
 
       /* =====================================
          HERO
@@ -456,37 +507,7 @@ export default function Home() {
           FIXED NAVIGATION
       ===================================== */}
 
-      <nav className="siteNav">
-
-        <a
-          href="#"
-          className="siteLogo"
-        >
-          SARA MAJ
-        </a>
-
-
-        <div className="siteNavLinks">
-
-          <a href="#work">
-            WORK
-          </a>
-
-          <a href="#about">
-            ABOUT
-          </a>
-
-          <Link href="/lab">
-            LAB
-          </Link>
-
-          <a href="#contact">
-            CONTACT
-          </a>
-
-        </div>
-
-      </nav>
+      <SiteNav />
 
 
       {/* =====================================
@@ -794,75 +815,40 @@ export default function Home() {
 
           <div className="projectList">
 
-            {projects.map(
-              (project, index) => (
+            {projects.map((project, index) => {
+              const hasPage = project.href !== "#";
 
+              const activate = () =>
+                setActiveProject(index);
+
+              return hasPage ? (
                 <Link
                   key={project.title}
-
                   href={project.href}
-
                   className="projectRow"
-
-                  onMouseEnter={() =>
-                    setActiveProject(index)
-                  }
-
-                  onFocus={() =>
-                    setActiveProject(index)
-                  }
+                  onMouseEnter={activate}
+                  onFocus={activate}
                 >
-
-                  <span className="projectNumber">
-
-                    {project.number}
-
-                  </span>
-
-
-                  <div className="projectText">
-
-                    <span className="projectType">
-
-                      {project.type}
-
-                    </span>
-
-
-                    <h3>
-                      {project.title}
-                    </h3>
-
-
-                    <div className="projectSkills">
-
-                      {project.skills.map(
-                        (skill) => (
-
-                          <span key={skill}>
-
-                            {skill}
-
-                          </span>
-
-                        )
-                      )}
-
-                    </div>
-
-                  </div>
-
-
-                  <span className="projectArrow">
-
-                    ↗
-
-                  </span>
-
+                  <ProjectRowContent
+                    project={project}
+                    hasPage
+                  />
                 </Link>
-
-              )
-            )}
+              ) : (
+                <div
+                  key={project.title}
+                  className="projectRow isSoon"
+                  tabIndex={0}
+                  onMouseEnter={activate}
+                  onFocus={activate}
+                >
+                  <ProjectRowContent
+                    project={project}
+                    hasPage={false}
+                  />
+                </div>
+              );
+            })}
 
           </div>
 
@@ -925,11 +911,13 @@ export default function Home() {
             <div className="previewBottom">
 
               <span>
-                VIEW CASE STUDY
+                {active.href !== "#"
+                  ? "VIEW CASE STUDY"
+                  : "CASE STUDY COMING SOON"}
               </span>
 
               <span>
-                ↗
+                {active.href !== "#" ? "↗" : ""}
               </span>
 
             </div>
@@ -1086,13 +1074,14 @@ export default function Home() {
           </a>
 
 
-          <a href="#">
+          <a
+            href="https://github.com/SaraVanesaMaj"
+
+            target="_blank"
+
+            rel="noreferrer"
+          >
             GITHUB ↗
-          </a>
-
-
-          <a href="#">
-            YOUTUBE ↗
           </a>
 
 

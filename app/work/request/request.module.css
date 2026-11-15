@@ -13,62 +13,6 @@
 }
 
 /* =========================
-   NAVIGATION
-========================= */
-
-.nav {
-  position: fixed;
-
-  top: 18px;
-  left: 50%;
-
-  transform: translateX(-50%);
-
-  z-index: 1000;
-
-  width: calc(100% - 70px);
-  max-width: 1500px;
-
-  min-height: 58px;
-
-  padding: 0 25px;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 100px;
-
-  background: rgba(9, 9, 9, 0.78);
-
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
-}
-
-.logo {
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-}
-
-.navLinks {
-  display: flex;
-  gap: 30px;
-}
-
-.navLinks a {
-  font-size: 9px;
-  letter-spacing: 0.13em;
-
-  transition: opacity 0.25s ease;
-}
-
-.navLinks a:hover {
-  opacity: 0.45;
-}
-
-/* =========================
    HERO
 ========================= */
 
@@ -87,7 +31,7 @@
 
   color: var(--grey);
 
-  font-size: 9px;
+  font-size: 11px;
   letter-spacing: 0.14em;
 }
 
@@ -156,14 +100,14 @@
 }
 
 .skills span {
-  padding: 7px 11px;
+  padding: 7px 12px;
 
   border: 1px solid #383838;
   border-radius: 100px;
 
   color: var(--grey);
 
-  font-size: 8px;
+  font-size: 11px;
 
   letter-spacing: 0.1em;
 }
@@ -208,9 +152,9 @@
 
   margin-bottom: 45px;
 
-  color: #777;
+  color: #5f5f5f;
 
-  font-size: 9px;
+  font-size: 11px;
 
   letter-spacing: 0.15em;
 }
@@ -242,7 +186,7 @@
 }
 
 .role span {
-  font-size: 9px;
+  font-size: 11px;
 
   letter-spacing: 0.14em;
 }
@@ -252,7 +196,7 @@
 
   color: #555;
 
-  font-size: 12px;
+  font-size: 13px;
 
   line-height: 1.5;
 }
@@ -284,7 +228,7 @@
 }
 
 .visualHeader > span {
-  font-size: 9px;
+  font-size: 11px;
 
   letter-spacing: 0.15em;
 }
@@ -342,7 +286,7 @@
 .end > span {
   color: var(--grey);
 
-  font-size: 9px;
+  font-size: 11px;
 
   letter-spacing: 0.15em;
 }
@@ -358,7 +302,7 @@
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
 
-  font-size: 10px;
+  font-size: 12px;
 
   letter-spacing: 0.13em;
 
@@ -377,25 +321,6 @@
 ========================= */
 
 @media (max-width: 900px) {
-  .nav {
-    top: 12px;
-
-    width: calc(100% - 24px);
-
-    min-height: 52px;
-
-    padding: 0 18px;
-  }
-
-  .navLinks {
-    gap: 14px;
-  }
-
-  .navLinks a:nth-child(2),
-  .navLinks a:nth-child(3) {
-    display: none;
-  }
-
   .hero,
   .about,
   .visualSectionLight,

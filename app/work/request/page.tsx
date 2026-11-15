@@ -1,23 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import SiteNav from "../../components/SiteNav";
+
 import styles from "./request.module.css";
 
 export default function RequestProject() {
   return (
     <main className={styles.page}>
-      <nav className={styles.nav}>
-        <Link href="/" className={styles.logo}>
-          SARA MAJ
-        </Link>
-
-        <div className={styles.navLinks}>
-          <Link href="/#work">WORK</Link>
-          <Link href="/#about">ABOUT</Link>
-          <Link href="/lab">LAB</Link>
-          <Link href="/#contact">CONTACT</Link>
-        </div>
-      </nav>
+      <SiteNav />
 
       {/* HERO */}
 
