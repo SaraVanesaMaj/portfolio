@@ -1,0 +1,496 @@
+.page {
+  --black: #090909;
+  --dark: #111111;
+  --white: #f3f1ec;
+  --grey: #858585;
+  --line: #292929;
+  --accent: #c8ff32;
+
+  background: var(--black);
+  color: var(--white);
+
+  overflow: hidden;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.nav {
+  position: fixed;
+
+  top: 18px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  z-index: 1000;
+
+  width: calc(100% - 70px);
+  max-width: 1500px;
+
+  min-height: 58px;
+
+  padding: 0 25px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 100px;
+
+  background: rgba(9, 9, 9, 0.78);
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.logo {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+.navLinks {
+  display: flex;
+  gap: 30px;
+}
+
+.navLinks a {
+  font-size: 9px;
+  letter-spacing: 0.13em;
+
+  transition: opacity 0.25s ease;
+}
+
+.navLinks a:hover {
+  opacity: 0.45;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  min-height: 92vh;
+
+  padding: 130px 65px 55px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.heroMeta {
+  display: flex;
+  justify-content: space-between;
+
+  color: var(--grey);
+
+  font-size: 9px;
+  letter-spacing: 0.14em;
+}
+
+.heroTitle {
+  position: relative;
+
+  margin: auto 0;
+
+  display: flex;
+  align-items: center;
+}
+
+.heroTitle h1 {
+  font-size: clamp(110px, 19vw, 290px);
+
+  line-height: 0.76;
+
+  letter-spacing: -0.085em;
+
+  text-transform: uppercase;
+}
+
+.requestLogo {
+  position: absolute;
+
+  right: 4vw;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  width: clamp(90px, 9vw, 145px);
+  height: clamp(90px, 9vw, 145px);
+
+  opacity: 0.7;
+}
+
+.logoImage {
+  object-fit: contain;
+}
+
+.heroBottom {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 80px;
+
+  align-items: end;
+}
+
+.heroBottom > p {
+  max-width: 580px;
+
+  font-size: clamp(19px, 2vw, 28px);
+
+  line-height: 1.35;
+
+  letter-spacing: -0.03em;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+
+  gap: 8px;
+}
+
+.skills span {
+  padding: 7px 11px;
+
+  border: 1px solid #383838;
+  border-radius: 100px;
+
+  color: var(--grey);
+
+  font-size: 8px;
+
+  letter-spacing: 0.1em;
+}
+
+/* =========================
+   ABOUT
+========================= */
+
+.about {
+  padding: 110px 65px;
+
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+
+  gap: 110px;
+
+  align-items: center;
+
+  background: var(--white);
+  color: var(--black);
+}
+
+.poster {
+  position: relative;
+
+  width: 100%;
+  height: 72vh;
+
+  background: #e3e0da;
+}
+
+.imageContain {
+  object-fit: contain;
+}
+
+.aboutText {
+  max-width: 680px;
+}
+
+.label {
+  display: block;
+
+  margin-bottom: 45px;
+
+  color: #777;
+
+  font-size: 9px;
+
+  letter-spacing: 0.15em;
+}
+
+.aboutText h2 {
+  font-size: clamp(55px, 7vw, 105px);
+
+  line-height: 0.86;
+
+  letter-spacing: -0.065em;
+}
+
+.aboutText > p {
+  margin-top: 28px;
+
+  max-width: 590px;
+
+  font-size: 16px;
+
+  line-height: 1.6;
+}
+
+.role {
+  margin-top: 45px;
+
+  padding-top: 22px;
+
+  border-top: 1px solid #aaa7a1;
+}
+
+.role span {
+  font-size: 9px;
+
+  letter-spacing: 0.14em;
+}
+
+.role p {
+  margin-top: 12px;
+
+  color: #555;
+
+  font-size: 12px;
+
+  line-height: 1.5;
+}
+
+/* =========================
+   VISUAL SECTIONS
+========================= */
+
+.visualSectionLight,
+.visualSectionDark {
+  padding: 100px 65px 120px;
+}
+
+.visualSectionLight {
+  background: #dfddd7;
+  color: var(--black);
+}
+
+.visualSectionDark {
+  background: var(--black);
+  color: var(--white);
+}
+
+.visualHeader {
+  display: flex;
+  justify-content: space-between;
+
+  gap: 100px;
+}
+
+.visualHeader > span {
+  font-size: 9px;
+
+  letter-spacing: 0.15em;
+}
+
+.visualHeader p {
+  width: min(480px, 45%);
+
+  font-size: 15px;
+
+  line-height: 1.6;
+}
+
+.visualSectionDark .visualHeader p {
+  color: var(--grey);
+}
+
+.visual,
+.visualDark {
+  position: relative;
+
+  width: 100%;
+  height: 72vh;
+
+  margin-top: 65px;
+
+  overflow: hidden;
+}
+
+.visual {
+  background: var(--white);
+}
+
+.visualDark {
+  background: var(--dark);
+}
+
+/* =========================
+   END
+========================= */
+
+.end {
+  padding: 55px 65px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 50px;
+
+  background: var(--black);
+
+  border-top: 1px solid var(--line);
+}
+
+.end > span {
+  color: var(--grey);
+
+  font-size: 9px;
+
+  letter-spacing: 0.15em;
+}
+
+.back {
+  min-width: min(500px, 50vw);
+
+  padding: 20px 0;
+
+  display: flex;
+  justify-content: space-between;
+
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+
+  font-size: 10px;
+
+  letter-spacing: 0.13em;
+
+  transition:
+    padding-left 0.3s ease,
+    padding-right 0.3s ease;
+}
+
+.back:hover {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+  .nav {
+    top: 12px;
+
+    width: calc(100% - 24px);
+
+    min-height: 52px;
+
+    padding: 0 18px;
+  }
+
+  .navLinks {
+    gap: 14px;
+  }
+
+  .navLinks a:nth-child(2),
+  .navLinks a:nth-child(3) {
+    display: none;
+  }
+
+  .hero,
+  .about,
+  .visualSectionLight,
+  .visualSectionDark,
+  .end {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+
+  .hero {
+    min-height: 85vh;
+
+    padding-top: 110px;
+  }
+
+  .heroBottom {
+    grid-template-columns: 1fr;
+
+    gap: 40px;
+  }
+
+  .skills {
+    justify-content: flex-start;
+  }
+
+  .about {
+    grid-template-columns: 1fr;
+
+    gap: 70px;
+  }
+
+  .poster {
+    height: 65vh;
+  }
+
+  .visualHeader {
+    flex-direction: column;
+
+    gap: 25px;
+  }
+
+  .visualHeader p {
+    width: 100%;
+  }
+
+  .visual,
+  .visualDark {
+    height: 55vh;
+  }
+
+  .end {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .back {
+    width: 100%;
+    min-width: 0;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+  .heroMeta {
+    flex-direction: column;
+
+    gap: 10px;
+  }
+
+  .heroTitle h1 {
+    font-size: clamp(80px, 25vw, 140px);
+  }
+
+  .requestLogo {
+    width: 70px;
+    height: 70px;
+
+    right: 0;
+
+    opacity: 0.4;
+  }
+
+  .poster {
+    height: 52vh;
+  }
+
+  .visual,
+  .visualDark {
+    height: 42vh;
+  }
+
+  .aboutText h2 {
+    font-size: 52px;
+  }
+}

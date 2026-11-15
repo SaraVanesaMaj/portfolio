@@ -1,69 +1,1109 @@
+"use client";
+
 import Image from "next/image";
+import Link from "next/link";
+
+import { useRef, useState } from "react";
+
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
+
+gsap.registerPlugin(ScrollTrigger, useGSAP);
+
+
+/* =========================================
+   JOURNEY
+========================================= */
+
+const journey = [
+  {
+    date: "SEP 2020 — JUL 2025",
+    type: "EDUCATION",
+    title: "TGM Vienna",
+    subtitle: "Higher Technical College (HTL)",
+    description: "Information Technology",
+    detail: "Matura with Good Success",
+  },
+
+  {
+    date: "JUL 2022",
+    type: "INTERNSHIP",
+    title: "Gaudo Fashion",
+    subtitle: "Social Media Marketing Intern",
+    description:
+      "One-month internship in Vienna with a focus on social media and digital communication.",
+    detail: "1 month",
+  },
+
+  {
+    date: "DEC 2023 — PRESENT",
+    type: "EXPERIENCE",
+    title: "Automix GmbH",
+    subtitle: "IT Services & Administrative Assistance",
+    description:
+      "Part-time position combining IT-related tasks with administrative support.",
+    detail: "Part-time",
+  },
+
+  {
+    date: "AUG 2024",
+    type: "INTERNSHIP",
+    title: "Siemens",
+    subtitle: "IT Intern",
+    description:
+      "One-month internship gaining practical experience in an international technology environment.",
+    detail: "1 month",
+  },
+
+  {
+    date: "SEP 2025 — PRESENT",
+    type: "EDUCATION",
+    title: "University of Applied Sciences Upper Austria",
+    subtitle: "BSc Media Technology & Design",
+    description:
+      "Studying at the intersection of software development, interactive media, design and digital production.",
+    detail: "Expected graduation: Sep 2028",
+  },
+];
+
+
+/* =========================================
+   PROJECTS
+========================================= */
+
+const projects = [
+  {
+    number: "01",
+    title: "ReQuest",
+    type: "DIPLOMA PROJECT",
+    href: "/work/request",
+
+    description:
+      "A diploma project combining UX/UI design, branding, wireframing, prototyping and project communication.",
+
+    skills: [
+      "UX/UI",
+      "Branding",
+      "Wireframing",
+      "Mockups",
+      "Prototyping",
+      "Web",
+    ],
+  },
+
+  {
+    number: "02",
+    title: "FitMind",
+    type: "APPLIED MOTION GRAPHICS",
+    href: "#",
+
+    description:
+      "An interactive fitness and wellness prototype exploring how animation and motion can become part of the user experience.",
+
+    skills: [
+      "Motion Design",
+      "Interaction Design",
+      "UI",
+      "Prototyping",
+      "Framer",
+      "LottieLab",
+    ],
+  },
+
+  {
+    number: "03",
+    title: "3D / CGI",
+    type: "MAYA × BLENDER",
+    href: "#",
+
+    description:
+      "A collection of 3D work exploring modeling, materials, lighting, rendering, animation and simulation in Autodesk Maya and Blender.",
+
+    skills: [
+      "Autodesk Maya",
+      "Blender",
+      "Modeling",
+      "Texturing",
+      "Lighting",
+      "Simulation",
+    ],
+  },
+
+  {
+    number: "04",
+    title: "Neon Cat Café",
+    type: "JAVA GAME",
+    href: "#",
+
+    description:
+      "A Java game focused on object-oriented programming, interactive game systems and application logic.",
+
+    skills: [
+      "Java",
+      "OOP",
+      "Game Logic",
+      "Programming",
+    ],
+  },
+
+  {
+    number: "05",
+    title: "The Fractured Fairytale",
+    type: "UNITY GAME",
+    href: "#",
+
+    description:
+      "An interactive game project combining programming, gameplay systems, sound, level design and iterative playtesting.",
+
+    skills: [
+      "Unity",
+      "C#",
+      "Game Development",
+      "Audio",
+      "Interaction",
+      "Playtesting",
+    ],
+  },
+
+  {
+    number: "06",
+    title: "Motion & Animation",
+    type: "MEDIA COLLECTION",
+    href: "#",
+
+    description:
+      "A selection of motion graphics, animation, editing, visual effects and audiovisual experiments.",
+
+    skills: [
+      "After Effects",
+      "Premiere Pro",
+      "Motion Design",
+      "Animation",
+      "Video Editing",
+      "Sound Design",
+    ],
+  },
+];
+
+
+/* =========================================
+   HOME
+========================================= */
 
 export default function Home() {
+  const pageRef = useRef<HTMLElement>(null);
+
+  const [activeProject, setActiveProject] =
+    useState(0);
+
+
+  useGSAP(
+    () => {
+
+      /* =====================================
+         HERO
+      ===================================== */
+
+      const heroTimeline = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".hero",
+
+          start: "top top",
+
+          end: "+=140%",
+
+          scrub: 1,
+
+          pin: true,
+
+          anticipatePin: 1,
+        },
+      });
+
+
+      heroTimeline
+
+        .to(
+          ".sara",
+          {
+            xPercent: -45,
+
+            ease: "none",
+          },
+
+          0
+        )
+
+
+        .to(
+          ".maj",
+          {
+            xPercent: 45,
+
+            ease: "none",
+          },
+
+          0
+        )
+
+
+        .to(
+          ".heroDescription",
+          {
+            opacity: 0,
+
+            y: -30,
+
+            ease: "none",
+          },
+
+          0
+        )
+
+
+        .to(
+          ".heroFooter",
+          {
+            opacity: 0,
+
+            y: 30,
+
+            ease: "none",
+          },
+
+          0
+        )
+
+
+        .to(
+          ".heroPortrait",
+          {
+            yPercent: -8,
+
+            scale: 1.08,
+
+            opacity: 0.12,
+
+            ease: "none",
+          },
+
+          0
+        )
+
+
+        .to(
+          ".sara, .maj",
+          {
+            opacity: 0.1,
+
+            scale: 0.96,
+
+            ease: "none",
+          },
+
+          0.55
+        );
+
+
+      /* =====================================
+         JOURNEY LINE
+      ===================================== */
+
+      gsap.fromTo(
+        ".journeyLineFill",
+
+        {
+          scaleY: 0,
+        },
+
+        {
+          scaleY: 1,
+
+          ease: "none",
+
+          scrollTrigger: {
+            trigger: ".journeyTimeline",
+
+            start: "top 70%",
+
+            end: "bottom 75%",
+
+            scrub: 1,
+          },
+        }
+      );
+
+
+      /* =====================================
+         JOURNEY ITEMS
+      ===================================== */
+
+      gsap.fromTo(
+        ".journeyItem",
+
+        {
+          opacity: 0,
+
+          y: 60,
+        },
+
+        {
+          opacity: 1,
+
+          y: 0,
+
+          stagger: 0.12,
+
+          scrollTrigger: {
+            trigger: ".journeyTimeline",
+
+            start: "top 75%",
+
+            end: "center 45%",
+
+            scrub: 1,
+          },
+        }
+      );
+
+
+      /* =====================================
+         PROJECTS
+      ===================================== */
+
+      gsap.fromTo(
+        ".projectRow",
+
+        {
+          opacity: 0,
+
+          y: 50,
+        },
+
+        {
+          opacity: 1,
+
+          y: 0,
+
+          stagger: 0.08,
+
+          scrollTrigger: {
+            trigger: ".workSection",
+
+            start: "top 75%",
+
+            end: "top 30%",
+
+            scrub: 1,
+          },
+        }
+      );
+
+
+      /* =====================================
+         GENERAL REVEALS
+      ===================================== */
+
+      gsap.utils
+        .toArray<HTMLElement>(".sectionReveal")
+        .forEach((element) => {
+
+          gsap.fromTo(
+            element,
+
+            {
+              opacity: 0,
+
+              y: 40,
+            },
+
+            {
+              opacity: 1,
+
+              y: 0,
+
+              scrollTrigger: {
+                trigger: element,
+
+                start: "top 88%",
+
+                end: "top 68%",
+
+                scrub: 1,
+              },
+            }
+          );
+
+        });
+
+    },
+
+    {
+      scope: pageRef,
+    }
+  );
+
+
+  const active =
+    projects[activeProject];
+
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <main ref={pageRef}>
+
+      {/* =====================================
+          FIXED NAVIGATION
+      ===================================== */}
+
+      <nav className="siteNav">
+
+        <a
+          href="#"
+          className="siteLogo"
+        >
+          SARA MAJ
+        </a>
+
+
+        <div className="siteNavLinks">
+
+          <a href="#work">
+            WORK
+          </a>
+
+          <a href="#about">
+            ABOUT
+          </a>
+
+          <Link href="/lab">
+            LAB
+          </Link>
+
+          <a href="#contact">
+            CONTACT
+          </a>
+
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+
+      </nav>
+
+
+      {/* =====================================
+          HERO
+      ===================================== */}
+
+      <section className="hero">
+
+        <div className="heroContent">
+
+          {/* SARA */}
+
+          <div className="saraBlock">
+
+            <h1 className="sara">
+              SARA
+            </h1>
+
+
+            <p className="heroDescription">
+
+              DEVELOPMENT
+
+              <br />
+
+              × DESIGN
+
+              <br />
+
+              × MEDIA
+
+            </p>
+
+          </div>
+
+
+          {/* PORTRAIT */}
+
+          <div className="heroPortrait">
+
             <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
+              src="/images/sara-portrait.png"
+
+              alt="Sara Maj"
+
+              fill
+
+              priority
+
+              className="heroPortraitImage"
+
+              sizes="(max-width: 900px) 70vw, 35vw"
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+          </div>
+
+
+          {/* MAJ */}
+
+          <h1 className="maj">
+            MAJ
+          </h1>
+
         </div>
-      </main>
-    </div>
+
+
+        {/* HERO FOOTER */}
+
+        <div className="heroFooter">
+
+          <div className="available">
+
+            <span className="dot" />
+
+            MEDIA TECHNOLOGY & DESIGN
+
+          </div>
+
+
+          <div className="heroInfo">
+
+            <span>
+              VIENNA, AUSTRIA
+            </span>
+
+
+            <a href="#about">
+
+              SCROLL TO EXPLORE ↓
+
+            </a>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      {/* =====================================
+          ABOUT + JOURNEY
+      ===================================== */}
+
+      <section
+        className="aboutJourney"
+        id="about"
+      >
+
+        <div className="sectionHeader sectionReveal">
+
+          <span>
+            01 — ABOUT
+          </span>
+
+          <span>
+            SARA MAJ
+          </span>
+
+        </div>
+
+
+        {/* ABOUT */}
+
+        <div className="aboutIntro">
+
+          <h2 className="sectionReveal">
+
+            TECHNOLOGY
+
+            <br />
+
+            MEETS
+
+            <br />
+
+            CREATIVITY.
+
+          </h2>
+
+
+          <div className="aboutCopy sectionReveal">
+
+            <p>
+              I&apos;m Sara, a Media Technology
+              & Design student based in Austria.
+            </p>
+
+
+            <p>
+              My background combines information
+              technology, software development and
+              creative media.
+            </p>
+
+
+            <p>
+              I enjoy working on projects where
+              technical thinking, interaction and
+              visual storytelling come together —
+              from software and games to UX/UI,
+              motion and 3D.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        {/* JOURNEY */}
+
+        <div className="journeyHeading sectionReveal">
+
+          <span>
+            MY JOURNEY
+          </span>
+
+
+          <p>
+            Education and professional experience
+            across IT, media and technology.
+          </p>
+
+        </div>
+
+
+        <div className="journeyTimeline">
+
+          <div className="journeyLine">
+
+            <div className="journeyLineFill" />
+
+          </div>
+
+
+          {journey.map(
+            (item, index) => (
+
+              <article
+                className="journeyItem"
+
+                key={`${item.title}-${item.date}`}
+              >
+
+                <div className="journeyDot" />
+
+
+                <span className="journeyIndex">
+
+                  {String(index + 1).padStart(
+                    2,
+                    "0"
+                  )}
+
+                </span>
+
+
+                <div className="journeyContent">
+
+                  <div className="journeyMeta">
+
+                    <span>
+                      {item.type}
+                    </span>
+
+                    <span>
+                      {item.date}
+                    </span>
+
+                  </div>
+
+
+                  <h3>
+                    {item.title}
+                  </h3>
+
+
+                  <h4>
+                    {item.subtitle}
+                  </h4>
+
+
+                  <p>
+                    {item.description}
+                  </p>
+
+
+                  <span className="journeyDetail">
+
+                    {item.detail}
+
+                  </span>
+
+                </div>
+
+              </article>
+
+            )
+          )}
+
+        </div>
+
+
+        <a
+          className="linkedinLink sectionReveal"
+
+          href="https://www.linkedin.com/in/sara-vanesa-maj/"
+
+          target="_blank"
+
+          rel="noreferrer"
+        >
+
+          VIEW FULL PROFILE ON LINKEDIN ↗
+
+        </a>
+
+      </section>
+
+
+      {/* =====================================
+          FEATURED WORK
+      ===================================== */}
+
+      <section
+        className="workSection"
+        id="work"
+      >
+
+        <div className="sectionHeader workHeader">
+
+          <span>
+            02 — FEATURED WORK
+          </span>
+
+          <span>
+            SELECTED PROJECTS
+          </span>
+
+        </div>
+
+
+        <div className="workLayout">
+
+          {/* PROJECT LIST */}
+
+          <div className="projectList">
+
+            {projects.map(
+              (project, index) => (
+
+                <Link
+                  key={project.title}
+
+                  href={project.href}
+
+                  className="projectRow"
+
+                  onMouseEnter={() =>
+                    setActiveProject(index)
+                  }
+
+                  onFocus={() =>
+                    setActiveProject(index)
+                  }
+                >
+
+                  <span className="projectNumber">
+
+                    {project.number}
+
+                  </span>
+
+
+                  <div className="projectText">
+
+                    <span className="projectType">
+
+                      {project.type}
+
+                    </span>
+
+
+                    <h3>
+                      {project.title}
+                    </h3>
+
+
+                    <div className="projectSkills">
+
+                      {project.skills.map(
+                        (skill) => (
+
+                          <span key={skill}>
+
+                            {skill}
+
+                          </span>
+
+                        )
+                      )}
+
+                    </div>
+
+                  </div>
+
+
+                  <span className="projectArrow">
+
+                    ↗
+
+                  </span>
+
+                </Link>
+
+              )
+            )}
+
+          </div>
+
+
+          {/* PREVIEW */}
+
+          <aside className="workPreview">
+
+            <div className="previewTop">
+
+              <span>
+                {active.number}
+              </span>
+
+              <span>
+                {active.type}
+              </span>
+
+            </div>
+
+
+            <div className="previewCenter">
+
+              <span className="previewGhost">
+
+                {active.number}
+
+              </span>
+
+
+              <h4>
+                {active.title}
+              </h4>
+
+
+              <p>
+                {active.description}
+              </p>
+
+
+              <div className="previewSkills">
+
+                {active.skills.map(
+                  (skill) => (
+
+                    <span key={skill}>
+
+                      {skill}
+
+                    </span>
+
+                  )
+                )}
+
+              </div>
+
+            </div>
+
+
+            <div className="previewBottom">
+
+              <span>
+                VIEW CASE STUDY
+              </span>
+
+              <span>
+                ↗
+              </span>
+
+            </div>
+
+          </aside>
+
+        </div>
+
+      </section>
+
+
+      {/* =====================================
+          LAB TEASER
+      ===================================== */}
+
+      <section className="labTeaser">
+
+        <div className="sectionHeader sectionReveal">
+
+          <span>
+            03 — THE LAB
+          </span>
+
+          <span>
+            MORE TO EXPLORE
+          </span>
+
+        </div>
+
+
+        <div className="labTeaserContent">
+
+          <h2 className="sectionReveal">
+
+            NOT
+
+            <br />
+
+            EVERYTHING
+
+            <br />
+
+            FITS IN A
+
+            <br />
+
+            CASE STUDY.
+
+          </h2>
+
+
+          <div className="labTeaserRight sectionReveal">
+
+            <p>
+              Motion experiments, short films,
+              graphic design, photography, sound,
+              3D studies and smaller development
+              projects live in my creative archive.
+            </p>
+
+
+            <div className="labTags">
+
+              <span>MOTION</span>
+
+              <span>FILM</span>
+
+              <span>GRAPHICS</span>
+
+              <span>SOUND</span>
+
+              <span>3D</span>
+
+              <span>CODE</span>
+
+            </div>
+
+
+            <Link
+              href="/lab"
+              className="labButton"
+            >
+
+              EXPLORE THE LAB
+
+              <span>
+                ↗
+              </span>
+
+            </Link>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      {/* =====================================
+          CONTACT
+      ===================================== */}
+
+      <section
+        className="contact"
+        id="contact"
+      >
+
+        <span className="sectionNumber sectionReveal">
+
+          04 — CONTACT
+
+        </span>
+
+
+        <div className="contactMain sectionReveal">
+
+          <p>
+            HAVE AN IDEA?
+          </p>
+
+
+          <h2>
+
+            LET&apos;S CREATE
+
+            <br />
+
+            SOMETHING.
+
+          </h2>
+
+        </div>
+
+
+        <div className="contactFooter">
+
+          <a href="mailto:saramaj2005@hotmail.com">
+
+            EMAIL ↗
+
+          </a>
+
+
+          <a
+            href="https://www.linkedin.com/in/sara-vanesa-maj/"
+
+            target="_blank"
+
+            rel="noreferrer"
+          >
+
+            LINKEDIN ↗
+
+          </a>
+
+
+          <a href="#">
+            GITHUB ↗
+          </a>
+
+
+          <a href="#">
+            YOUTUBE ↗
+          </a>
+
+
+          <span>
+            © 2026 SARA MAJ
+          </span>
+
+        </div>
+
+      </section>
+
+    </main>
   );
 }
