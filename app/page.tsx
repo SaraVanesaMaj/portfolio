@@ -65,7 +65,7 @@ const journey = [
     title: "TGM Vienna",
     subtitle: "Higher Technical College (HTL)",
     description: "Information Technology",
-    detail: "Matura with Good Success",
+    detail: "Matura",
   },
 ];
 
