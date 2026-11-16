@@ -87,7 +87,7 @@ export default function RyanairProject() {
 
       <section className={styles.hero}>
         <div className={styles.heroMeta}>
-          <span>02 — FEATURED PROJECT</span>
+          <span>03 — FEATURED PROJECT</span>
           <span>RESPONSIVE DESIGN · SUMMER SEMESTER 2026</span>
         </div>
 
