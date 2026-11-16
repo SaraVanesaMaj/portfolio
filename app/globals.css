@@ -266,7 +266,7 @@ section {
 .heroPortrait {
   position: absolute;
 
-  left: 53%;
+  left: 49%;
   bottom: -40px;
 
   transform: translateX(-50%);
@@ -359,7 +359,7 @@ section {
 ========================================= */
 
 .aboutJourney {
-  padding: 110px 65px 40px;
+  padding: 90px 65px 30px;
 
   background: var(--white);
 
@@ -367,7 +367,7 @@ section {
 }
 
 .journeySection {
-  padding: 110px 65px 140px;
+  padding: 80px 65px 90px;
 
   background: #d6d3cb;
 
@@ -380,9 +380,7 @@ section {
 ========================================= */
 
 .aboutIntro {
-  min-height: 80vh;
-
-  padding: 100px 0 130px;
+  padding: 60px 0 70px;
 
   display: grid;
 
@@ -468,7 +466,7 @@ section {
 
   width: min(1150px, 92%);
 
-  margin-top: 100px;
+  margin-top: 60px;
   margin-left: auto;
 }
 
@@ -496,9 +494,7 @@ section {
 .journeyItem {
   position: relative;
 
-  min-height: 270px;
-
-  padding-bottom: 90px;
+  padding-bottom: 55px;
 
   display: grid;
 
@@ -614,9 +610,7 @@ section {
 ========================================= */
 
 .workSection {
-  min-height: 120vh;
-
-  padding: 100px 65px 140px;
+  padding: 80px 65px 90px;
 
   background: var(--black);
 
@@ -624,7 +618,7 @@ section {
 }
 
 .workHeader {
-  padding-bottom: 90px;
+  padding-bottom: 50px;
 
   color: var(--grey);
 }
@@ -862,9 +856,7 @@ section {
 ========================================= */
 
 .labTeaser {
-  min-height: 100vh;
-
-  padding: 100px 65px 130px;
+  padding: 80px 65px 90px;
 
   background: var(--white);
 
@@ -872,7 +864,7 @@ section {
 }
 
 .labTeaserContent {
-  margin-top: 120px;
+  margin-top: 60px;
 
   display: grid;
 
@@ -955,9 +947,9 @@ section {
 ========================================= */
 
 .contact {
-  min-height: 100vh;
+  min-height: 90vh;
 
-  padding: 100px 65px 40px;
+  padding: 80px 65px 40px;
 
   display: flex;
   flex-direction: column;
