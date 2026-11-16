@@ -20,22 +20,13 @@ gsap.registerPlugin(ScrollTrigger, useGSAP);
 
 const journey = [
   {
-    date: "SEP 2020 — JUL 2025",
+    date: "SEP 2025 — PRESENT",
     type: "EDUCATION",
-    title: "TGM Vienna",
-    subtitle: "Higher Technical College (HTL)",
-    description: "Information Technology",
-    detail: "Matura with Good Success",
-  },
-
-  {
-    date: "JUL 2022",
-    type: "INTERNSHIP",
-    title: "Gaudo Fashion",
-    subtitle: "Social Media Marketing Intern",
+    title: "University of Applied Sciences Upper Austria",
+    subtitle: "BSc Media Technology & Design",
     description:
-      "One-month internship in Vienna with a focus on social media and digital communication.",
-    detail: "1 month",
+      "Studying at the intersection of software development, interactive media, design and digital production.",
+    detail: "Expected graduation: Sep 2028",
   },
 
   {
@@ -59,13 +50,22 @@ const journey = [
   },
 
   {
-    date: "SEP 2025 — PRESENT",
-    type: "EDUCATION",
-    title: "University of Applied Sciences Upper Austria",
-    subtitle: "BSc Media Technology & Design",
+    date: "JUL 2022",
+    type: "INTERNSHIP",
+    title: "Gaudo Fashion",
+    subtitle: "Social Media Marketing Intern",
     description:
-      "Studying at the intersection of software development, interactive media, design and digital production.",
-    detail: "Expected graduation: Sep 2028",
+      "One-month internship in Vienna with a focus on social media and digital communication.",
+    detail: "1 month",
+  },
+
+  {
+    date: "SEP 2020 — JUL 2025",
+    type: "EDUCATION",
+    title: "TGM Vienna",
+    subtitle: "Higher Technical College (HTL)",
+    description: "Information Technology",
+    detail: "Matura with Good Success",
   },
 ];
 
@@ -659,7 +659,15 @@ export default function Home() {
         </div>
 
 
-        {/* JOURNEY */}
+      </section>
+
+
+      {/* =====================================
+          JOURNEY
+      ===================================== */}
+
+      <section className="journeySection">
+
 
         <div className="journeyHeading sectionReveal">
 
@@ -1035,38 +1043,38 @@ export default function Home() {
         </div>
 
 
-        <div className="contactFooter">
+        <div className="contactLinks sectionReveal">
 
           <a href="mailto:saramaj@gmx.at">
-
-            EMAIL ↗
-
+            <span>EMAIL</span>
+            <strong>saramaj@gmx.at</strong>
+            <em>↗</em>
           </a>
-
 
           <a
             href="https://www.linkedin.com/in/sara-vanesa-maj/"
-
             target="_blank"
-
             rel="noreferrer"
           >
-
-            LINKEDIN ↗
-
+            <span>LINKEDIN</span>
+            <strong>Sara Vanesa Maj</strong>
+            <em>↗</em>
           </a>
-
 
           <a
             href="https://github.com/SaraVanesaMaj"
-
             target="_blank"
-
             rel="noreferrer"
           >
-            GITHUB ↗
+            <span>GITHUB</span>
+            <strong>SaraVanesaMaj</strong>
+            <em>↗</em>
           </a>
 
+        </div>
+
+
+        <div className="contactFooter">
 
           <span>
             © 2026 SARA MAJ

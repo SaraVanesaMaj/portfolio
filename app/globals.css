@@ -359,11 +359,17 @@ section {
 ========================================= */
 
 .aboutJourney {
-  min-height: 150vh;
-
-  padding: 110px 65px 140px;
+  padding: 110px 65px 40px;
 
   background: var(--white);
+
+  color: var(--black);
+}
+
+.journeySection {
+  padding: 110px 65px 140px;
+
+  background: #d6d3cb;
 
   color: var(--black);
 }
@@ -423,7 +429,7 @@ section {
 ========================================= */
 
 .journeyHeading {
-  margin-top: 80px;
+  margin-top: 0;
 
   padding-bottom: 35px;
 
@@ -961,6 +967,8 @@ section {
 
 .contactMain {
   margin: auto 0;
+
+  padding-bottom: 70px;
 }
 
 .contactMain > p {
@@ -996,12 +1004,59 @@ section {
   letter-spacing: 0.12em;
 }
 
-.contactFooter a {
-  transition: opacity 0.25s ease;
+.contactLinks {
+  margin-bottom: 60px;
+
+  border-top: 1px solid var(--line);
 }
 
-.contactFooter a:hover {
-  opacity: 0.45;
+.contactLinks a {
+  padding: 34px 0;
+
+  display: grid;
+  grid-template-columns: 200px minmax(0, 1fr) auto;
+
+  gap: 30px;
+
+  align-items: center;
+
+  border-bottom: 1px solid var(--line);
+
+  transition:
+    padding-left 0.3s ease,
+    color 0.3s ease;
+}
+
+.contactLinks a:hover {
+  padding-left: 20px;
+
+  color: var(--accent);
+}
+
+.contactLinks span {
+  color: var(--grey);
+
+  font-size: 12px;
+
+  letter-spacing: 0.15em;
+}
+
+.contactLinks strong {
+  font-size: clamp(30px, 5.2vw, 82px);
+
+  font-weight: 500;
+
+  line-height: 1;
+
+  letter-spacing: -0.05em;
+
+  overflow-wrap: anywhere;
+}
+
+.contactLinks em {
+  font-size: clamp(26px, 4vw, 60px);
+
+  font-style: normal;
 }
 
 .contactFooter span {
@@ -1093,6 +1148,7 @@ section {
 
   .hero,
   .aboutJourney,
+  .journeySection,
   .workSection,
   .labTeaser,
   .contact {
@@ -1210,6 +1266,18 @@ section {
   }
 
   /* CONTACT */
+
+  .contactLinks a {
+    padding: 24px 0;
+
+    grid-template-columns: 1fr auto;
+
+    gap: 8px 16px;
+  }
+
+  .contactLinks span {
+    grid-column: 1 / -1;
+  }
 
   .contactFooter {
     flex-wrap: wrap;
