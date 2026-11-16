@@ -132,12 +132,12 @@ export default function RyanairProject() {
 
         <div className={styles.figure}>
           <Image
-            src="/images/ryanair/cover.jpg"
-            alt="Ryanair Responsive Redesign shown on desktop, tablet, phone and smartwatch"
-            width={2000}
-            height={1250}
-            className={styles.figureImage}
-            sizes="(max-width: 900px) 760px, 90vw"
+            src="/images/ryanair/responsive-screens.png"
+            alt="The Ryanair redesign homepage in five sizes: Mobile, Mobile Large, Tablet, Desktop and Smartwatch"
+            width={2224}
+            height={822}
+            className={`${styles.figureImage} ${styles.figureWide}`}
+            sizes="(max-width: 900px) 1100px, 90vw"
           />
         </div>
       </section>
