@@ -1037,7 +1037,7 @@ export default function Home() {
 
         <div className="contactFooter">
 
-          <a href="mailto:saramaj2005@hotmail.com">
+          <a href="mailto:saramaj@gmx.at">
 
             EMAIL ↗
 
