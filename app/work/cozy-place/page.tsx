@@ -9,35 +9,15 @@ import styles from "../case-study.module.css";
 export const metadata: Metadata = {
   title: "Cozy Place — Sara Maj",
   description:
-    "Cozy Place is a 3D interior scene, modelled, textured, lit and rendered from a first sketch to the final day and night renders.",
+    "Cozy Place is a 3D interior scene, modelled, textured, lit and rendered from a first sketch to the final render.",
 };
 
-const refs = [
-  {
-    src: "/images/cozy-place/sketch.jpg",
-    alt: "Hand-drawn sketch of the room with a bed, bookshelf, city view and a TV",
-    width: 1332,
-    height: 942,
-    title: "SKETCH",
-    note: "First layout by hand",
-  },
-  {
-    src: "/images/cozy-place/ai-living.jpg",
-    alt: "AI-generated visual of a dim bedroom and lounge with a round coffee table and a city view",
-    width: 1662,
-    height: 1100,
-    title: "AI VISUAL",
-    note: "Lounge and mood",
-  },
-  {
-    src: "/images/cozy-place/ai-bedroom.jpg",
-    alt: "AI-generated visual of the bed with a wall-mounted TV and a night view",
-    width: 1332,
-    height: 737,
-    title: "AI VISUAL",
-    note: "Bed and TV wall",
-  },
-];
+const sketch = {
+  src: "/images/cozy-place/sketch.jpg",
+  alt: "Hand-drawn sketch of the room with a bed, bookshelf, city view and a TV",
+  width: 1332,
+  height: 942,
+};
 
 const assets = [
   {
@@ -97,7 +77,7 @@ export default function CozyPlaceProject() {
         <div className={styles.heroBottom}>
           <p>
             A cosy bedroom and lounge with a view, built in 3D from a
-            first sketch to the final day and night renders. Every
+            first sketch to the final render. Every
             object in the room is modelled, textured and lit by hand.
           </p>
 
@@ -119,9 +99,9 @@ export default function CozyPlaceProject() {
           <span>01 — THE ROOM</span>
 
           <p>
-            The same room in two lighting moods: a soft sunset over
-            the sea and a starry night. Warm lamps, a glowing TV and
-            light strips along the walls keep it calm and cosy.
+            The final render: a soft sunset over the sea, warm lamps,
+            a glowing TV and light strips along the walls keep the
+            room calm and cosy.
           </p>
         </div>
 
@@ -141,22 +121,6 @@ export default function CozyPlaceProject() {
             <span>Sunset</span>
           </figcaption>
         </figure>
-
-        <figure className={styles.screenFigure}>
-          <Image
-            src="/images/cozy-place/render-night.jpg"
-            alt="Final render of the room at night with a starry sky outside the window"
-            width={3000}
-            height={1688}
-            className={styles.figureImage}
-            sizes="(max-width: 900px) 100vw, 90vw"
-          />
-
-          <figcaption className={styles.screenCaption}>
-            <span>FINAL RENDER</span>
-            <span>Night</span>
-          </figcaption>
-        </figure>
       </section>
 
       {/* CONCEPT */}
@@ -166,34 +130,29 @@ export default function CozyPlaceProject() {
           <span>02 — CONCEPT</span>
 
           <p>
-            The layout started as a hand-drawn sketch. AI-generated
-            visuals then served as references for the mood: a dark,
-            warm room with a big window, a wall-mounted TV and soft
-            lamp light.
+            The layout started as a hand-drawn sketch: a bed and a
+            lounge area in front of a big window with a city view, and
+            a wall-mounted TV opposite.
           </p>
         </div>
 
-        <div className={styles.refs}>
-          {refs.map((ref) => (
-            <figure key={ref.src} className={styles.screen}>
-              <div className={styles.screenFrame}>
-                <Image
-                  src={ref.src}
-                  alt={ref.alt}
-                  width={ref.width}
-                  height={ref.height}
-                  className={styles.figureImage}
-                  sizes="(max-width: 900px) 90vw, 30vw"
-                />
-              </div>
+        <figure className={styles.sketch}>
+          <div className={styles.screenFrame}>
+            <Image
+              src={sketch.src}
+              alt={sketch.alt}
+              width={sketch.width}
+              height={sketch.height}
+              className={styles.figureImage}
+              sizes="(max-width: 900px) 90vw, 40vw"
+            />
+          </div>
 
-              <figcaption className={styles.screenCaption}>
-                <span>{ref.title}</span>
-                <span>{ref.note}</span>
-              </figcaption>
-            </figure>
-          ))}
-        </div>
+          <figcaption className={styles.screenCaption}>
+            <span>SKETCH</span>
+            <span>First layout by hand</span>
+          </figcaption>
+        </figure>
       </section>
 
       {/* TOPOLOGY */}
@@ -254,33 +213,6 @@ export default function CozyPlaceProject() {
               </figcaption>
             </figure>
           ))}
-        </div>
-      </section>
-
-      {/* MORE 3D WORK */}
-
-      <section className={styles.visualSectionDark}>
-        <div className={styles.visualHeader}>
-          <span>05 — MORE 3D WORK</span>
-
-          <p>
-            A short reel of earlier studies from 2023 to 2025 in
-            Maya: topology, a polygon robot, rig animation, a liquid
-            simulation, realistic hair and cloth with HDRI lighting.
-          </p>
-        </div>
-
-        <div className={styles.videoWrap}>
-          <video
-            className={styles.video}
-            controls
-            preload="metadata"
-            playsInline
-            poster="/videos/3d-portfolio-poster.jpg"
-            aria-label="3D modelling portfolio in Maya, 2023 to 2025"
-          >
-            <source src="/videos/3d-portfolio.mp4" type="video/mp4" />
-          </video>
         </div>
       </section>
 

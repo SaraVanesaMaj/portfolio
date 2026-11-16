@@ -139,7 +139,7 @@ const projects = [
     href: "/work/cozy-place",
 
     description:
-      "A cosy 3D bedroom and lounge, from first sketch to final day and night renders, with every object modelled, textured and lit, plus a reel of earlier Maya studies.",
+      "A cosy 3D bedroom and lounge, from first sketch to final render, with every object modelled, textured and lit.",
 
     skills: [
       "3D Modelling",

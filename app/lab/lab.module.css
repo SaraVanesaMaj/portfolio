@@ -52,7 +52,10 @@
 }
 
 .list {
-  margin-top: 90px;
+  margin: 90px 0 0;
+  padding: 0;
+
+  list-style: none;
 
   border-top: 1px solid var(--line);
 }
@@ -94,6 +97,86 @@
   font-size: 11px;
 
   letter-spacing: 0.13em;
+}
+
+.rowLink {
+  transition:
+    padding-left 0.3s ease,
+    color 0.3s ease;
+}
+
+.rowLink:hover {
+  padding-left: 15px;
+
+  color: var(--accent);
+}
+
+.rowLink .status {
+  color: var(--white);
+}
+
+/* 3D feature */
+
+.feature {
+  margin-top: 110px;
+
+  scroll-margin-top: 100px;
+}
+
+.featureHead {
+  display: flex;
+  justify-content: space-between;
+
+  color: var(--grey);
+
+  font-size: 11px;
+
+  letter-spacing: 0.15em;
+}
+
+.featureTitle {
+  margin-top: 40px;
+
+  font-size: clamp(36px, 6vw, 90px);
+
+  line-height: 0.95;
+
+  font-weight: 600;
+
+  letter-spacing: -0.055em;
+}
+
+.featureText {
+  max-width: 620px;
+
+  margin-top: 26px;
+
+  color: var(--grey);
+
+  font-size: 15px;
+
+  line-height: 1.6;
+}
+
+.featureText a {
+  color: var(--white);
+
+  border-bottom: 1px solid var(--grey);
+}
+
+.videoWrap {
+  margin-top: 45px;
+
+  background: #000;
+}
+
+.video {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  aspect-ratio: 16 / 9;
 }
 
 .footer {

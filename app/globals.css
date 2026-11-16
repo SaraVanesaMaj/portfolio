@@ -266,7 +266,7 @@ section {
 .heroPortrait {
   position: absolute;
 
-  left: 49%;
+  left: 42%;
   bottom: -40px;
 
   transform: translateX(-50%);
