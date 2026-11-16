@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Link from "next/link";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -29,7 +30,14 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       data-scroll-behavior="smooth"
       className={`${geistSans.variable} ${geistMono.variable}`}
     >
-      <body>{children}</body>
+      <body>
+        {children}
+
+        <footer className="legalBar" lang="de">
+          <Link href="/impressum">IMPRESSUM</Link>
+          <Link href="/datenschutz">DATENSCHUTZ</Link>
+        </footer>
+      </body>
     </html>
   );
 }
