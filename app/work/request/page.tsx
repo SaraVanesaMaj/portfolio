@@ -3,7 +3,7 @@ import Link from "next/link";
 
 import SiteNav from "../../components/SiteNav";
 
-import styles from "./request.module.css";
+import styles from "../case-study.module.css";
 
 export default function RequestProject() {
   return (

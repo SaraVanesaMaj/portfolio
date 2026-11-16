@@ -96,6 +96,25 @@ const projects = [
 
   {
     number: "02",
+    title: "Ryanair Responsive Redesign",
+    type: "RESPONSIVE DESIGN",
+    href: "/work/ryanair",
+
+    description:
+      "A responsive redesign of a Ryanair booking interface for mobile, tablet, desktop and smartwatch, built on a user flow, sketches and a design system.",
+
+    skills: [
+      "UX/UI",
+      "Responsive Design",
+      "Design System",
+      "User Flow",
+      "Prototyping",
+      "Figma",
+    ],
+  },
+
+  {
+    number: "03",
     title: "FitMind",
     type: "APPLIED MOTION GRAPHICS",
     href: "#",
@@ -114,7 +133,7 @@ const projects = [
   },
 
   {
-    number: "03",
+    number: "04",
     title: "3D / CGI",
     type: "MAYA × BLENDER",
     href: "#",
@@ -133,7 +152,7 @@ const projects = [
   },
 
   {
-    number: "04",
+    number: "05",
     title: "Neon Cat Café",
     type: "JAVA GAME",
     href: "#",
@@ -150,7 +169,7 @@ const projects = [
   },
 
   {
-    number: "05",
+    number: "06",
     title: "The Fractured Fairytale",
     type: "UNITY GAME",
     href: "#",
@@ -169,7 +188,7 @@ const projects = [
   },
 
   {
-    number: "06",
+    number: "07",
     title: "Motion & Animation",
     type: "MEDIA COLLECTION",
     href: "#",
