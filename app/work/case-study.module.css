@@ -664,3 +664,72 @@
     min-width: 0;
   }
 }
+
+/* =========================
+   PHONE SCREENS (app case studies)
+========================= */
+
+.phones {
+  margin-top: 65px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 55px 35px;
+}
+
+.phone {
+  margin: 0;
+}
+
+.phoneFrame {
+  overflow: hidden;
+
+  border: 1px solid rgba(0, 0, 0, 0.18);
+  border-radius: 34px;
+
+  background: #000a1f;
+}
+
+.phoneFrame .figureImage {
+  min-width: 0;
+}
+
+.phoneCaption {
+  margin-top: 20px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 8px;
+
+  font-size: 11px;
+
+  letter-spacing: 0.13em;
+}
+
+.phoneCaption span:last-child {
+  color: #5f5f5f;
+
+  font-size: 14px;
+
+  line-height: 1.5;
+
+  letter-spacing: 0;
+}
+
+@media (max-width: 900px) {
+  .phones {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 40px 18px;
+  }
+
+  .phoneFrame {
+    border-radius: 24px;
+  }
+
+  .phoneCaption span:last-child {
+    font-size: 13px;
+  }
+}
