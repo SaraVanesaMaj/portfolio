@@ -799,3 +799,83 @@
     grid-column: 2;
   }
 }
+
+/* =========================
+   3D CASE STUDY (renders, pairs, video)
+========================= */
+
+.screenFigure {
+  margin: 65px 0 0;
+}
+
+.screenFigure .figureImage {
+  min-width: 0;
+}
+
+.screenFigure .screenCaption {
+  color: var(--grey);
+}
+
+.screenFigure .screenCaption span:last-child {
+  color: var(--grey);
+}
+
+.refs {
+  margin-top: 65px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 30px;
+
+  align-items: start;
+}
+
+.pairs {
+  margin-top: 65px;
+
+  display: grid;
+
+  gap: 55px;
+}
+
+.pair {
+  margin: 0;
+}
+
+.pairFrame {
+  overflow: hidden;
+
+  background: #32282a;
+}
+
+.pairFrame .figureImage {
+  min-width: 0;
+}
+
+.videoWrap {
+  margin-top: 65px;
+
+  background: #000;
+}
+
+.video {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  aspect-ratio: 16 / 9;
+}
+
+@media (max-width: 900px) {
+  .refs {
+    grid-template-columns: 1fr;
+
+    gap: 45px;
+  }
+
+  .pairs {
+    gap: 40px;
+  }
+}

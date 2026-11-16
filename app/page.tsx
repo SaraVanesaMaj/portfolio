@@ -134,19 +134,19 @@ const projects = [
 
   {
     number: "04",
-    title: "3D / CGI",
-    type: "MAYA × BLENDER",
-    href: "#",
+    title: "Cozy Place",
+    type: "3D MODELLING",
+    href: "/work/cozy-place",
 
     description:
-      "A collection of 3D work exploring modeling, materials, lighting, rendering, animation and simulation in Autodesk Maya and Blender.",
+      "A cosy 3D bedroom and lounge, from first sketch to final day and night renders, with every object modelled, textured and lit, plus a reel of earlier Maya studies.",
 
     skills: [
-      "Autodesk Maya",
-      "Blender",
-      "Modeling",
+      "3D Modelling",
       "Texturing",
       "Lighting",
+      "Rendering",
+      "Topology",
       "Simulation",
     ],
   },
@@ -245,7 +245,7 @@ export default function Home() {
 
           start: "top top",
 
-          end: "+=140%",
+          end: "+=55%",
 
           scrub: 1,
 
