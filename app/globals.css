@@ -1248,3 +1248,37 @@ section {
     font-size: 21px;
   }
 }
+
+/* LEGAL LINKS (every page) */
+
+.legalBar {
+  padding: 26px 65px;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 14px 30px;
+
+  border-top: 1px solid var(--line);
+
+  background: var(--black);
+  color: var(--grey);
+
+  font-size: 11px;
+
+  letter-spacing: 0.13em;
+}
+
+.legalBar a {
+  transition: color 0.25s ease;
+}
+
+.legalBar a:hover {
+  color: var(--white);
+}
+
+@media (max-width: 900px) {
+  .legalBar {
+    padding: 26px 22px;
+  }
+}
