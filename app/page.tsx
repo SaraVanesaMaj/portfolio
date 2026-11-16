@@ -96,25 +96,6 @@ const projects = [
 
   {
     number: "02",
-    title: "Ryanair Responsive Redesign",
-    type: "RESPONSIVE DESIGN",
-    href: "/work/ryanair",
-
-    description:
-      "A responsive redesign of a Ryanair booking interface for mobile, tablet, desktop and smartwatch, built on a user flow, sketches and a design system.",
-
-    skills: [
-      "UX/UI",
-      "Responsive Design",
-      "Design System",
-      "User Flow",
-      "Prototyping",
-      "Figma",
-    ],
-  },
-
-  {
-    number: "03",
     title: "FitMind",
     type: "APPLIED MOTION GRAPHICS",
     href: "/work/fitmind",
@@ -129,6 +110,25 @@ const projects = [
       "Prototyping",
       "Framer",
       "LottieLab",
+    ],
+  },
+
+  {
+    number: "03",
+    title: "Ryanair Responsive Redesign",
+    type: "RESPONSIVE DESIGN",
+    href: "/work/ryanair",
+
+    description:
+      "A responsive redesign of a Ryanair booking interface for mobile, tablet, desktop and smartwatch, built on a user flow, sketches and a design system.",
+
+    skills: [
+      "UX/UI",
+      "Responsive Design",
+      "Design System",
+      "User Flow",
+      "Prototyping",
+      "Figma",
     ],
   },
 
@@ -153,42 +153,6 @@ const projects = [
 
   {
     number: "05",
-    title: "Neon Cat Café",
-    type: "JAVA GAME",
-    href: "#",
-
-    description:
-      "A Java game focused on object-oriented programming, interactive game systems and application logic.",
-
-    skills: [
-      "Java",
-      "OOP",
-      "Game Logic",
-      "Programming",
-    ],
-  },
-
-  {
-    number: "06",
-    title: "The Fractured Fairytale",
-    type: "UNITY GAME",
-    href: "#",
-
-    description:
-      "An interactive game project combining programming, gameplay systems, sound, level design and iterative playtesting.",
-
-    skills: [
-      "Unity",
-      "C#",
-      "Game Development",
-      "Audio",
-      "Interaction",
-      "Playtesting",
-    ],
-  },
-
-  {
-    number: "07",
     title: "Motion & Animation",
     type: "MEDIA COLLECTION",
     href: "#",
