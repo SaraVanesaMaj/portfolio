@@ -117,10 +117,10 @@ const projects = [
     number: "03",
     title: "FitMind",
     type: "APPLIED MOTION GRAPHICS",
-    href: "#",
+    href: "/work/fitmind",
 
     description:
-      "An interactive fitness and wellness prototype exploring how animation and motion can become part of the user experience.",
+      "A wellness app concept for water, activity, breathing and sleep, with clear statistics, gentle animations and motivating goals.",
 
     skills: [
       "Motion Design",
