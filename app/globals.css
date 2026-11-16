@@ -24,7 +24,29 @@ body {
   background: var(--black);
   color: var(--white);
 
-  font-family: Arial, Helvetica, sans-serif;
+  font-family:
+    var(--font-geist-sans),
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  * {
+    transition-duration: 0.01ms !important;
+  }
 }
 
 button,
@@ -63,7 +85,7 @@ section {
 
   gap: 30px;
 
-  font-size: 10px;
+  font-size: 11px;
 
   letter-spacing: 0.15em;
 
@@ -71,7 +93,7 @@ section {
 }
 
 .sectionNumber {
-  font-size: 10px;
+  font-size: 11px;
 
   letter-spacing: 0.15em;
 }
@@ -117,7 +139,7 @@ section {
 }
 
 .siteLogo {
-  font-size: 11px;
+  font-size: 12px;
 
   font-weight: 700;
 
@@ -133,7 +155,7 @@ section {
 .siteNavLinks a {
   position: relative;
 
-  font-size: 9px;
+  font-size: 11px;
 
   letter-spacing: 0.13em;
 
@@ -142,6 +164,20 @@ section {
 
 .siteNavLinks a:hover {
   opacity: 0.45;
+}
+
+.siteNavToggle {
+  display: none;
+
+  padding: 12px 0;
+
+  background: transparent;
+
+  font-size: 11px;
+
+  letter-spacing: 0.13em;
+
+  cursor: pointer;
 }
 
 
@@ -215,7 +251,7 @@ section {
 
   color: var(--grey);
 
-  font-size: 10px;
+  font-size: 12px;
 
   line-height: 1.6;
 
@@ -279,7 +315,7 @@ section {
 
   z-index: 4;
 
-  font-size: 9px;
+  font-size: 11px;
 
   letter-spacing: 0.14em;
 }
@@ -479,9 +515,9 @@ section {
 .journeyIndex {
   padding-top: 1px;
 
-  color: #777;
+  color: #5f5f5f;
 
-  font-size: 9px;
+  font-size: 11px;
 
   letter-spacing: 0.15em;
 }
@@ -498,9 +534,9 @@ section {
 
   gap: 40px;
 
-  color: #777;
+  color: #5f5f5f;
 
-  font-size: 9px;
+  font-size: 11px;
 
   letter-spacing: 0.14em;
 }
@@ -528,7 +564,7 @@ section {
 
   color: #555;
 
-  font-size: 14px;
+  font-size: 15px;
 
   line-height: 1.6;
 }
@@ -544,7 +580,7 @@ section {
 
   border-radius: 100px;
 
-  font-size: 9px;
+  font-size: 11px;
 
   letter-spacing: 0.1em;
 }
@@ -561,7 +597,7 @@ section {
 
   border-bottom: 1px solid var(--black);
 
-  font-size: 10px;
+  font-size: 12px;
 
   letter-spacing: 0.12em;
 }
@@ -627,6 +663,10 @@ section {
     padding-left 0.3s ease;
 }
 
+.projectRow.isSoon {
+  cursor: default;
+}
+
 .projectList:hover .projectRow {
   opacity: 0.22;
 }
@@ -642,7 +682,7 @@ section {
 
   color: var(--grey);
 
-  font-size: 9px;
+  font-size: 11px;
 
   letter-spacing: 0.15em;
 }
@@ -654,7 +694,7 @@ section {
 
   color: var(--grey);
 
-  font-size: 8px;
+  font-size: 11px;
 
   letter-spacing: 0.14em;
 }
@@ -688,7 +728,7 @@ section {
 
 .projectSkills span,
 .previewSkills span {
-  padding: 6px 10px;
+  padding: 7px 12px;
 
   border: 1px solid #353535;
 
@@ -696,7 +736,7 @@ section {
 
   color: var(--grey);
 
-  font-size: 7px;
+  font-size: 11px;
 
   letter-spacing: 0.1em;
 }
@@ -752,7 +792,7 @@ section {
 
   color: var(--grey);
 
-  font-size: 8px;
+  font-size: 11px;
 
   letter-spacing: 0.13em;
 }
@@ -805,7 +845,7 @@ section {
 
   color: var(--grey);
 
-  font-size: 11px;
+  font-size: 13px;
 
   line-height: 1.6;
 }
@@ -871,7 +911,7 @@ section {
 
   border-radius: 100px;
 
-  font-size: 8px;
+  font-size: 11px;
 
   letter-spacing: 0.11em;
 }
@@ -890,7 +930,7 @@ section {
   border-top: 1px solid var(--black);
   border-bottom: 1px solid var(--black);
 
-  font-size: 11px;
+  font-size: 12px;
 
   letter-spacing: 0.13em;
 
@@ -928,7 +968,7 @@ section {
 
   color: var(--grey);
 
-  font-size: 10px;
+  font-size: 12px;
 
   letter-spacing: 0.15em;
 }
@@ -951,7 +991,7 @@ section {
 
   border-top: 1px solid var(--line);
 
-  font-size: 9px;
+  font-size: 12px;
 
   letter-spacing: 0.12em;
 }
@@ -992,13 +1032,60 @@ section {
     padding: 0 18px;
   }
 
-  .siteNavLinks {
-    gap: 14px;
+  .siteNavToggle {
+    display: block;
   }
 
-  .siteNavLinks a:nth-child(2),
-  .siteNavLinks a:nth-child(3) {
-    display: none;
+  .siteNavLinks {
+    position: absolute;
+
+    top: calc(100% + 8px);
+    left: 0;
+    right: 0;
+
+    padding: 8px 22px 12px;
+
+    flex-direction: column;
+
+    gap: 0;
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    border-radius: 28px;
+
+    background: rgba(9, 9, 9, 0.96);
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateY(-6px);
+
+    transition:
+      opacity 0.25s ease,
+      transform 0.25s ease,
+      visibility 0.25s;
+  }
+
+  .siteNavLinks.isOpen {
+    opacity: 1;
+    visibility: visible;
+
+    transform: none;
+  }
+
+  .siteNavLinks a {
+    padding: 18px 0;
+
+    border-bottom: 1px solid var(--line);
+
+    font-size: 14px;
+  }
+
+  .siteNavLinks a:last-child {
+    border-bottom: 0;
   }
 
 
@@ -1122,11 +1209,6 @@ section {
     padding-left: 0;
   }
 
-  .projectSkills span {
-    font-size: 6px;
-  }
-
-
   /* CONTACT */
 
   .contactFooter {
@@ -1155,15 +1237,11 @@ section {
   }
 
   .heroDescription {
-    font-size: 8px;
+    font-size: 11px;
   }
 
   .heroFooter {
-    font-size: 7px;
-  }
-
-  .siteNavLinks a {
-    font-size: 8px;
+    font-size: 10px;
   }
 
   .aboutCopy p:first-child {
