@@ -41,6 +41,16 @@ export default function SiteNav() {
             {link.label}
           </Link>
         ))}
+
+        <a
+          href="/cv/Sara-Maj-CV.pdf"
+          target="_blank"
+          rel="noreferrer"
+          className="siteNavCv"
+          onClick={close}
+        >
+          CV ↓
+        </a>
       </div>
     </nav>
   );

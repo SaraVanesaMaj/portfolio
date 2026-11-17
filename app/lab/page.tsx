@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 
 import SiteNav from "../components/SiteNav";
@@ -8,34 +9,158 @@ import styles from "./lab.module.css";
 export const metadata: Metadata = {
   title: "The Lab — Sara Maj",
   description:
-    "Motion experiments, film, graphics, sound, 3D studies and smaller development projects by Sara Maj.",
+    "A small gallery of animation, film, sound, 3D, graphics and photography by Sara Maj.",
 };
 
-const categories = [
+type Item = {
+  title: string;
+  tag: string;
+  kind: "video" | "image";
+  src: string;
+  poster?: string;
+  width: number;
+  height: number;
+  href?: string;
+};
+
+const items: Item[] = [
   {
-    name: "Motion",
-    text: "Motion graphics, animation and editing experiments.",
+    title: "Rolex — brand animation",
+    tag: "MOTION",
+    kind: "video",
+    src: "/videos/lab-rolex.mp4",
+    poster: "/images/lab/poster-rolex.jpg",
+    width: 1100,
+    height: 619,
+    href: "https://youtu.be/44fTrB4mUSo",
   },
   {
-    name: "Film",
-    text: "Short films, edits and visual storytelling.",
+    title: "Vienna Night Riders",
+    tag: "FILM",
+    kind: "image",
+    src: "/images/lab/poster-night-riders.webp",
+    width: 778,
+    height: 1117,
+    href: "https://youtu.be/OMcHLZG4VFQ",
   },
   {
-    name: "Graphics",
-    text: "Posters, typography and other graphic design studies.",
+    title: "TGM logo animation",
+    tag: "MOTION",
+    kind: "video",
+    src: "/videos/lab-logo.mp4",
+    poster: "/images/lab/poster-logo.jpg",
+    width: 1100,
+    height: 779,
+    href: "https://youtu.be/Oe3J0A4UB_Y",
   },
   {
-    name: "3D",
-    text: "A short reel of studies in Maya: topology, a polygon robot, rig animation, a liquid simulation, realistic hair and cloth with HDRI lighting.",
-    video: true,
+    title: "Sound design",
+    tag: "SOUND",
+    kind: "video",
+    src: "/videos/lab-sound.mp4",
+    poster: "/images/lab/poster-sound.jpg",
+    width: 1100,
+    height: 880,
+    href: "https://youtu.be/ggdabRdK6Qk",
   },
   {
-    name: "Sound",
-    text: "Sound design and audio experiments.",
+    title: "Delayed",
+    tag: "SHORT FILM",
+    kind: "image",
+    src: "/images/lab/poster-delayed.webp",
+    width: 788,
+    height: 1117,
+    href: "https://youtu.be/Q_T--YyAsNA",
   },
   {
-    name: "Code",
-    text: "Smaller development projects and interface experiments.",
+    title: "3D modelling in Maya",
+    tag: "3D",
+    kind: "video",
+    src: "/videos/3d-portfolio.mp4",
+    poster: "/videos/3d-portfolio-poster.jpg",
+    width: 1280,
+    height: 720,
+    href: "https://youtu.be/enPP5eKyBco",
+  },
+  {
+    title: "Sendung ohne Namen",
+    tag: "MOTION",
+    kind: "video",
+    src: "/videos/lab-sendung.mp4",
+    poster: "/images/lab/poster-sendung.jpg",
+    width: 1100,
+    height: 619,
+    href: "https://youtu.be/Xn8ROwkhZgI",
+  },
+  {
+    title: "Typography",
+    tag: "GRAPHICS",
+    kind: "image",
+    src: "/images/lab/typo-sara.webp",
+    width: 630,
+    height: 475,
+  },
+  {
+    title: "Acorn",
+    tag: "ILLUSTRATOR",
+    kind: "image",
+    src: "/images/lab/gfx-acorn.webp",
+    width: 533,
+    height: 517,
+  },
+  {
+    title: "Flower",
+    tag: "ILLUSTRATOR",
+    kind: "image",
+    src: "/images/lab/gfx-flower.webp",
+    width: 653,
+    height: 517,
+  },
+  {
+    title: "Palm",
+    tag: "ILLUSTRATOR",
+    kind: "image",
+    src: "/images/lab/gfx-palm.webp",
+    width: 609,
+    height: 587,
+  },
+  {
+    title: "Pattern",
+    tag: "ILLUSTRATOR",
+    kind: "image",
+    src: "/images/lab/gfx-pattern.webp",
+    width: 572,
+    height: 584,
+  },
+  {
+    title: "Light & shadow",
+    tag: "PHOTO",
+    kind: "image",
+    src: "/images/lab/photo-light-shadow.webp",
+    width: 1316,
+    height: 1125,
+  },
+  {
+    title: "Light studies",
+    tag: "PHOTO",
+    kind: "image",
+    src: "/images/lab/photo-studies.webp",
+    width: 1600,
+    height: 900,
+  },
+];
+
+const moreVideos = [
+  { title: "Mixed realities", href: "https://youtu.be/gbbmmURtCF0" },
+  {
+    title: "Photoshop generative fill",
+    href: "https://youtu.be/atB-eYxZHI4",
+  },
+  { title: "Cuts & transitions", href: "https://youtu.be/VGcLE3G1n9c" },
+  { title: "ZIB Magazin", href: "https://youtu.be/_8GSJ_rrisc" },
+  {
+    title: "Typography & shape animation",
+    href: "https://youtu.be/dI1vxlD5_oQ",
   },
 ];
 
@@ -51,63 +176,77 @@ export default function Lab() {
 
       <h1 className={styles.title}>THE LAB</h1>
 
-      <p className={styles.intro}>
-        Experiments, studies and smaller projects that don&apos;t fit
-        into a case study. The archive is still growing.
-      </p>
-
-      <div className={styles.grid}>
-        {categories.map((category, index) => (
-          <article
-            key={category.name}
-            className={`${styles.card} ${
-              category.video ? styles.cardWide : ""
-            }`}
+      <div className={styles.gallery}>
+        {items.map((item) => (
+          <figure
+            key={item.src}
+            className={styles.tile}
           >
-            <div className={styles.cardInfo}>
-              <div className={styles.cardTop}>
-                <span className={styles.number}>
-                  {String(index + 1).padStart(2, "0")}
-                </span>
-
-                <span className={styles.status}>
-                  {category.video ? "1 ITEM" : "COMING SOON"}
-                </span>
-              </div>
-
-              <h2 className={styles.name}>{category.name}</h2>
-
-              <p className={styles.cardText}>{category.text}</p>
-
-              {category.video && (
-                <p className={styles.panelNote}>
-                  3D-Modelling Portfolio · Maya · 2023–2025. My latest
-                  3D scene is the{" "}
-                  <Link href="/work/cozy-place">Cozy Place</Link>{" "}
-                  project.
-                </p>
+            <div className={styles.media}>
+              {item.kind === "video" ? (
+                <video
+                  className={styles.mediaEl}
+                  controls
+                  preload="none"
+                  playsInline
+                  poster={item.poster}
+                  width={item.width}
+                  height={item.height}
+                  aria-label={item.title}
+                >
+                  <source src={item.src} type="video/mp4" />
+                </video>
+              ) : (
+                <Image
+                  src={item.src}
+                  alt={item.title}
+                  width={item.width}
+                  height={item.height}
+                  className={styles.mediaEl}
+                  sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 33vw"
+                />
               )}
             </div>
 
-            {category.video && (
-              <div className={styles.videoWrap}>
-                <video
-                  className={styles.video}
-                  controls
-                  preload="metadata"
-                  playsInline
-                  poster="/videos/3d-portfolio-poster.jpg"
-                  aria-label="3D modelling portfolio in Maya, 2023 to 2025"
-                >
-                  <source
-                    src="/videos/3d-portfolio.mp4"
-                    type="video/mp4"
-                  />
-                </video>
-              </div>
-            )}
-          </article>
+            <figcaption className={styles.caption}>
+              <span>{item.title}</span>
+
+              <span className={styles.tag}>
+                {item.tag}
+                {item.href && (
+                  <>
+                    {" · "}
+                    <a
+                      href={item.href}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      YouTube ↗
+                    </a>
+                  </>
+                )}
+              </span>
+            </figcaption>
+          </figure>
         ))}
+      </div>
+
+      <div className={styles.more}>
+        <span className={styles.moreLabel}>MORE ON YOUTUBE</span>
+
+        <div className={styles.moreList}>
+          {moreVideos.map((video) => (
+            <a
+              key={video.href}
+              href={video.href}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <span>{video.title}</span>
+              <span>↗</span>
+            </a>
+          ))}
+        </div>
       </div>
 
       <div className={styles.footer}>
