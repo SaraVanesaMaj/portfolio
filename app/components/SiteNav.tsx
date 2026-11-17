@@ -37,7 +37,25 @@ export default function SiteNav() {
   return (
     <>
       <nav className="siteNav" aria-label="Main navigation">
-        <Link href="/" className="siteLogo" onClick={close}>
+        <Link
+          href="/"
+          className="siteLogo"
+          onClick={(event) => {
+            close();
+
+            /* already on the home page: a normal link does nothing,
+             so scroll to the top ourselves */
+            if (pathname === "/") {
+              event.preventDefault();
+
+              window.scrollTo({ top: 0, behavior: "smooth" });
+
+              if (window.location.hash) {
+                window.history.replaceState(null, "", "/");
+              }
+            }
+          }}
+        >
           SARA MAJ
         </Link>
 
