@@ -7,26 +7,26 @@ import { siteInfo } from "../lib/site-info";
 import styles from "../legal.module.css";
 
 export const metadata: Metadata = {
-  title: "Impressum - Sara Vanesa Maj",
+  title: "Legal Notice - Sara Vanesa Maj",
   description:
-    "Impressum und Offenlegung nach § 25 Mediengesetz der Portfolio-Website von Sara Vanesa Maj.",
+    "Legal notice (Impressum) and disclosure under § 25 of the Austrian Media Act for the portfolio website of Sara Vanesa Maj.",
 };
 
 export default function Impressum() {
   return (
-    <main className={styles.page} lang="de">
+    <main className={styles.page} lang="en">
       <SiteNav />
 
       <div className={styles.meta}>
-        <span>RECHTLICHES</span>
-        <span>OFFENLEGUNG NACH § 25 MEDIENGESETZ</span>
+        <span>LEGAL</span>
+        <span>DISCLOSURE UNDER § 25 AUSTRIAN MEDIA ACT</span>
       </div>
 
-      <h1 className={styles.title}>Impressum</h1>
+      <h1 className={styles.title}>Legal Notice</h1>
 
       <div className={styles.content}>
         <section className={styles.block}>
-          <h2>MEDIENINHABERIN UND HERAUSGEBERIN</h2>
+          <h2>MEDIA OWNER AND PUBLISHER</h2>
 
           <div className={styles.text}>
             <p>{siteInfo.name}</p>
@@ -34,7 +34,7 @@ export default function Impressum() {
         </section>
 
         <section className={styles.block}>
-          <h2>WOHNORT</h2>
+          <h2>PLACE OF RESIDENCE</h2>
 
           <div className={styles.text}>
             <p>
@@ -44,7 +44,7 @@ export default function Impressum() {
         </section>
 
         <section className={styles.block}>
-          <h2>ART UND ZWECK DER WEBSITE</h2>
+          <h2>NATURE AND PURPOSE OF THE WEBSITE</h2>
 
           <div className={styles.text}>
             <p>{siteInfo.purpose}</p>
@@ -52,20 +52,19 @@ export default function Impressum() {
         </section>
 
         <section className={styles.block}>
-          <h2>KONTAKT</h2>
+          <h2>CONTACT</h2>
 
           <div className={styles.text}>
             <p>
-              E-Mail:{" "}
-              <a href={`mailto:${siteInfo.email}`}>{siteInfo.email}</a>
+              Email: <a href={`mailto:${siteInfo.email}`}>{siteInfo.email}</a>
             </p>
           </div>
         </section>
       </div>
 
       <div className={styles.note}>
-        <Link href="/datenschutz">DATENSCHUTZ</Link>
-        <Link href="/">ZURÜCK ZUR STARTSEITE</Link>
+        <Link href="/datenschutz">PRIVACY POLICY</Link>
+        <Link href="/">BACK TO HOME</Link>
       </div>
     </main>
   );
