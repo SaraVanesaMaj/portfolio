@@ -25,13 +25,13 @@ const categories = [
     text: "Posters, typography and other graphic design studies.",
   },
   {
-    name: "Sound",
-    text: "Sound design and audio experiments.",
-  },
-  {
     name: "3D",
     text: "A short reel of studies in Maya: topology, a polygon robot, rig animation, a liquid simulation, realistic hair and cloth with HDRI lighting.",
     video: true,
+  },
+  {
+    name: "Sound",
+    text: "Sound design and audio experiments.",
   },
   {
     name: "Code",
@@ -53,62 +53,60 @@ export default function Lab() {
 
       <p className={styles.intro}>
         Experiments, studies and smaller projects that don&apos;t fit
-        into a case study. Open a category to see what&apos;s inside.
-        The archive is still growing.
+        into a case study. The archive is still growing.
       </p>
 
-      <div className={styles.list}>
+      <div className={styles.grid}>
         {categories.map((category, index) => (
-          <details key={category.name} className={styles.item}>
-            <summary className={styles.row}>
-              <span className={styles.number}>
-                {String(index + 1).padStart(2, "0")}
-              </span>
+          <article
+            key={category.name}
+            className={`${styles.card} ${
+              category.video ? styles.cardWide : ""
+            }`}
+          >
+            <div className={styles.cardInfo}>
+              <div className={styles.cardTop}>
+                <span className={styles.number}>
+                  {String(index + 1).padStart(2, "0")}
+                </span>
 
-              <span className={styles.name}>{category.name}</span>
+                <span className={styles.status}>
+                  {category.video ? "1 ITEM" : "COMING SOON"}
+                </span>
+              </div>
 
-              <span className={styles.status}>
-                {category.video ? "1 ITEM" : "COMING SOON"}
-              </span>
+              <h2 className={styles.name}>{category.name}</h2>
 
-              <span className={styles.toggle} aria-hidden="true" />
-            </summary>
+              <p className={styles.cardText}>{category.text}</p>
 
-            <div className={styles.panel}>
-              <p>{category.text}</p>
-
-              {category.video ? (
-                <>
-                  <div className={styles.videoWrap}>
-                    <video
-                      className={styles.video}
-                      controls
-                      preload="metadata"
-                      playsInline
-                      poster="/videos/3d-portfolio-poster.jpg"
-                      aria-label="3D modelling portfolio in Maya, 2023 to 2025"
-                    >
-                      <source
-                        src="/videos/3d-portfolio.mp4"
-                        type="video/mp4"
-                      />
-                    </video>
-                  </div>
-
-                  <p className={styles.panelNote}>
-                    3D-Modelling Portfolio · Maya · 2023–2025. My latest
-                    3D scene is the{" "}
-                    <Link href="/work/cozy-place">Cozy Place</Link>{" "}
-                    project.
-                  </p>
-                </>
-              ) : (
+              {category.video && (
                 <p className={styles.panelNote}>
-                  Nothing here yet. This category is being curated.
+                  3D-Modelling Portfolio · Maya · 2023–2025. My latest
+                  3D scene is the{" "}
+                  <Link href="/work/cozy-place">Cozy Place</Link>{" "}
+                  project.
                 </p>
               )}
             </div>
-          </details>
+
+            {category.video && (
+              <div className={styles.videoWrap}>
+                <video
+                  className={styles.video}
+                  controls
+                  preload="metadata"
+                  playsInline
+                  poster="/videos/3d-portfolio-poster.jpg"
+                  aria-label="3D modelling portfolio in Maya, 2023 to 2025"
+                >
+                  <source
+                    src="/videos/3d-portfolio.mp4"
+                    type="video/mp4"
+                  />
+                </video>
+              </div>
+            )}
+          </article>
         ))}
       </div>
 
