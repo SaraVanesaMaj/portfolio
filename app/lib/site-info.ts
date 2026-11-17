@@ -1,14 +1,14 @@
 /**
- * Data for the legal pages (Impressum, Datenschutz).
+ * Data for the legal pages (Legal notice, Privacy policy).
  * Update this file when something changes, e.g. when the site gets a host.
  */
 export const siteInfo = {
   name: "Sara Vanesa Maj",
   place: "2103 Langenzersdorf",
-  country: "Österreich",
+  country: "Austria",
   email: "saramaj@gmx.at",
   purpose:
-    "Private, nicht-kommerzielle Portfolio-Website zur Darstellung eigener Arbeiten.",
+    "Private, non-commercial portfolio website presenting my own work.",
 
   /** Hosting provider of the site. */
   hostingProvider:
