@@ -108,7 +108,6 @@ export default function RyanairProject() {
             <span>Design System</span>
             <span>User Flow</span>
             <span>Sketching</span>
-            <span>Prototyping</span>
             <span>Figma</span>
           </div>
         </div>
@@ -125,8 +124,7 @@ export default function RyanairProject() {
             starting point. Its desktop screens for homepage, search
             results and baggage selection were developed further and
             adapted to different screen sizes, navigation patterns
-            and touch interactions. The result is also a clickable
-            prototype in Figma.
+            and touch interactions.
           </p>
         </div>
 
@@ -214,7 +212,7 @@ export default function RyanairProject() {
             The booking journey mapped in five steps, from the
             homepage to baggage selection. Editing the search,
             personal details, payment and confirmation are not part
-            of the prototype.
+            of the flow.
           </p>
         </div>
 
