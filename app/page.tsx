@@ -138,7 +138,7 @@ const projects = [
   {
     number: "04",
     title: "VSA",
-    cover: "/images/covers/vsa.jpg",
+    cover: "/images/covers/vsa-hero.jpg",
     type: "UX/UI DESIGN",
     href: "/work/vsa",
 
@@ -598,6 +598,7 @@ export default function Home() {
                   alt={`${project.title} cover`}
                   fill
                   className="projectCoverImage"
+                loading="eager"
                   sizes="(max-width: 900px) 100vw, 33vw"
                 />
 
@@ -641,10 +642,11 @@ export default function Home() {
             <div className="projectCover">
 
               <Image
-                src="/images/covers/lab-mix.jpg"
+                src="/images/covers/lab-collage.jpg"
                 alt="A collage of work from the Lab"
                 fill
                 className="projectCoverImage"
+                loading="eager"
                 sizes="(max-width: 900px) 100vw, 33vw"
               />
 
