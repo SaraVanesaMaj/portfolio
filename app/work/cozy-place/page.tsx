@@ -12,13 +12,6 @@ export const metadata: Metadata = {
     "Cozy Place is a 3D interior scene, modelled, textured, lit and rendered from a first sketch to the final render.",
 };
 
-const sketch = {
-  src: "/images/cozy-place/sketch.jpg",
-  alt: "Hand-drawn sketch of the room with a bed, bookshelf, city view and a TV",
-  width: 1332,
-  height: 942,
-};
-
 const assets = [
   {
     src: "/images/cozy-place/sofa.jpg",
@@ -123,43 +116,11 @@ export default function CozyPlaceProject() {
         </figure>
       </section>
 
-      {/* CONCEPT */}
+      {/* TOPOLOGY */}
 
       <section className={styles.visualSectionLight}>
         <div className={styles.visualHeader}>
-          <span>02 — CONCEPT</span>
-
-          <p>
-            The layout started as a hand-drawn sketch: a bed and a
-            lounge area in front of a big window with a city view, and
-            a wall-mounted TV opposite.
-          </p>
-        </div>
-
-        <figure className={styles.sketch}>
-          <div className={styles.screenFrame}>
-            <Image
-              src={sketch.src}
-              alt={sketch.alt}
-              width={sketch.width}
-              height={sketch.height}
-              className={styles.figureImage}
-              sizes="(max-width: 900px) 90vw, 40vw"
-            />
-          </div>
-
-          <figcaption className={styles.screenCaption}>
-            <span>SKETCH</span>
-            <span>First layout by hand</span>
-          </figcaption>
-        </figure>
-      </section>
-
-      {/* TOPOLOGY */}
-
-      <section className={styles.visualSectionDark}>
-        <div className={styles.visualHeader}>
-          <span>03 — TOPOLOGY</span>
+          <span>02 — TOPOLOGY</span>
 
           <p>
             The whole scene as a wireframe. It shows the mesh behind
@@ -183,9 +144,9 @@ export default function CozyPlaceProject() {
 
       {/* ASSETS */}
 
-      <section className={styles.visualSectionLight}>
+      <section className={styles.visualSectionDark}>
         <div className={styles.visualHeader}>
-          <span>04 — THE OBJECTS</span>
+          <span>03 — THE OBJECTS</span>
 
           <p>
             Each piece of furniture was modelled on its own and

@@ -153,20 +153,20 @@ const projects = [
 
   {
     number: "05",
-    title: "Motion & Animation",
-    type: "MEDIA COLLECTION",
-    href: "#",
+    title: "VSA",
+    type: "UX/UI DESIGN",
+    href: "/work/vsa",
 
     description:
-      "A selection of motion graphics, animation, editing, visual effects and audiovisual experiments.",
+      "A universal platform for managing digital assets like social media accounts and crypto wallets after a user's death, designed in light and dark mode.",
 
     skills: [
-      "After Effects",
-      "Premiere Pro",
-      "Motion Design",
-      "Animation",
-      "Video Editing",
-      "Sound Design",
+      "UX/UI",
+      "Wireframing",
+      "Adobe XD",
+      "Mockups",
+      "YouTrack",
+      "Balsamiq",
     ],
   },
 ];
