@@ -641,7 +641,7 @@ export default function Home() {
             <div className="projectCover">
 
               <Image
-                src="/images/covers/lab.jpg"
+                src="/images/covers/lab-mix.jpg"
                 alt="A collage of work from the Lab"
                 fill
                 className="projectCoverImage"
