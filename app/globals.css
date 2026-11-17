@@ -267,7 +267,7 @@ section {
   position: absolute;
 
   left: 46%;
-  bottom: -40px;
+  bottom: calc(-40px - 5vh);
 
   transform: translateX(-50%);
 
@@ -1135,6 +1135,19 @@ section {
     height: 52vh;
 
     bottom: -5px;
+  }
+
+  /* SARA sits right below the menu, MAJ stays on the sweater */
+  .heroContent {
+    justify-content: space-between;
+
+    padding-top: 2vh;
+  }
+
+  .maj {
+    margin-top: 0;
+
+    margin-bottom: calc(50vw - 5px);
   }
 
   .heroDescription {
