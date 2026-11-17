@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { useRef, useState } from "react";
+import { useRef } from "react";
 
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -78,6 +78,7 @@ const projects = [
   {
     number: "01",
     title: "ReQuest",
+    cover: "/images/covers/request.jpg",
     type: "DIPLOMA PROJECT",
     href: "/work/request",
 
@@ -97,6 +98,7 @@ const projects = [
   {
     number: "02",
     title: "FitMind",
+    cover: "/images/covers/fitmind.jpg",
     type: "APPLIED MOTION GRAPHICS",
     href: "/work/fitmind",
 
@@ -116,6 +118,7 @@ const projects = [
   {
     number: "03",
     title: "Ryanair Responsive Redesign",
+    cover: "/images/covers/ryanair.jpg",
     type: "RESPONSIVE DESIGN",
     href: "/work/ryanair",
 
@@ -135,6 +138,7 @@ const projects = [
   {
     number: "04",
     title: "VSA",
+    cover: "/images/covers/vsa.jpg",
     type: "UX/UI DESIGN",
     href: "/work/vsa",
 
@@ -154,6 +158,7 @@ const projects = [
   {
     number: "05",
     title: "Cozy Place",
+    cover: "/images/covers/cozy-place.jpg",
     type: "3D MODELLING",
     href: "/work/cozy-place",
 
@@ -172,53 +177,12 @@ const projects = [
 ];
 
 
-type Project = (typeof projects)[number];
-
-function ProjectRowContent({
-  project,
-  hasPage,
-}: {
-  project: Project;
-  hasPage: boolean;
-}) {
-  return (
-    <>
-      <span className="projectNumber">
-        {project.number}
-      </span>
-
-      <div className="projectText">
-        <span className="projectType">
-          {project.type}
-          {!hasPage && " · CASE STUDY COMING SOON"}
-        </span>
-
-        <h3>{project.title}</h3>
-
-        <div className="projectSkills">
-          {project.skills.map((skill) => (
-            <span key={skill}>{skill}</span>
-          ))}
-        </div>
-      </div>
-
-      <span className="projectArrow">
-        {hasPage ? "↗" : ""}
-      </span>
-    </>
-  );
-}
-
-
 /* =========================================
    HOME
 ========================================= */
 
 export default function Home() {
   const pageRef = useRef<HTMLElement>(null);
-
-  const [activeProject, setActiveProject] =
-    useState(0);
 
 
   useGSAP(
@@ -407,7 +371,7 @@ export default function Home() {
       ===================================== */
 
       gsap.fromTo(
-        ".projectRow",
+        ".projectCard",
 
         {
           opacity: 0,
@@ -477,10 +441,6 @@ export default function Home() {
       scope: pageRef,
     }
   );
-
-
-  const active =
-    projects[activeProject];
 
 
   return (
@@ -586,13 +546,126 @@ export default function Home() {
               DOWNLOAD CV ↓
             </a>
 
-            <a href="#about">
+            <a href="#work">
 
               SCROLL TO EXPLORE ↓
 
             </a>
 
           </div>
+
+        </div>
+
+      </section>
+
+
+      {/* =====================================
+          FEATURED WORK
+      ===================================== */}
+
+      <section
+        className="workSection"
+        id="work"
+      >
+
+        <div className="sectionHeader workHeader">
+
+          <span>
+            01 — FEATURED WORK
+          </span>
+
+          <span>
+            SELECTED PROJECTS
+          </span>
+
+        </div>
+
+
+        <div className="workGrid">
+
+          {projects.map((project) => (
+
+            <Link
+              key={project.title}
+              href={project.href}
+              className="projectCard"
+            >
+
+              <div className="projectCover">
+
+                <Image
+                  src={project.cover}
+                  alt={`${project.title} cover`}
+                  fill
+                  className="projectCoverImage"
+                  sizes="(max-width: 900px) 100vw, 33vw"
+                />
+
+              </div>
+
+
+              <div className="projectCardBody">
+
+                <div className="projectCardTop">
+
+                  <span>{project.number}</span>
+
+                  <span>{project.type}</span>
+
+                </div>
+
+                <h3>{project.title}</h3>
+
+                <p>{project.description}</p>
+
+                <div className="projectCardFoot">
+
+                  <span>VIEW CASE STUDY</span>
+
+                  <span>↗</span>
+
+                </div>
+
+              </div>
+
+            </Link>
+
+          ))}
+
+
+          <Link
+            href="/lab"
+            className="projectCard projectCardLab"
+          >
+
+            <div className="projectCardBody">
+
+              <div className="projectCardTop">
+
+                <span>+</span>
+
+                <span>THE LAB</span>
+
+              </div>
+
+              <h3>More experiments, films &amp; 3D.</h3>
+
+              <p>
+                Animation, sound, photography and smaller
+                studies live in the Lab.
+              </p>
+
+              <div className="projectCardFoot">
+
+                <span>EXPLORE THE LAB</span>
+
+                <span>↗</span>
+
+              </div>
+
+            </div>
+
+          </Link>
 
         </div>
 
@@ -611,7 +684,7 @@ export default function Home() {
         <div className="sectionHeader sectionReveal">
 
           <span>
-            01 — ABOUT
+            02 — ABOUT
           </span>
 
           <span>
@@ -783,148 +856,6 @@ export default function Home() {
           VIEW FULL PROFILE ON LINKEDIN ↗
 
         </a>
-
-      </section>
-
-
-      {/* =====================================
-          FEATURED WORK
-      ===================================== */}
-
-      <section
-        className="workSection"
-        id="work"
-      >
-
-        <div className="sectionHeader workHeader">
-
-          <span>
-            02 — FEATURED WORK
-          </span>
-
-          <span>
-            SELECTED PROJECTS
-          </span>
-
-        </div>
-
-
-        <div className="workLayout">
-
-          {/* PROJECT LIST */}
-
-          <div className="projectList">
-
-            {projects.map((project, index) => {
-              const hasPage = project.href !== "#";
-
-              const activate = () =>
-                setActiveProject(index);
-
-              return hasPage ? (
-                <Link
-                  key={project.title}
-                  href={project.href}
-                  className="projectRow"
-                  onMouseEnter={activate}
-                  onFocus={activate}
-                >
-                  <ProjectRowContent
-                    project={project}
-                    hasPage
-                  />
-                </Link>
-              ) : (
-                <div
-                  key={project.title}
-                  className="projectRow isSoon"
-                  tabIndex={0}
-                  onMouseEnter={activate}
-                  onFocus={activate}
-                >
-                  <ProjectRowContent
-                    project={project}
-                    hasPage={false}
-                  />
-                </div>
-              );
-            })}
-
-          </div>
-
-
-          {/* PREVIEW */}
-
-          <aside className="workPreview">
-
-            <div className="previewTop">
-
-              <span>
-                {active.number}
-              </span>
-
-              <span>
-                {active.type}
-              </span>
-
-            </div>
-
-
-            <div className="previewCenter">
-
-              <span className="previewGhost">
-
-                {active.number}
-
-              </span>
-
-
-              <h4>
-                {active.title}
-              </h4>
-
-
-              <p>
-                {active.description}
-              </p>
-
-
-              <div className="previewSkills">
-
-                {active.skills.map(
-                  (skill) => (
-
-                    <span key={skill}>
-
-                      {skill}
-
-                    </span>
-
-                  )
-                )}
-
-              </div>
-
-            </div>
-
-
-            <div className="previewBottom">
-
-              <span>
-                {active.href !== "#"
-                  ? "VIEW CASE STUDY"
-                  : "CASE STUDY COMING SOON"}
-              </span>
-
-              <span>
-                {active.href !== "#" ? "↗" : ""}
-              </span>
-
-            </div>
-
-          </aside>
-
-        </div>
 
       </section>
 
