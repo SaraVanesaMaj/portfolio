@@ -76,6 +76,16 @@ const items: Item[] = [
   },
   /* column 2 */
   {
+    title: "Toy model: Stitch",
+    text: "A stylised toy figure sculpted and rendered in Blender.",
+    tag: "BLENDER",
+    kind: "image",
+    col: 0,
+    src: "/images/lab/blender-stitch.webp",
+    width: 1100,
+    height: 619,
+  },
+  {
     title: "Sound design",
     text: "A sound design exercise: building the audio for moving images.",
     tag: "SOUND",
@@ -122,6 +132,31 @@ const items: Item[] = [
     height: 720,
   },
   /* column 3 */
+  {
+    title: "High-poly headphones",
+    text: "A detailed high-poly model of over-ear headphones, modelled and rendered in Blender.",
+    tag: "BLENDER",
+    kind: "mosaic",
+    col: 1,
+    layout: "stack",
+    images: [
+      "/images/lab/blender-headphones-light.webp",
+      "/images/lab/blender-headphones-dark1.webp",
+      "/images/lab/blender-headphones-dark2.webp",
+    ],
+  },
+  {
+    title: "Rolex - brand animation",
+    text: "An animated product film for a watch, built from type, particles and motion.",
+    tag: "MOTION",
+    kind: "video",
+    col: 1,
+    src: "/videos/lab-rolex.mp4",
+    poster: "/images/lab/poster-rolex.jpg",
+    width: 1100,
+    height: 619,
+    href: "https://youtu.be/44fTrB4mUSo",
+  },
   {
     title: "Capturing shapes",
     text: "A photography assignment: finding forms in Vienna's architecture.",
@@ -171,6 +206,16 @@ const items: Item[] = [
     width: 1280,
     height: 720,
     href: "https://youtu.be/dI1vxlD5_oQ",
+  },
+  {
+    title: "Toon rocket",
+    text: "A stylised toon rocket with a glowing flame, modelled and lit in Blender.",
+    tag: "BLENDER",
+    kind: "image",
+    col: 2,
+    src: "/images/lab/blender-rocket.webp",
+    width: 540,
+    height: 960,
   },
   {
     title: "Sendung ohne Namen",

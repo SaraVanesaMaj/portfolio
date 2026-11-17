@@ -138,7 +138,7 @@ const projects = [
   {
     number: "04",
     title: "VSA",
-    cover: "/images/covers/vsa-screen.jpg",
+    cover: "/images/covers/vsa-pricing.jpg",
     type: "UX/UI DESIGN",
     href: "/work/vsa",
 
