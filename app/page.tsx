@@ -203,6 +203,11 @@ export default function Home() {
          HERO
       ===================================== */
 
+      const isDesktop = window.matchMedia("(min-width: 901px)").matches;
+
+      /* the browser bar on phones must not make the pinned hero jump */
+      ScrollTrigger.config({ ignoreMobileResize: true });
+
       const heroTimeline = gsap.timeline({
         scrollTrigger: {
           trigger: ".hero",
@@ -276,15 +281,22 @@ export default function Home() {
 
         .to(
           ".heroPortrait",
-          {
-            yPercent: -8,
+          isDesktop
+            ? {
+                yPercent: -8,
 
-            scale: 1.08,
+                scale: 1.08,
 
-            opacity: 0.12,
+                opacity: 0.12,
 
-            ease: "none",
-          },
+                ease: "none",
+              }
+            : {
+                /* phones: the portrait stays calm and only fades a little */
+                opacity: 0.35,
+
+                ease: "none",
+              },
 
           0
         )

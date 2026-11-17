@@ -1040,10 +1040,9 @@ section {
 
     border-radius: 28px;
 
-    background: rgba(9, 9, 9, 0.96);
-
-    backdrop-filter: blur(18px);
-    -webkit-backdrop-filter: blur(18px);
+    /* solid background: a backdrop-filter inside the nav's own
+       backdrop-filter renders nothing on iPhones */
+    background: #0b0b0b;
 
     opacity: 0;
     visibility: hidden;
