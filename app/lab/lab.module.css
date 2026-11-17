@@ -185,49 +185,6 @@
   border-bottom: 1px solid var(--grey);
 }
 
-.more {
-  margin-top: 50px;
-}
-
-.moreLabel {
-  color: var(--grey);
-
-  font-size: 11px;
-
-  letter-spacing: 0.15em;
-}
-
-.moreList {
-  margin-top: 16px;
-
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-
-  gap: 12px;
-}
-
-.moreList a {
-  padding: 18px 20px;
-
-  display: flex;
-  justify-content: space-between;
-
-  border: 1px solid var(--line);
-  border-radius: 6px;
-
-  font-size: 14px;
-
-  transition:
-    border-color 0.3s ease,
-    transform 0.3s ease;
-}
-
-.moreList a:hover {
-  border-color: #4a4a4a;
-
-  transform: translateY(-3px);
-}
-
 .footer {
   margin-top: auto;
 
