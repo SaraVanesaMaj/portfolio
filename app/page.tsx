@@ -577,6 +577,15 @@ export default function Home() {
             </span>
 
 
+            <a
+              href="/cv/Sara-Maj-CV.pdf"
+              target="_blank"
+              rel="noreferrer"
+              className="cvButton"
+            >
+              DOWNLOAD CV ↓
+            </a>
+
             <a href="#about">
 
               SCROLL TO EXPLORE ↓
@@ -1059,6 +1068,16 @@ export default function Home() {
             <strong>LinkedIn</strong>
             <span>linkedin.com/in/sara-vanesa-maj</span>
             <em>↗</em>
+          </a>
+
+          <a
+            href="/cv/Sara-Maj-CV.pdf"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <strong>CV</strong>
+            <span>Download as PDF</span>
+            <em>↓</em>
           </a>
 
           <a

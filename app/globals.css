@@ -495,10 +495,11 @@ section {
 .journeyTimeline {
   position: relative;
 
-  width: min(1150px, 92%);
+  width: min(940px, 92%);
 
   margin-top: 60px;
-  margin-left: clamp(0px, 6vw, 110px);
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .journeyLine {
@@ -1391,4 +1392,61 @@ section {
   .legalBar {
     padding: 26px 22px;
   }
+}
+
+
+/* CV BUTTONS */
+
+.cvButton,
+.siteNavLinks a.siteNavCv {
+  display: inline-flex;
+
+  white-space: nowrap;
+  align-items: center;
+
+  padding: 10px 18px;
+
+  border-radius: 100px;
+
+  background: var(--accent);
+  color: #090909;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 0.13em;
+
+  transition:
+    transform 0.25s ease,
+    opacity 0.25s ease;
+}
+
+.cvButton:hover,
+.siteNavLinks a.siteNavCv:hover {
+  opacity: 1;
+
+  transform: translateY(-2px);
+}
+
+.siteNavLinks {
+  align-items: center;
+}
+
+@media (max-width: 900px) {
+  .siteNavLinks a.siteNavCv {
+    align-self: flex-start;
+
+    margin-top: 14px;
+    padding: 12px 20px;
+
+    border-bottom: 0;
+  }
+}
+
+.heroInfo a.cvButton {
+  align-self: flex-end;
+
+  margin-bottom: 8px;
+
+  color: #090909;
 }
