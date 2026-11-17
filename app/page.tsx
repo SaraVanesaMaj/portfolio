@@ -655,13 +655,13 @@ export default function Home() {
 
               <div className="projectCardTop">
 
-                <span>06</span>
+                <span>+</span>
 
-                <span>EXPERIMENTS</span>
+                <span>MORE WORK</span>
 
               </div>
 
-              <h3>The Lab</h3>
+              <h3>More projects</h3>
 
               <p>
                 Animation, film, 3D, sound, graphics and

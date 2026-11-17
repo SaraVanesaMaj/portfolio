@@ -89,18 +89,6 @@ const items: Item[] = [
 
   /* column 2 */
   {
-    title: "Rolex - brand animation",
-    text: "An animated product film for a watch, built from type, particles and motion.",
-    tag: "MOTION",
-    kind: "video",
-    col: 1,
-    src: "/videos/lab-rolex.mp4",
-    poster: "/images/lab/poster-rolex.jpg",
-    width: 1100,
-    height: 619,
-    href: "https://youtu.be/44fTrB4mUSo",
-  },
-  {
     title: "Sound design",
     text: "A sound design exercise: building the audio for moving images.",
     tag: "SOUND",
@@ -147,6 +135,18 @@ const items: Item[] = [
     href: "https://youtu.be/atB-eYxZHI4",
   },
 
+  {
+    title: "Rolex - brand animation",
+    text: "An animated product film for a watch, built from type, particles and motion.",
+    tag: "MOTION",
+    kind: "video",
+    col: 1,
+    src: "/videos/lab-rolex.mp4",
+    poster: "/images/lab/poster-rolex.jpg",
+    width: 1100,
+    height: 619,
+    href: "https://youtu.be/44fTrB4mUSo",
+  },
   /* column 3 */
   {
     title: "Capturing shapes",
