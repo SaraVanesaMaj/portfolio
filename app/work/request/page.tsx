@@ -94,7 +94,7 @@ export default function RequestProject() {
 
       {/* WIREFRAMES */}
 
-      <section className={styles.visualSectionLight}>
+      <section className={styles.visualSectionDark}>
         <div className={styles.visualHeader}>
           <span>02 — WIREFRAMES</span>
 
@@ -104,7 +104,7 @@ export default function RequestProject() {
           </p>
         </div>
 
-        <div className={styles.visual}>
+        <div className={styles.visualDark}>
           <Image
             src="/images/request/request-wireframes.png"
             alt="ReQuest wireframes"
@@ -117,7 +117,9 @@ export default function RequestProject() {
 
       {/* FINAL UI */}
 
-      <section className={styles.visualSectionDark}>
+      <section
+        className={`${styles.visualSectionDark} ${styles.sectionLine}`}
+      >
         <div className={styles.visualHeader}>
           <span>03 — FINAL UI</span>
 
