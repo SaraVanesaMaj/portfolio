@@ -74,18 +74,6 @@ const items: Item[] = [
     height: 720,
     href: "https://youtu.be/VGcLE3G1n9c",
   },
-  {
-    title: "TGM logo animation",
-    text: "An animated logo for the IT department of TGM Vienna.",
-    tag: "MOTION",
-    kind: "video",
-    col: 0,
-    src: "/videos/lab-logo.mp4",
-    poster: "/images/lab/poster-logo.jpg",
-    width: 1100,
-    height: 779,
-    href: "https://youtu.be/Oe3J0A4UB_Y",
-  },
   /* column 2 */
   {
     title: "Sound design",
@@ -98,6 +86,18 @@ const items: Item[] = [
     width: 1100,
     height: 880,
     href: "https://youtu.be/ggdabRdK6Qk",
+  },
+  {
+    title: "TGM logo animation",
+    text: "An animated logo for the IT department of TGM Vienna.",
+    tag: "MOTION",
+    kind: "video",
+    col: 1,
+    src: "/videos/lab-logo.mp4",
+    poster: "/images/lab/poster-logo.jpg",
+    width: 1100,
+    height: 779,
+    href: "https://youtu.be/Oe3J0A4UB_Y",
   },
   {
     title: "Delayed",

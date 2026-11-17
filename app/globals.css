@@ -359,15 +359,15 @@ section {
 ========================================= */
 
 .aboutJourney {
-  padding: 90px 65px 30px;
+  padding: 90px 65px 0;
 
-  background: var(--white);
+  background: var(--dark);
 
-  color: var(--black);
+  color: var(--white);
 }
 
 .journeySection {
-  padding: 80px 65px 90px;
+  padding: 0 65px 90px;
 
   background: var(--dark);
 
@@ -411,7 +411,7 @@ section {
 ========================================= */
 
 .aboutIntro {
-  padding: 60px 0 70px;
+  padding: 60px 0 80px;
 
   display: grid;
 
@@ -440,6 +440,10 @@ section {
   font-size: 18px;
 
   line-height: 1.55;
+}
+
+.aboutCopy p:not(:first-child) {
+  color: #a3a3a3;
 }
 
 .aboutCopy p:first-child {
