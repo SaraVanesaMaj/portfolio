@@ -102,6 +102,16 @@
   gap: 2px;
 }
 
+.mosaicStack .mosaicImg {
+  aspect-ratio: 4 / 3;
+}
+
+.mosaicStack .mosaicImg:first-child {
+  grid-column: 1 / -1;
+
+  aspect-ratio: 3 / 2;
+}
+
 .mosaicImg {
   display: block;
 

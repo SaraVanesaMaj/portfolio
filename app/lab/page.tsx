@@ -17,6 +17,7 @@ type Item = {
   text: string;
   tag: string;
   kind: "video" | "image" | "mosaic";
+  layout?: "square" | "stack";
   src?: string;
   images?: string[];
   poster?: string;
@@ -27,6 +28,17 @@ type Item = {
 
 const items: Item[] = [
   {
+    title: "3D modelling in Maya",
+    text: "Studies in modelling, rigging, simulation and lighting.",
+    tag: "3D",
+    kind: "video",
+    src: "/videos/3d-portfolio.mp4",
+    poster: "/videos/3d-portfolio-poster.jpg",
+    width: 1280,
+    height: 720,
+    href: "https://youtu.be/enPP5eKyBco",
+  },
+  {
     title: "Rolex — brand animation",
     text: "An animated product film for a watch, built from type, particles and motion.",
     tag: "MOTION",
@@ -36,6 +48,16 @@ const items: Item[] = [
     width: 1100,
     height: 619,
     href: "https://youtu.be/44fTrB4mUSo",
+  },
+  {
+    title: "Spring",
+    text: "A spring scene animated in After Effects, with a bee flying through the flowers.",
+    tag: "AFTER EFFECTS",
+    kind: "video",
+    src: "/videos/lab-spring.mp4",
+    poster: "/images/lab/poster-spring.jpg",
+    width: 1280,
+    height: 720,
   },
   {
     title: "Vienna Night Riders",
@@ -80,17 +102,6 @@ const items: Item[] = [
     href: "https://youtu.be/Q_T--YyAsNA",
   },
   {
-    title: "3D modelling in Maya",
-    text: "Studies in modelling, rigging, simulation and lighting.",
-    tag: "3D",
-    kind: "video",
-    src: "/videos/3d-portfolio.mp4",
-    poster: "/videos/3d-portfolio-poster.jpg",
-    width: 1280,
-    height: 720,
-    href: "https://youtu.be/enPP5eKyBco",
-  },
-  {
     title: "Sendung ohne Namen",
     text: "An experimental piece with the feel of a news show.",
     tag: "MOTION",
@@ -120,6 +131,18 @@ const items: Item[] = [
       "/images/lab/gfx-flower.webp",
       "/images/lab/gfx-palm.webp",
       "/images/lab/gfx-pattern.webp",
+    ],
+  },
+  {
+    title: "Capturing shapes",
+    text: "A photography assignment: finding forms in Vienna's architecture.",
+    tag: "PHOTO",
+    kind: "mosaic",
+    layout: "stack",
+    images: [
+      "/images/lab/shape-dc-tower.webp",
+      "/images/lab/shape-gasometer.webp",
+      "/images/lab/shape-riesenrad.webp",
     ],
   },
 ];
@@ -181,7 +204,11 @@ export default function Lab() {
               )}
 
               {item.kind === "mosaic" && (
-                <div className={styles.mosaic}>
+                <div
+                  className={`${styles.mosaic} ${
+                    item.layout === "stack" ? styles.mosaicStack : ""
+                  }`}
+                >
                   {item.images?.map((image) => (
                     <Image
                       key={image}
