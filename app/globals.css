@@ -1139,15 +1139,16 @@ section {
 
   /* SARA sits right below the menu, MAJ stays on the sweater */
   .heroContent {
-    justify-content: space-between;
+    justify-content: flex-start;
 
     padding-top: 2vh;
   }
 
+  /* MAJ sits right of the tagline, just under SARA */
   .maj {
-    margin-top: 0;
+    margin-top: 2vw;
 
-    margin-bottom: calc(50vw - 5px);
+    margin-bottom: 0;
   }
 
   .heroDescription {

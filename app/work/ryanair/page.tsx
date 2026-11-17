@@ -142,37 +142,11 @@ export default function RyanairProject() {
         </div>
       </section>
 
-      {/* USER FLOW */}
+      {/* SKETCHES */}
 
       <section className={styles.visualSectionLight}>
         <div className={styles.visualHeader}>
-          <span>02 - USER FLOW</span>
-
-          <p>
-            The booking journey mapped in five steps, from the
-            homepage to baggage selection. Editing the search,
-            personal details, payment and confirmation are not part
-            of the prototype.
-          </p>
-        </div>
-
-        <div className={`${styles.figure} ${styles.figureLight}`}>
-          <Image
-            src="/images/ryanair/user-flow.png"
-            alt="User flow in five steps: homepage, search flights, search results, select flight, select baggage"
-            width={904}
-            height={206}
-            className={styles.figureImage}
-            sizes="(max-width: 900px) 760px, 90vw"
-          />
-        </div>
-      </section>
-
-      {/* SKETCHES */}
-
-      <section className={styles.visualSectionDark}>
-        <div className={styles.visualHeader}>
-          <span>03 - SKETCHES</span>
+          <span>02 - SKETCHES</span>
 
           <p>
             Hand-drawn wireframes with numbered annotations that
@@ -195,9 +169,9 @@ export default function RyanairProject() {
 
       {/* STARTING POINT: DESKTOP SCREENS */}
 
-      <section className={styles.visualSectionLight}>
+      <section className={styles.visualSectionDark}>
         <div className={styles.visualHeader}>
-          <span>04 - STARTING POINT</span>
+          <span>03 - STARTING POINT</span>
 
           <p>
             The desktop screens of the first redesign: homepage,
@@ -232,9 +206,9 @@ export default function RyanairProject() {
 
       {/* DESIGN SYSTEM */}
 
-      <section className={styles.visualSectionDark}>
+      <section className={styles.visualSectionLight}>
         <div className={styles.visualHeader}>
-          <span>05 - DESIGN SYSTEM</span>
+          <span>04 - DESIGN SYSTEM</span>
 
           <p>
             A shared style guide keeps every screen size consistent.
@@ -302,6 +276,32 @@ export default function RyanairProject() {
               sizes="(max-width: 900px) 90vw, 40vw"
             />
           </figure>
+        </div>
+      </section>
+
+      {/* USER FLOW */}
+
+      <section className={styles.visualSectionDark}>
+        <div className={styles.visualHeader}>
+          <span>05 - USER FLOW</span>
+
+          <p>
+            The booking journey mapped in five steps, from the
+            homepage to baggage selection. Editing the search,
+            personal details, payment and confirmation are not part
+            of the prototype.
+          </p>
+        </div>
+
+        <div className={`${styles.figure} ${styles.figureLight}`}>
+          <Image
+            src="/images/ryanair/user-flow.png"
+            alt="User flow in five steps: homepage, search flights, search results, select flight, select baggage"
+            width={904}
+            height={206}
+            className={styles.figureImage}
+            sizes="(max-width: 900px) 760px, 90vw"
+          />
         </div>
       </section>
 
