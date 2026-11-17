@@ -1071,16 +1071,6 @@ export default function Home() {
           </a>
 
           <a
-            href="/cv/Sara-Maj-CV.pdf"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <strong>CV</strong>
-            <span>Download as PDF</span>
-            <em>↓</em>
-          </a>
-
-          <a
             href="https://github.com/SaraVanesaMaj"
             target="_blank"
             rel="noreferrer"
@@ -1088,6 +1078,16 @@ export default function Home() {
             <strong>GitHub</strong>
             <span>github.com/SaraVanesaMaj</span>
             <em>↗</em>
+          </a>
+
+          <a
+            href="/cv/Sara-Maj-CV.pdf"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <strong>CV</strong>
+            <span>Download as PDF</span>
+            <em>↓</em>
           </a>
 
         </div>

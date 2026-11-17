@@ -51,8 +51,52 @@
   line-height: 1.55;
 }
 
+.ytButton {
+  align-self: flex-start;
+
+  margin-top: 40px;
+  padding: 16px 26px;
+
+  display: inline-flex;
+  align-items: center;
+
+  gap: 14px;
+
+  border-radius: 100px;
+
+  background: var(--white);
+  color: #090909;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  letter-spacing: 0.13em;
+
+  transition: transform 0.25s ease;
+}
+
+.ytButton:hover {
+  transform: translateY(-3px);
+}
+
+.ytIcon {
+  width: 26px;
+  height: 26px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 100%;
+
+  background: #ff0033;
+  color: #fff;
+
+  font-size: 9px;
+}
+
 .gallery {
-  margin: 70px 0 0;
+  margin: 40px 0 0;
 
   display: grid;
   grid-template-columns: repeat(3, 1fr);
