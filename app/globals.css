@@ -1120,6 +1120,9 @@ section {
 
   .hero {
     padding-top: 95px;
+
+    /* fixed height: must not change when the phone's browser bar hides */
+    min-height: 100svh;
   }
 
   .sara,
@@ -1136,11 +1139,11 @@ section {
   .heroPortrait {
     left: 50%;
 
-    bottom: calc(-15px - 4vh);
+    bottom: calc(-15px - 4svh);
 
     width: 70vw;
 
-    height: 58vh;
+    height: 58svh;
   }
 
 
@@ -1260,16 +1263,16 @@ section {
   .heroPortrait {
     width: 82vw;
 
-    height: 52vh;
+    height: 52svh;
 
-    bottom: calc(-5px - 4vh);
+    bottom: calc(-5px - 4svh);
   }
 
   /* SARA sits right below the menu, MAJ stays on the sweater */
   .heroContent {
     justify-content: flex-start;
 
-    padding-top: 2vh;
+    padding-top: 2svh;
   }
 
   /* MAJ sits right of the tagline, just under SARA */
