@@ -361,48 +361,48 @@ section {
 .aboutJourney {
   padding: 90px 65px 0;
 
-  background: var(--dark);
+  background: var(--white);
 
-  color: var(--white);
+  color: var(--black);
 }
 
 .journeySection {
   padding: 0 65px 90px;
 
-  background: var(--dark);
+  background: var(--white);
 
-  color: var(--white);
+  color: var(--black);
 }
 
 .journeySection .journeyHeading {
-  border-bottom-color: var(--line);
+  border-bottom-color: #c9c6c0;
 }
 
 .journeySection .journeyHeading p,
 .journeySection .journeyIndex,
 .journeySection .journeyMeta {
-  color: var(--grey);
+  color: #666;
 }
 
 .journeySection .journeyLine {
-  background: var(--line);
+  background: #d4d1cb;
 }
 
 .journeySection .journeyLineFill,
 .journeySection .journeyDot {
-  background: var(--white);
+  background: var(--black);
 }
 
 .journeySection .journeyContent p {
-  color: #a3a3a3;
+  color: #555;
 }
 
 .journeySection .journeyDetail {
-  border-color: #3a3a3a;
+  border-color: #bdb9b2;
 }
 
 .journeySection .linkedinLink {
-  border-bottom-color: var(--white);
+  border-bottom-color: var(--black);
 }
 
 
@@ -443,7 +443,7 @@ section {
 }
 
 .aboutCopy p:not(:first-child) {
-  color: #a3a3a3;
+  color: #555;
 }
 
 .aboutCopy p:first-child {
