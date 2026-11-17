@@ -42,6 +42,16 @@ const items: Item[] = [
     href: "https://youtu.be/enPP5eKyBco",
   },
   {
+    title: "Typography",
+    text: "Letters cut from found signs and assembled into a name.",
+    tag: "GRAPHICS",
+    kind: "image",
+    col: 0,
+    src: "/images/lab/typo-sara.webp",
+    width: 630,
+    height: 475,
+  },
+  {
     title: "Vienna Night Riders",
     text: "A two-minute film intro about Vienna's riding culture, planned with a storyboard.",
     tag: "FILM",
@@ -76,17 +86,6 @@ const items: Item[] = [
     height: 779,
     href: "https://youtu.be/Oe3J0A4UB_Y",
   },
-  {
-    title: "Typography",
-    text: "Letters cut from found signs and assembled into a name.",
-    tag: "GRAPHICS",
-    kind: "image",
-    col: 0,
-    src: "/images/lab/typo-sara.webp",
-    width: 630,
-    height: 475,
-  },
-
   /* column 2 */
   {
     title: "Sound design",
@@ -121,31 +120,6 @@ const items: Item[] = [
     poster: "/images/lab/poster-spring.jpg",
     width: 1280,
     height: 720,
-  },
-  {
-    title: "Photoshop generative fill",
-    text: "A set and lighting design exercise, extended with generative fill.",
-    tag: "PHOTOSHOP",
-    kind: "video",
-    col: 1,
-    src: "/videos/lab-genfill.mp4",
-    poster: "/images/lab/poster-genfill.jpg",
-    width: 960,
-    height: 720,
-    href: "https://youtu.be/atB-eYxZHI4",
-  },
-
-  {
-    title: "Rolex - brand animation",
-    text: "An animated product film for a watch, built from type, particles and motion.",
-    tag: "MOTION",
-    kind: "video",
-    col: 1,
-    src: "/videos/lab-rolex.mp4",
-    poster: "/images/lab/poster-rolex.jpg",
-    width: 1100,
-    height: 619,
-    href: "https://youtu.be/44fTrB4mUSo",
   },
   /* column 3 */
   {
