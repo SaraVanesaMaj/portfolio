@@ -14,33 +14,6 @@ export const metadata: Metadata = {
     "FitMind is a wellness app concept for water, activity, breathing and sleep, built as a Framer prototype with applied motion graphics.",
 };
 
-const brief = [
-  {
-    title: "Working prototype",
-    text: "A clear, working Framer prototype with applied motion graphics, shared as one project link.",
-  },
-  {
-    title: "Required motion",
-    text: "Intro, start or loading animation, transitions, and feedback states for hover, click and event listeners.",
-  },
-  {
-    title: "Character animation",
-    text: "Where it supports the concept. It is about the motion and the interaction, not about how realistic the character looks.",
-  },
-  {
-    title: "Clean interface",
-    text: "A visually clean, understandable presentation of the interface.",
-  },
-  {
-    title: "Tested interactions",
-    text: "All core interactions tested: hover, click, delay and other relevant triggers.",
-  },
-  {
-    title: "Lottie animations",
-    text: "Exported Lottie/JSON files that are properly embedded and functioning.",
-  },
-];
-
 const pillars = [
   "Drink water",
   "Stay active",
@@ -145,40 +118,11 @@ export default function FitMindProject() {
         </div>
       </section>
 
-      {/* BRIEF */}
-
-      <section className={styles.visualSectionLight}>
-        <div className={styles.visualHeader}>
-          <span>01 — THE BRIEF</span>
-
-          <p>
-            Build a coherent, working prototype in Framer in which
-            motion supports the interface. It does not need to be
-            huge: the strongest submissions show a clear concept,
-            motion that supports the interface and a technically
-            stable implementation.
-          </p>
-        </div>
-
-        <ul className={styles.checklist}>
-          {brief.map((item, index) => (
-            <li key={item.title}>
-              <span className={styles.checkMark} aria-hidden="true">
-                {String(index + 1).padStart(2, "0")}
-              </span>
-
-              <h3>{item.title}</h3>
-              <p>{item.text}</p>
-            </li>
-          ))}
-        </ul>
-      </section>
-
       {/* ABOUT */}
 
       <section className={styles.visualSectionDark}>
         <div className={styles.visualHeader}>
-          <span>02 — THE APP</span>
+          <span>01 — THE APP</span>
 
           <p>
             FitMind helps you keep your daily habits in view, from
@@ -218,7 +162,7 @@ export default function FitMindProject() {
 
       <section className={styles.visualSectionLight}>
         <div className={styles.visualHeader}>
-          <span>03 — SCREENS</span>
+          <span>02 — SCREENS</span>
 
           <p>
             Six screens of the prototype: a splash screen, the
@@ -253,7 +197,7 @@ export default function FitMindProject() {
 
       <section className={styles.visualSectionDark}>
         <div className={styles.visualHeader}>
-          <span>04 — DESIGN DETAILS</span>
+          <span>03 — DESIGN DETAILS</span>
 
           <p>
             A few decisions that hold the six screens together.

@@ -1046,8 +1046,8 @@ export default function Home() {
         <div className="contactLinks sectionReveal">
 
           <a href="mailto:saramaj@gmx.at">
-            <span>EMAIL</span>
-            <strong>saramaj@gmx.at</strong>
+            <strong>Email</strong>
+            <span>saramaj@gmx.at</span>
             <em>↗</em>
           </a>
 
@@ -1056,8 +1056,8 @@ export default function Home() {
             target="_blank"
             rel="noreferrer"
           >
-            <span>LINKEDIN</span>
-            <strong>Sara Vanesa Maj</strong>
+            <strong>LinkedIn</strong>
+            <span>linkedin.com/in/sara-vanesa-maj</span>
             <em>↗</em>
           </a>
 
@@ -1066,8 +1066,8 @@ export default function Home() {
             target="_blank"
             rel="noreferrer"
           >
-            <span>GITHUB</span>
-            <strong>SaraVanesaMaj</strong>
+            <strong>GitHub</strong>
+            <span>github.com/SaraVanesaMaj</span>
             <em>↗</em>
           </a>
 

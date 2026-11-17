@@ -262,7 +262,7 @@
 }
 
 .visualDark {
-  background: var(--dark);
+  background: #000;
 }
 
 /* =========================
@@ -735,70 +735,13 @@
 }
 
 /* =========================
-   BRIEF CHECKLIST (light sections)
+   PROTOTYPE LINK
 ========================= */
-
-.checklist {
-  margin: 65px 0 0;
-  padding: 0;
-
-  list-style: none;
-
-  border-top: 1px solid rgba(0, 0, 0, 0.2);
-}
-
-.checklist li {
-  padding: 22px 0;
-
-  display: grid;
-  grid-template-columns: 34px 220px 1fr;
-
-  gap: 20px;
-
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-}
-
-.checklist h3 {
-  font-size: 16px;
-
-  font-weight: 600;
-
-  letter-spacing: -0.02em;
-}
-
-.checklist p {
-  color: #5f5f5f;
-
-  font-size: 14px;
-
-  line-height: 1.6;
-}
-
-.checkMark {
-  padding-top: 3px;
-
-  color: #5f5f5f;
-
-  font-size: 11px;
-
-  letter-spacing: 0.1em;
-}
 
 .protoWrap {
   margin-top: 55px;
 }
 
-@media (max-width: 900px) {
-  .checklist li {
-    grid-template-columns: 26px 1fr;
-
-    gap: 6px 12px;
-  }
-
-  .checklist p {
-    grid-column: 2;
-  }
-}
 
 /* =========================
    3D CASE STUDY (renders, pairs)
@@ -896,4 +839,8 @@
 
     gap: 40px;
   }
+}
+
+.sectionLine {
+  border-top: 1px solid var(--line);
 }
