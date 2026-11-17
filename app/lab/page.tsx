@@ -222,22 +222,24 @@ export default function Lab() {
         <span>CREATIVE ARCHIVE</span>
       </div>
 
-      <h1 className={styles.title}>THE LAB</h1>
+      <div className={styles.titleRow}>
+        <h1 className={styles.title}>THE LAB</h1>
 
-      <a
-        href="https://www.youtube.com/@SaraVanesaMaj"
-        target="_blank"
-        rel="noreferrer"
-        className={styles.ytButton}
-      >
-        <span className={styles.ytIcon} aria-hidden="true">
-          ▶
-        </span>
+        <a
+          href="https://www.youtube.com/@SaraVanesaMaj"
+          target="_blank"
+          rel="noreferrer"
+          className={styles.ytButton}
+        >
+          <span className={styles.ytIcon} aria-hidden="true">
+            ▶
+          </span>
 
-        <span>WATCH ALL ON YOUTUBE</span>
+          <span>WATCH ALL ON YOUTUBE</span>
 
-        <span>↗</span>
-      </a>
+          <span>↗</span>
+        </a>
+      </div>
 
       <div className={styles.gallery}>
         {[0, 1, 2].map((col) => (
