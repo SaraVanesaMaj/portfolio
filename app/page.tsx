@@ -492,7 +492,7 @@ export default function Home() {
           <div className="heroPortrait">
 
             <Image
-              src="/images/sara-portrait.webp"
+              src="/images/sara-portrait-cutout.webp"
 
               alt="Sara Maj"
 
