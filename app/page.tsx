@@ -134,25 +134,6 @@ const projects = [
 
   {
     number: "04",
-    title: "Cozy Place",
-    type: "3D MODELLING",
-    href: "/work/cozy-place",
-
-    description:
-      "A cosy 3D bedroom and lounge, from first sketch to final render, with every object modelled, textured and lit.",
-
-    skills: [
-      "3D Modelling",
-      "Texturing",
-      "Lighting",
-      "Rendering",
-      "Topology",
-      "Simulation",
-    ],
-  },
-
-  {
-    number: "05",
     title: "VSA",
     type: "UX/UI DESIGN",
     href: "/work/vsa",
@@ -167,6 +148,25 @@ const projects = [
       "Mockups",
       "YouTrack",
       "Balsamiq",
+    ],
+  },
+
+  {
+    number: "05",
+    title: "Cozy Place",
+    type: "3D MODELLING",
+    href: "/work/cozy-place",
+
+    description:
+      "A cozy 3D bedroom and lounge with a view, from first scene to final render, with wireframes of the furniture.",
+
+    skills: [
+      "3D Modelling",
+      "Texturing",
+      "Lighting",
+      "Rendering",
+      "Topology",
+      "Simulation",
     ],
   },
 ];
