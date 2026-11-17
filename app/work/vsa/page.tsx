@@ -83,7 +83,7 @@ export default function VsaProject() {
 
       <section className={styles.hero}>
         <div className={styles.heroMeta}>
-          <span>05 — FEATURED PROJECT</span>
+          <span>04 — FEATURED PROJECT</span>
           <span>UX/UI DESIGN · NOV 2023 – MAY 2024</span>
         </div>
 

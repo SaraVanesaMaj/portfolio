@@ -9,7 +9,7 @@ import styles from "../case-study.module.css";
 export const metadata: Metadata = {
   title: "Cozy Place — Sara Maj",
   description:
-    "Cozy Place is a 3D interior scene, modelled, textured, lit and rendered from a first sketch to the final render.",
+    "Cozy Place is a 3D interior scene with a sunset render, a wireframe of the whole room and wireframe-to-render views of the furniture.",
 };
 
 const assets = [
@@ -59,7 +59,7 @@ export default function CozyPlaceProject() {
 
       <section className={styles.hero}>
         <div className={styles.heroMeta}>
-          <span>04 — FEATURED PROJECT</span>
+          <span>05 — FEATURED PROJECT</span>
           <span>3D MODELLING · WINTER SEMESTER 2025/26</span>
         </div>
 
@@ -69,9 +69,9 @@ export default function CozyPlaceProject() {
 
         <div className={styles.heroBottom}>
           <p>
-            A cosy bedroom and lounge with a view, built in 3D from a
-            first sketch to the final render. Every
-            object in the room is modelled, textured and lit by hand.
+            A cozy bedroom and lounge with a view, built in 3D and
+            rendered at sunset, from the full scene down to the
+            wireframes of the furniture.
           </p>
 
           <div className={styles.skills}>
@@ -94,7 +94,7 @@ export default function CozyPlaceProject() {
           <p>
             The final render: a soft sunset over the sea, warm lamps,
             a glowing TV and light strips along the walls keep the
-            room calm and cosy.
+            room calm and cozy.
           </p>
         </div>
 
@@ -149,8 +149,8 @@ export default function CozyPlaceProject() {
           <span>03 — THE OBJECTS</span>
 
           <p>
-            Each piece of furniture was modelled on its own and
-            checked as a wireframe next to its final material.
+            Selected pieces of furniture, shown as a wireframe next to
+            their final material.
           </p>
         </div>
 
