@@ -670,10 +670,10 @@ section {
 
   overflow: hidden;
 
-  border: 1px solid var(--line);
+  border: 1px solid #3a3a3a;
   border-radius: 8px;
 
-  background: #0f0f0f;
+  background: #1b1b1b;
 
   transition:
     border-color 0.3s ease,
@@ -681,7 +681,7 @@ section {
 }
 
 .projectCard:hover {
-  border-color: #4a4a4a;
+  border-color: #6a6a6a;
 
   transform: translateY(-5px);
 }
@@ -739,7 +739,7 @@ section {
 }
 
 .projectCard p {
-  color: var(--grey);
+  color: #a8a8a8;
 
   font-size: 14px;
 
@@ -758,118 +758,6 @@ section {
 
   letter-spacing: 0.14em;
 }
-
-.projectCardLab {
-  justify-content: center;
-
-  background: var(--accent);
-  color: #090909;
-
-  border-color: var(--accent);
-}
-
-.projectCardLab .projectCardBody {
-  justify-content: space-between;
-
-  min-height: 260px;
-}
-
-.projectCardLab .projectCardTop,
-.projectCardLab p {
-  color: #2a3a00;
-}
-
-
-/* =========================================
-   LAB TEASER
-========================================= */
-
-.labTeaser {
-  padding: 80px 65px 90px;
-
-  background: var(--white);
-
-  color: var(--black);
-}
-
-.labTeaserContent {
-  margin-top: 60px;
-
-  display: grid;
-
-  grid-template-columns: 1.2fr 0.8fr;
-
-  gap: 100px;
-}
-
-.labTeaser h2 {
-  font-size: clamp(65px, 9vw, 145px);
-
-  line-height: 0.84;
-
-  letter-spacing: -0.07em;
-}
-
-.labTeaserRight {
-  align-self: end;
-}
-
-.labTeaserRight > p {
-  font-size: 19px;
-
-  line-height: 1.5;
-
-  letter-spacing: -0.02em;
-}
-
-.labTags {
-  margin-top: 35px;
-
-  display: flex;
-  flex-wrap: wrap;
-
-  gap: 8px;
-}
-
-.labTags span {
-  padding: 8px 12px;
-
-  border: 1px solid #aaa7a1;
-
-  border-radius: 100px;
-
-  font-size: 11px;
-
-  letter-spacing: 0.11em;
-}
-
-.labButton {
-  width: 100%;
-
-  margin-top: 60px;
-
-  padding: 22px 0;
-
-  display: flex;
-
-  justify-content: space-between;
-
-  border-top: 1px solid var(--black);
-  border-bottom: 1px solid var(--black);
-
-  font-size: 12px;
-
-  letter-spacing: 0.13em;
-
-  transition: padding 0.3s ease;
-}
-
-.labButton:hover {
-  padding-left: 15px;
-
-  padding-right: 15px;
-}
-
 
 /* =========================================
    CONTACT
@@ -1073,7 +961,6 @@ section {
   .aboutJourney,
   .journeySection,
   .workSection,
-  .labTeaser,
   .contact {
     padding-left: 22px;
 
@@ -1113,8 +1000,7 @@ section {
 
   /* ABOUT */
 
-  .aboutIntro,
-  .labTeaserContent {
+  .aboutIntro {
     grid-template-columns: 1fr;
 
     gap: 70px;

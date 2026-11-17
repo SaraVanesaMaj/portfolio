@@ -635,24 +635,37 @@ export default function Home() {
 
           <Link
             href="/lab"
-            className="projectCard projectCardLab"
+            className="projectCard"
           >
+
+            <div className="projectCover">
+
+              <Image
+                src="/images/covers/lab.jpg"
+                alt="A collage of work from the Lab"
+                fill
+                className="projectCoverImage"
+                sizes="(max-width: 900px) 100vw, 33vw"
+              />
+
+            </div>
+
 
             <div className="projectCardBody">
 
               <div className="projectCardTop">
 
-                <span>+</span>
+                <span>06</span>
 
-                <span>THE LAB</span>
+                <span>EXPERIMENTS</span>
 
               </div>
 
-              <h3>More experiments, films &amp; 3D.</h3>
+              <h3>The Lab</h3>
 
               <p>
-                Animation, sound, photography and smaller
-                studies live in the Lab.
+                Animation, film, 3D, sound, graphics and
+                photography: smaller studies and experiments.
               </p>
 
               <div className="projectCardFoot">
@@ -861,93 +874,6 @@ export default function Home() {
 
 
       {/* =====================================
-          LAB TEASER
-      ===================================== */}
-
-      <section className="labTeaser">
-
-        <div className="sectionHeader sectionReveal">
-
-          <span>
-            03 — THE LAB
-          </span>
-
-          <span>
-            MORE TO EXPLORE
-          </span>
-
-        </div>
-
-
-        <div className="labTeaserContent">
-
-          <h2 className="sectionReveal">
-
-            NOT
-
-            <br />
-
-            EVERYTHING
-
-            <br />
-
-            FITS IN A
-
-            <br />
-
-            CASE STUDY.
-
-          </h2>
-
-
-          <div className="labTeaserRight sectionReveal">
-
-            <p>
-              Motion experiments, short films,
-              graphic design, photography, sound,
-              3D studies and smaller development
-              projects live in my creative archive.
-            </p>
-
-
-            <div className="labTags">
-
-              <span>MOTION</span>
-
-              <span>FILM</span>
-
-              <span>GRAPHICS</span>
-
-              <span>SOUND</span>
-
-              <span>3D</span>
-
-              <span>CODE</span>
-
-            </div>
-
-
-            <Link
-              href="/lab"
-              className="labButton"
-            >
-
-              EXPLORE THE LAB
-
-              <span>
-                ↗
-              </span>
-
-            </Link>
-
-          </div>
-
-        </div>
-
-      </section>
-
-
-      {/* =====================================
           CONTACT
       ===================================== */}
 
@@ -958,7 +884,7 @@ export default function Home() {
 
         <span className="sectionNumber sectionReveal">
 
-          04 — CONTACT
+          03 — CONTACT
 
         </span>
 
