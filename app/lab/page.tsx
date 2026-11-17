@@ -9,23 +9,26 @@ import styles from "./lab.module.css";
 export const metadata: Metadata = {
   title: "The Lab — Sara Maj",
   description:
-    "A small gallery of animation, film, sound, 3D, graphics and photography by Sara Maj.",
+    "A small gallery of animation, film, sound, 3D and graphics by Sara Maj.",
 };
 
 type Item = {
   title: string;
+  text: string;
   tag: string;
-  kind: "video" | "image";
-  src: string;
+  kind: "video" | "image" | "mosaic";
+  src?: string;
+  images?: string[];
   poster?: string;
-  width: number;
-  height: number;
+  width?: number;
+  height?: number;
   href?: string;
 };
 
 const items: Item[] = [
   {
     title: "Rolex — brand animation",
+    text: "An animated product film for a watch, built from type, particles and motion.",
     tag: "MOTION",
     kind: "video",
     src: "/videos/lab-rolex.mp4",
@@ -36,6 +39,7 @@ const items: Item[] = [
   },
   {
     title: "Vienna Night Riders",
+    text: "A two-minute film intro about Vienna's riding culture, planned with a storyboard.",
     tag: "FILM",
     kind: "image",
     src: "/images/lab/poster-night-riders.webp",
@@ -45,6 +49,7 @@ const items: Item[] = [
   },
   {
     title: "TGM logo animation",
+    text: "An animated logo for the IT department of TGM Vienna.",
     tag: "MOTION",
     kind: "video",
     src: "/videos/lab-logo.mp4",
@@ -55,6 +60,7 @@ const items: Item[] = [
   },
   {
     title: "Sound design",
+    text: "A sound design exercise: building the audio for moving images.",
     tag: "SOUND",
     kind: "video",
     src: "/videos/lab-sound.mp4",
@@ -65,6 +71,7 @@ const items: Item[] = [
   },
   {
     title: "Delayed",
+    text: "A short film about a rushed trip to the airport that goes wrong.",
     tag: "SHORT FILM",
     kind: "image",
     src: "/images/lab/poster-delayed.webp",
@@ -74,6 +81,7 @@ const items: Item[] = [
   },
   {
     title: "3D modelling in Maya",
+    text: "Studies in modelling, rigging, simulation and lighting.",
     tag: "3D",
     kind: "video",
     src: "/videos/3d-portfolio.mp4",
@@ -84,6 +92,7 @@ const items: Item[] = [
   },
   {
     title: "Sendung ohne Namen",
+    text: "An experimental piece with the feel of a news show.",
     tag: "MOTION",
     kind: "video",
     src: "/videos/lab-sendung.mp4",
@@ -94,6 +103,7 @@ const items: Item[] = [
   },
   {
     title: "Typography",
+    text: "Letters cut from found signs and assembled into a name.",
     tag: "GRAPHICS",
     kind: "image",
     src: "/images/lab/typo-sara.webp",
@@ -101,52 +111,16 @@ const items: Item[] = [
     height: 475,
   },
   {
-    title: "Acorn",
+    title: "Shapes in black & white",
+    text: "Four motifs built only from basic shapes in Adobe Illustrator.",
     tag: "ILLUSTRATOR",
-    kind: "image",
-    src: "/images/lab/gfx-acorn.webp",
-    width: 533,
-    height: 517,
-  },
-  {
-    title: "Flower",
-    tag: "ILLUSTRATOR",
-    kind: "image",
-    src: "/images/lab/gfx-flower.webp",
-    width: 653,
-    height: 517,
-  },
-  {
-    title: "Palm",
-    tag: "ILLUSTRATOR",
-    kind: "image",
-    src: "/images/lab/gfx-palm.webp",
-    width: 609,
-    height: 587,
-  },
-  {
-    title: "Pattern",
-    tag: "ILLUSTRATOR",
-    kind: "image",
-    src: "/images/lab/gfx-pattern.webp",
-    width: 572,
-    height: 584,
-  },
-  {
-    title: "Light & shadow",
-    tag: "PHOTO",
-    kind: "image",
-    src: "/images/lab/photo-light-shadow.webp",
-    width: 1316,
-    height: 1125,
-  },
-  {
-    title: "Light studies",
-    tag: "PHOTO",
-    kind: "image",
-    src: "/images/lab/photo-studies.webp",
-    width: 1600,
-    height: 900,
+    kind: "mosaic",
+    images: [
+      "/images/lab/gfx-acorn.webp",
+      "/images/lab/gfx-flower.webp",
+      "/images/lab/gfx-palm.webp",
+      "/images/lab/gfx-pattern.webp",
+    ],
   },
 ];
 
@@ -178,12 +152,9 @@ export default function Lab() {
 
       <div className={styles.gallery}>
         {items.map((item) => (
-          <figure
-            key={item.src}
-            className={styles.tile}
-          >
+          <article key={item.title} className={styles.tile}>
             <div className={styles.media}>
-              {item.kind === "video" ? (
+              {item.kind === "video" && item.src && (
                 <video
                   className={styles.mediaEl}
                   controls
@@ -196,7 +167,9 @@ export default function Lab() {
                 >
                   <source src={item.src} type="video/mp4" />
                 </video>
-              ) : (
+              )}
+
+              {item.kind === "image" && item.src && (
                 <Image
                   src={item.src}
                   alt={item.title}
@@ -206,28 +179,45 @@ export default function Lab() {
                   sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 33vw"
                 />
               )}
+
+              {item.kind === "mosaic" && (
+                <div className={styles.mosaic}>
+                  {item.images?.map((image) => (
+                    <Image
+                      key={image}
+                      src={image}
+                      alt=""
+                      width={600}
+                      height={600}
+                      className={styles.mosaicImg}
+                      sizes="(max-width: 700px) 50vw, 17vw"
+                    />
+                  ))}
+                </div>
+              )}
             </div>
 
-            <figcaption className={styles.caption}>
-              <span>{item.title}</span>
+            <div className={styles.body}>
+              <div className={styles.cardTop}>
+                <h2 className={styles.cardTitle}>{item.title}</h2>
 
-              <span className={styles.tag}>
-                {item.tag}
-                {item.href && (
-                  <>
-                    {" · "}
-                    <a
-                      href={item.href}
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      YouTube ↗
-                    </a>
-                  </>
-                )}
-              </span>
-            </figcaption>
-          </figure>
+                <span className={styles.tag}>{item.tag}</span>
+              </div>
+
+              <p className={styles.cardText}>{item.text}</p>
+
+              {item.href && (
+                <a
+                  href={item.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className={styles.cardLink}
+                >
+                  Watch on YouTube ↗
+                </a>
+              )}
+            </div>
+          </article>
         ))}
       </div>
 

@@ -2,7 +2,9 @@
 
 import Link from "next/link";
 
-import { useState } from "react";
+import { usePathname } from "next/navigation";
+
+import { useEffect, useState } from "react";
 
 const links = [
   { href: "/#work", label: "WORK" },
@@ -13,6 +15,22 @@ const links = [
 
 export default function SiteNav() {
   const [open, setOpen] = useState(false);
+
+  const pathname = usePathname();
+
+  const [inHero, setInHero] = useState(true);
+
+  useEffect(() => {
+    const update = () => setInHero(window.scrollY < window.innerHeight * 0.8);
+
+    update();
+
+    window.addEventListener("scroll", update, { passive: true });
+
+    return () => window.removeEventListener("scroll", update);
+  }, []);
+
+  const highlightCv = pathname === "/" && inHero;
 
   const close = () => setOpen(false);
 
@@ -46,7 +64,7 @@ export default function SiteNav() {
           href="/cv/Sara-Maj-CV.pdf"
           target="_blank"
           rel="noreferrer"
-          className="siteNavCv"
+          className={`siteNavCv${highlightCv ? " isHighlight" : ""}`}
           onClick={close}
         >
           CV ↓
