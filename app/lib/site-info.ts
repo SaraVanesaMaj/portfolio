@@ -10,8 +10,9 @@ export const siteInfo = {
   purpose:
     "Private, nicht-kommerzielle Portfolio-Website zur Darstellung eigener Arbeiten.",
 
-  /** Name of the hosting provider. Set it as soon as the site is published. */
-  hostingProvider: null as string | null,
+  /** Hosting provider of the site. */
+  hostingProvider:
+    "Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, USA",
 
   updated: "November 2026",
 };

@@ -930,16 +930,6 @@ export default function Home() {
           </a>
 
           <a
-            href="https://github.com/SaraVanesaMaj"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <strong>GitHub</strong>
-            <span>github.com/SaraVanesaMaj</span>
-            <em>↗</em>
-          </a>
-
-          <a
             href="/cv/Sara-Maj-CV.pdf"
             target="_blank"
             rel="noreferrer"

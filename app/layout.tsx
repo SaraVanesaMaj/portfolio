@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Sara Maj - UX/UI & Product Design",
+  title: "Sara Maj - Portfolio",
   description:
     "Portfolio of Sara Maj, Media Technology & Design student in Austria. UX/UI design, branding, motion and development.",
   openGraph: {
