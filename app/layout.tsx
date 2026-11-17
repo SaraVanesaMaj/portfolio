@@ -36,6 +36,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <footer className="legalBar" lang="de">
           <Link href="/impressum">IMPRESSUM</Link>
           <Link href="/datenschutz">DATENSCHUTZ</Link>
+          <span>© 2026 SARA MAJ</span>
         </footer>
       </body>
     </html>

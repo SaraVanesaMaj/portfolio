@@ -1074,14 +1074,6 @@ export default function Home() {
         </div>
 
 
-        <div className="contactFooter">
-
-          <span>
-            © 2026 SARA MAJ
-          </span>
-
-        </div>
-
       </section>
 
     </main>

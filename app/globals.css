@@ -369,9 +369,40 @@ section {
 .journeySection {
   padding: 80px 65px 90px;
 
-  background: #d6d3cb;
+  background: var(--dark);
 
-  color: var(--black);
+  color: var(--white);
+}
+
+.journeySection .journeyHeading {
+  border-bottom-color: var(--line);
+}
+
+.journeySection .journeyHeading p,
+.journeySection .journeyIndex,
+.journeySection .journeyMeta {
+  color: var(--grey);
+}
+
+.journeySection .journeyLine {
+  background: var(--line);
+}
+
+.journeySection .journeyLineFill,
+.journeySection .journeyDot {
+  background: var(--white);
+}
+
+.journeySection .journeyContent p {
+  color: #a3a3a3;
+}
+
+.journeySection .journeyDetail {
+  border-color: #3a3a3a;
+}
+
+.journeySection .linkedinLink {
+  border-bottom-color: var(--white);
 }
 
 
@@ -611,6 +642,8 @@ section {
 
 .workSection {
   padding: 80px 65px 90px;
+
+  border-top: 1px solid var(--line);
 
   background: var(--black);
 
@@ -1003,10 +1036,10 @@ section {
 }
 
 .contactLinks a {
-  padding: 20px 0;
+  padding: 16px 0;
 
   display: grid;
-  grid-template-columns: 300px minmax(0, 1fr) auto;
+  grid-template-columns: 220px minmax(0, 1fr) auto;
 
   gap: 30px;
 
@@ -1036,7 +1069,7 @@ section {
 }
 
 .contactLinks strong {
-  font-size: clamp(30px, 3.8vw, 58px);
+  font-size: clamp(22px, 2.1vw, 30px);
 
   font-weight: 500;
 
@@ -1048,7 +1081,7 @@ section {
 }
 
 .contactLinks em {
-  font-size: clamp(20px, 2vw, 28px);
+  font-size: clamp(18px, 1.6vw, 22px);
 
   font-style: normal;
 }
@@ -1262,7 +1295,7 @@ section {
   /* CONTACT */
 
   .contactLinks a {
-    padding: 18px 0;
+    padding: 14px 0;
 
     grid-template-columns: 1fr auto;
 
@@ -1344,6 +1377,10 @@ section {
 
 .legalBar a {
   transition: color 0.25s ease;
+}
+
+.legalBar span {
+  margin-left: auto;
 }
 
 .legalBar a:hover {
