@@ -126,32 +126,14 @@ export default function Datenschutz() {
           <h2>IHRE RECHTE</h2>
 
           <div className={styles.text}>
-            <p>Sie haben das Recht auf:</p>
-            <ul>
-              <li>Auskunft über Ihre Daten (Art. 15 DSGVO)</li>
-              <li>Berichtigung unrichtiger Daten (Art. 16 DSGVO)</li>
-              <li>Löschung (Art. 17 DSGVO)</li>
-              <li>Einschränkung der Verarbeitung (Art. 18 DSGVO)</li>
-              <li>Datenübertragbarkeit (Art. 20 DSGVO)</li>
-              <li>Widerspruch (Art. 21 DSGVO)</li>
-            </ul>
             <p>
-              Schreiben Sie dazu einfach an{" "}
+              Sie haben das Recht auf Auskunft, Berichtigung, Löschung,
+              Einschränkung der Verarbeitung, Datenübertragbarkeit und
+              Widerspruch (Art. 15 bis 21 DSGVO). Schreiben Sie dazu
+              einfach an{" "}
               <a href={`mailto:${siteInfo.email}`}>{siteInfo.email}</a>.
-            </p>
-          </div>
-        </section>
-
-        <section className={styles.block}>
-          <h2>BESCHWERDERECHT</h2>
-
-          <div className={styles.text}>
-            <p>
-              Wenn Sie der Meinung sind, dass die Verarbeitung Ihrer
-              Daten gegen das Datenschutzrecht verstößt, können Sie
-              sich bei der Datenschutzbehörde beschweren: Barichgasse
-              40-42, 1030 Wien, E-Mail{" "}
-              <a href="mailto:dsb@dsb.gv.at">dsb@dsb.gv.at</a>,{" "}
+              Außerdem können Sie sich bei der österreichischen
+              Datenschutzbehörde beschweren:{" "}
               <a
                 href="https://www.dsb.gv.at/"
                 target="_blank"

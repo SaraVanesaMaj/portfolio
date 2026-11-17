@@ -185,59 +185,83 @@ section {
    HERO
 ========================================= */
 
-/* slow drifting accent glow behind the hero */
+/* two accent glows drifting behind the hero, always moving */
 
-.hero::before {
+.hero::before,
+.hero::after {
   content: "";
 
   position: absolute;
-  top: -20%;
-  left: -15%;
-
-  width: 90vmax;
-  height: 90vmax;
 
   z-index: 0;
 
   pointer-events: none;
 
-  background:
-    radial-gradient(
-      circle at 30% 35%,
-      rgba(200, 255, 50, 0.13) 0%,
-      rgba(200, 255, 50, 0.05) 28%,
-      rgba(200, 255, 50, 0) 55%
-    ),
-    radial-gradient(
-      circle at 75% 70%,
-      rgba(200, 255, 50, 0.08) 0%,
-      rgba(200, 255, 50, 0) 40%
-    );
+  border-radius: 50%;
 
-  -webkit-mask-image: radial-gradient(closest-side, #000 55%, transparent 100%);
-  mask-image: radial-gradient(closest-side, #000 55%, transparent 100%);
-
-  animation: heroGlow 22s ease-in-out infinite alternate;
+  -webkit-mask-image: radial-gradient(closest-side, #000 45%, transparent 100%);
+  mask-image: radial-gradient(closest-side, #000 45%, transparent 100%);
 
   will-change: transform;
 }
 
-@keyframes heroGlow {
-  0% {
-    transform: translate3d(0, 0, 0) scale(1);
-  }
+.hero::before {
+  top: -25%;
+  left: -20%;
 
-  50% {
-    transform: translate3d(14%, 10%, 0) scale(1.12);
+  width: 80vmax;
+  height: 80vmax;
+
+  background: radial-gradient(
+    circle,
+    rgba(200, 255, 50, 0.26) 0%,
+    rgba(200, 255, 50, 0.1) 40%,
+    rgba(200, 255, 50, 0) 70%
+  );
+
+  animation: heroGlowA 11s ease-in-out infinite alternate;
+}
+
+.hero::after {
+  bottom: -35%;
+  right: -25%;
+
+  width: 70vmax;
+  height: 70vmax;
+
+  background: radial-gradient(
+    circle,
+    rgba(200, 255, 50, 0.18) 0%,
+    rgba(200, 255, 50, 0.06) 40%,
+    rgba(200, 255, 50, 0) 70%
+  );
+
+  animation: heroGlowB 14s ease-in-out infinite alternate;
+}
+
+@keyframes heroGlowA {
+  0% {
+    transform: translate3d(-6%, -4%, 0) scale(0.92);
   }
 
   100% {
-    transform: translate3d(4%, 22%, 0) scale(0.95);
+    transform: translate3d(32%, 28%, 0) scale(1.15);
+  }
+}
+
+@keyframes heroGlowB {
+  0% {
+    transform: translate3d(6%, 4%, 0) scale(1.1);
+  }
+
+  100% {
+    transform: translate3d(-34%, -26%, 0) scale(0.9);
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .hero::before {
+  .hero::before,
+  .hero::after {
     animation: none;
   }
 }
@@ -260,6 +284,8 @@ section {
 }
 
 .heroContent {
+  z-index: 1;
+
   flex: 1;
 
   width: 100%;
