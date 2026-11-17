@@ -77,10 +77,6 @@ const details = [
     title: "A coach with a face",
     text: "A small rabbit on the home screen gives one focus for the day, such as drinking regularly and taking time to breathe.",
   },
-  {
-    title: "Rhythm instead of instructions",
-    text: "The breathing screen is built around a single bubble and one rhythm, 4 · 4 · 6, so there is nothing to read while breathing.",
-  },
 ];
 
 export default function FitMindProject() {
@@ -120,7 +116,7 @@ export default function FitMindProject() {
 
       {/* ABOUT */}
 
-      <section className={styles.visualSectionDark}>
+      <section className={styles.visualSectionLight}>
         <div className={styles.visualHeader}>
           <span>01 — THE APP</span>
 
@@ -160,7 +156,7 @@ export default function FitMindProject() {
 
       {/* SCREENS */}
 
-      <section className={styles.visualSectionLight}>
+      <section className={styles.visualSectionDark}>
         <div className={styles.visualHeader}>
           <span>02 — SCREENS</span>
 
@@ -195,7 +191,7 @@ export default function FitMindProject() {
 
       {/* DESIGN DETAILS */}
 
-      <section className={styles.visualSectionDark}>
+      <section className={styles.visualSectionLight}>
         <div className={styles.visualHeader}>
           <span>03 — DESIGN DETAILS</span>
 

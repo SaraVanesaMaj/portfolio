@@ -12,12 +12,31 @@ export const metadata: Metadata = {
 };
 
 const categories = [
-  { name: "Motion", href: null },
-  { name: "Film", href: null },
-  { name: "Graphics", href: null },
-  { name: "Sound", href: null },
-  { name: "3D", href: "#3d" },
-  { name: "Code", href: null },
+  {
+    name: "Motion",
+    text: "Motion graphics, animation and editing experiments.",
+  },
+  {
+    name: "Film",
+    text: "Short films, edits and visual storytelling.",
+  },
+  {
+    name: "Graphics",
+    text: "Posters, typography and other graphic design studies.",
+  },
+  {
+    name: "Sound",
+    text: "Sound design and audio experiments.",
+  },
+  {
+    name: "3D",
+    text: "A short reel of studies in Maya: topology, a polygon robot, rig animation, a liquid simulation, realistic hair and cloth with HDRI lighting.",
+    video: true,
+  },
+  {
+    name: "Code",
+    text: "Smaller development projects and interface experiments.",
+  },
 ];
 
 export default function Lab() {
@@ -34,14 +53,14 @@ export default function Lab() {
 
       <p className={styles.intro}>
         Experiments, studies and smaller projects that don&apos;t fit
-        into a case study. This archive is being curated and will
-        grow over time.
+        into a case study. Open a category to see what&apos;s inside.
+        The archive is still growing.
       </p>
 
-      <ul className={styles.list}>
-        {categories.map((category, index) => {
-          const content = (
-            <>
+      <div className={styles.list}>
+        {categories.map((category, index) => (
+          <details key={category.name} className={styles.item}>
+            <summary className={styles.row}>
               <span className={styles.number}>
                 {String(index + 1).padStart(2, "0")}
               </span>
@@ -49,56 +68,49 @@ export default function Lab() {
               <span className={styles.name}>{category.name}</span>
 
               <span className={styles.status}>
-                {category.href ? "WATCH ↓" : "COMING SOON"}
+                {category.video ? "1 ITEM" : "COMING SOON"}
               </span>
-            </>
-          );
 
-          return (
-            <li key={category.name}>
-              {category.href ? (
-                <a
-                  href={category.href}
-                  className={`${styles.row} ${styles.rowLink}`}
-                >
-                  {content}
-                </a>
+              <span className={styles.toggle} aria-hidden="true" />
+            </summary>
+
+            <div className={styles.panel}>
+              <p>{category.text}</p>
+
+              {category.video ? (
+                <>
+                  <div className={styles.videoWrap}>
+                    <video
+                      className={styles.video}
+                      controls
+                      preload="metadata"
+                      playsInline
+                      poster="/videos/3d-portfolio-poster.jpg"
+                      aria-label="3D modelling portfolio in Maya, 2023 to 2025"
+                    >
+                      <source
+                        src="/videos/3d-portfolio.mp4"
+                        type="video/mp4"
+                      />
+                    </video>
+                  </div>
+
+                  <p className={styles.panelNote}>
+                    3D-Modelling Portfolio · Maya · 2023–2025. My latest
+                    3D scene is the{" "}
+                    <Link href="/work/cozy-place">Cozy Place</Link>{" "}
+                    project.
+                  </p>
+                </>
               ) : (
-                <div className={styles.row}>{content}</div>
+                <p className={styles.panelNote}>
+                  Nothing here yet. This category is being curated.
+                </p>
               )}
-            </li>
-          );
-        })}
-      </ul>
-
-      <section className={styles.feature} id="3d">
-        <div className={styles.featureHead}>
-          <span>05 — 3D</span>
-          <span>MAYA · 2023–2025</span>
-        </div>
-
-        <h2 className={styles.featureTitle}>3D-Modelling Portfolio</h2>
-
-        <p className={styles.featureText}>
-          A short reel of studies in Maya: topology, a polygon robot,
-          rig animation, a liquid simulation, realistic hair and cloth
-          with HDRI lighting. My latest 3D scene is the{" "}
-          <Link href="/work/cozy-place">Cozy Place</Link> project.
-        </p>
-
-        <div className={styles.videoWrap}>
-          <video
-            className={styles.video}
-            controls
-            preload="metadata"
-            playsInline
-            poster="/videos/3d-portfolio-poster.jpg"
-            aria-label="3D modelling portfolio in Maya, 2023 to 2025"
-          >
-            <source src="/videos/3d-portfolio.mp4" type="video/mp4" />
-          </video>
-        </div>
-      </section>
+            </div>
+          </details>
+        ))}
+      </div>
 
       <div className={styles.footer}>
         <Link href="/" className={styles.back}>
