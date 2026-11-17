@@ -58,25 +58,31 @@ export default function Datenschutz() {
 
           <div className={styles.text}>
             <p>
-              Diese Website wird bei einem externen Anbieter gehostet
-              {siteInfo.hostingProvider
-                ? `: ${siteInfo.hostingProvider}`
-                : ""}
-              . Beim Aufruf verarbeitet der Anbieter technisch
+              Diese Website wird bei {siteInfo.hostingProvider}{" "}
+              gehostet. Beim Aufruf verarbeitet der Anbieter technisch
               notwendige Daten, nämlich die IP-Adresse, Datum und
               Uhrzeit, die aufgerufene Seite sowie Browser und
-              Betriebssystem. Das dient dazu, die Website
-              auszuliefern, stabil und sicher zu betreiben.
-              Rechtsgrundlage ist das berechtigte Interesse am sicheren
-              und zuverlässigen Betrieb der Website (Art. 6 Abs. 1
-              lit. f DSGVO). Ich verwende diese Daten nicht für eigene
-              Auswertungen.
+              Betriebssystem, um die Website auszuliefern und sicher
+              zu betreiben. Rechtsgrundlage ist das berechtigte
+              Interesse am sicheren und zuverlässigen Betrieb der
+              Website (Art. 6 Abs. 1 lit. f DSGVO). Ich verwende diese
+              Daten nicht für eigene Auswertungen.
             </p>
             <p>
-              Hat der Anbieter seinen Sitz außerhalb der EU bzw. des
-              EWR, stützt sich eine Übermittlung auf einen
-              Angemessenheitsbeschluss der EU-Kommission oder auf
-              Standardvertragsklauseln.
+              Da der Anbieter seinen Sitz in den USA hat, kann dabei
+              eine Übermittlung in ein Drittland stattfinden. Sie
+              stützt sich auf den Angemessenheitsbeschluss der
+              EU-Kommission zum EU-US Data Privacy Framework bzw. auf
+              Standardvertragsklauseln. Mehr dazu in der
+              Datenschutzerklärung des Anbieters:{" "}
+              <a
+                href="https://vercel.com/legal/privacy-policy"
+                target="_blank"
+                rel="noreferrer"
+              >
+                vercel.com/legal/privacy-policy
+              </a>
+              .
             </p>
           </div>
         </section>
@@ -105,8 +111,8 @@ export default function Datenschutz() {
 
           <div className={styles.text}>
             <p>
-              Diese Website enthält Links zu GitHub, LinkedIn und zu
-              einem Prototyp bei Framer. Wenn Sie einen solchen Link
+              Diese Website enthält Links zu LinkedIn und zu einem
+              Prototyp bei Framer. Wenn Sie einen solchen Link
               anklicken, verlassen Sie diese Website. Für die
               Verarbeitung Ihrer Daten dort sind die jeweiligen
               Anbieter verantwortlich, es gelten deren
@@ -154,18 +160,6 @@ export default function Datenschutz() {
                 www.dsb.gv.at
               </a>
               .
-            </p>
-          </div>
-        </section>
-
-        <section className={styles.block}>
-          <h2>ÄNDERUNGEN</h2>
-
-          <div className={styles.text}>
-            <p>
-              Ich passe diese Erklärung an, wenn sich die Website
-              ändert, zum Beispiel bei einem neuen Hosting-Anbieter.
-              Stand: {siteInfo.updated}.
             </p>
           </div>
         </section>
