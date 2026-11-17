@@ -17,6 +17,7 @@ type Item = {
   text: string;
   tag: string;
   kind: "video" | "image" | "mosaic";
+  col: 0 | 1 | 2;
   layout?: "square" | "stack";
   src?: string;
   images?: string[];
@@ -27,11 +28,13 @@ type Item = {
 };
 
 const items: Item[] = [
+  /* column 1 */
   {
     title: "3D modelling in Maya",
     text: "Studies in modelling, rigging, simulation and lighting.",
     tag: "3D",
     kind: "video",
+    col: 0,
     src: "/videos/3d-portfolio.mp4",
     poster: "/videos/3d-portfolio-poster.jpg",
     width: 1280,
@@ -39,41 +42,34 @@ const items: Item[] = [
     href: "https://youtu.be/enPP5eKyBco",
   },
   {
-    title: "Rolex — brand animation",
-    text: "An animated product film for a watch, built from type, particles and motion.",
-    tag: "MOTION",
-    kind: "video",
-    src: "/videos/lab-rolex.mp4",
-    poster: "/images/lab/poster-rolex.jpg",
-    width: 1100,
-    height: 619,
-    href: "https://youtu.be/44fTrB4mUSo",
-  },
-  {
-    title: "Spring",
-    text: "A spring scene animated in After Effects, with a bee flying through the flowers.",
-    tag: "AFTER EFFECTS",
-    kind: "video",
-    src: "/videos/lab-spring.mp4",
-    poster: "/images/lab/poster-spring.jpg",
-    width: 1280,
-    height: 720,
-  },
-  {
     title: "Vienna Night Riders",
     text: "A two-minute film intro about Vienna's riding culture, planned with a storyboard.",
     tag: "FILM",
     kind: "image",
+    col: 0,
     src: "/images/lab/poster-night-riders.webp",
     width: 778,
     height: 1117,
     href: "https://youtu.be/OMcHLZG4VFQ",
   },
   {
+    title: "Cuts & transitions",
+    text: "Experiments with cuts and transitions between scenes.",
+    tag: "EDITING",
+    kind: "video",
+    col: 0,
+    src: "/videos/lab-cuts.mp4",
+    poster: "/images/lab/poster-cuts.jpg",
+    width: 1280,
+    height: 720,
+    href: "https://youtu.be/VGcLE3G1n9c",
+  },
+  {
     title: "TGM logo animation",
     text: "An animated logo for the IT department of TGM Vienna.",
     tag: "MOTION",
     kind: "video",
+    col: 0,
     src: "/videos/lab-logo.mp4",
     poster: "/images/lab/poster-logo.jpg",
     width: 1100,
@@ -81,10 +77,35 @@ const items: Item[] = [
     href: "https://youtu.be/Oe3J0A4UB_Y",
   },
   {
+    title: "Typography",
+    text: "Letters cut from found signs and assembled into a name.",
+    tag: "GRAPHICS",
+    kind: "image",
+    col: 0,
+    src: "/images/lab/typo-sara.webp",
+    width: 630,
+    height: 475,
+  },
+
+  /* column 2 */
+  {
+    title: "Rolex - brand animation",
+    text: "An animated product film for a watch, built from type, particles and motion.",
+    tag: "MOTION",
+    kind: "video",
+    col: 1,
+    src: "/videos/lab-rolex.mp4",
+    poster: "/images/lab/poster-rolex.jpg",
+    width: 1100,
+    height: 619,
+    href: "https://youtu.be/44fTrB4mUSo",
+  },
+  {
     title: "Sound design",
     text: "A sound design exercise: building the audio for moving images.",
     tag: "SOUND",
     kind: "video",
+    col: 1,
     src: "/videos/lab-sound.mp4",
     poster: "/images/lab/poster-sound.jpg",
     width: 1100,
@@ -96,36 +117,56 @@ const items: Item[] = [
     text: "A short film about a rushed trip to the airport that goes wrong.",
     tag: "SHORT FILM",
     kind: "image",
+    col: 1,
     src: "/images/lab/poster-delayed.webp",
     width: 788,
     height: 1117,
     href: "https://youtu.be/Q_T--YyAsNA",
   },
   {
-    title: "Sendung ohne Namen",
-    text: "An experimental piece with the feel of a news show.",
-    tag: "MOTION",
+    title: "Spring - animation",
+    text: "A spring scene animated in After Effects, with a bee flying through the flowers.",
+    tag: "AFTER EFFECTS",
     kind: "video",
-    src: "/videos/lab-sendung.mp4",
-    poster: "/images/lab/poster-sendung.jpg",
-    width: 1100,
-    height: 619,
-    href: "https://youtu.be/Xn8ROwkhZgI",
+    col: 1,
+    src: "/videos/lab-spring.mp4",
+    poster: "/images/lab/poster-spring.jpg",
+    width: 1280,
+    height: 720,
   },
   {
-    title: "Typography",
-    text: "Letters cut from found signs and assembled into a name.",
-    tag: "GRAPHICS",
-    kind: "image",
-    src: "/images/lab/typo-sara.webp",
-    width: 630,
-    height: 475,
+    title: "Photoshop generative fill",
+    text: "A set and lighting design exercise, extended with generative fill.",
+    tag: "PHOTOSHOP",
+    kind: "video",
+    col: 1,
+    src: "/videos/lab-genfill.mp4",
+    poster: "/images/lab/poster-genfill.jpg",
+    width: 960,
+    height: 720,
+    href: "https://youtu.be/atB-eYxZHI4",
+  },
+
+  /* column 3 */
+  {
+    title: "Capturing shapes",
+    text: "A photography assignment: finding forms in Vienna's architecture.",
+    tag: "PHOTO",
+    kind: "mosaic",
+    col: 2,
+    layout: "stack",
+    images: [
+      "/images/lab/shape-dc-tower.webp",
+      "/images/lab/shape-gasometer.webp",
+      "/images/lab/shape-riesenrad.webp",
+    ],
   },
   {
     title: "Shapes in black & white",
     text: "Four motifs built only from basic shapes in Adobe Illustrator.",
     tag: "ILLUSTRATOR",
     kind: "mosaic",
+    col: 2,
     images: [
       "/images/lab/gfx-acorn.webp",
       "/images/lab/gfx-flower.webp",
@@ -134,31 +175,45 @@ const items: Item[] = [
     ],
   },
   {
-    title: "Capturing shapes",
-    text: "A photography assignment: finding forms in Vienna's architecture.",
-    tag: "PHOTO",
-    kind: "mosaic",
-    layout: "stack",
-    images: [
-      "/images/lab/shape-dc-tower.webp",
-      "/images/lab/shape-gasometer.webp",
-      "/images/lab/shape-riesenrad.webp",
-    ],
+    title: "Mixed realities",
+    text: "A camera gliding through a virtual corridor of images and type.",
+    tag: "MOTION",
+    kind: "video",
+    col: 2,
+    src: "/videos/lab-mixed.mp4",
+    poster: "/images/lab/poster-mixed.jpg",
+    width: 1280,
+    height: 720,
+    href: "https://youtu.be/gbbmmURtCF0",
+  },
+  {
+    title: "Type & shape animation",
+    text: "Type and basic shapes animated into moving compositions.",
+    tag: "MOTION",
+    kind: "video",
+    col: 2,
+    src: "/videos/lab-typeanim.mp4",
+    poster: "/images/lab/poster-typeanim.jpg",
+    width: 1280,
+    height: 720,
+    href: "https://youtu.be/dI1vxlD5_oQ",
+  },
+  {
+    title: "Sendung ohne Namen",
+    text: "An experimental piece with the feel of a news show.",
+    tag: "MOTION",
+    kind: "video",
+    col: 2,
+    src: "/videos/lab-sendung.mp4",
+    poster: "/images/lab/poster-sendung.jpg",
+    width: 1100,
+    height: 619,
+    href: "https://youtu.be/Xn8ROwkhZgI",
   },
 ];
 
 const moreVideos = [
-  { title: "Mixed realities", href: "https://youtu.be/gbbmmURtCF0" },
-  {
-    title: "Photoshop generative fill",
-    href: "https://youtu.be/atB-eYxZHI4",
-  },
-  { title: "Cuts & transitions", href: "https://youtu.be/VGcLE3G1n9c" },
   { title: "ZIB Magazin", href: "https://youtu.be/_8GSJ_rrisc" },
-  {
-    title: "Typography & shape animation",
-    href: "https://youtu.be/dI1vxlD5_oQ",
-  },
 ];
 
 export default function Lab() {
@@ -174,7 +229,9 @@ export default function Lab() {
       <h1 className={styles.title}>THE LAB</h1>
 
       <div className={styles.gallery}>
-        {items.map((item) => (
+        {[0, 1, 2].map((col) => (
+          <div key={col} className={styles.column}>
+        {items.filter((item) => item.col === col).map((item) => (
           <article key={item.title} className={styles.tile}>
             <div className={styles.media}>
               {item.kind === "video" && item.src && (
@@ -245,6 +302,8 @@ export default function Lab() {
               )}
             </div>
           </article>
+        ))}
+          </div>
         ))}
       </div>
 
