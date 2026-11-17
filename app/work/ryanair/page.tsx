@@ -7,7 +7,7 @@ import SiteNav from "../../components/SiteNav";
 import styles from "../case-study.module.css";
 
 export const metadata: Metadata = {
-  title: "Ryanair Responsive Redesign — Sara Maj",
+  title: "Ryanair Responsive Redesign - Sara Maj",
   description:
     "A responsive redesign of a Ryanair booking interface for mobile, tablet, desktop and smartwatch, with user flow, sketches and a design system.",
 };
@@ -87,7 +87,7 @@ export default function RyanairProject() {
 
       <section className={styles.hero}>
         <div className={styles.heroMeta}>
-          <span>03 — FEATURED PROJECT</span>
+          <span>03 - FEATURED PROJECT</span>
           <span>RESPONSIVE DESIGN · SUMMER SEMESTER 2026</span>
         </div>
 
@@ -98,7 +98,7 @@ export default function RyanairProject() {
         <div className={styles.heroBottom}>
           <p>
             A responsive redesign of a Ryanair booking interface for
-            mobile, tablet, desktop and smartwatch — built on a
+            mobile, tablet, desktop and smartwatch - built on a
             user flow, hand-drawn sketches and a design system.
           </p>
 
@@ -118,7 +118,7 @@ export default function RyanairProject() {
 
       <section className={styles.visualSectionDark}>
         <div className={styles.visualHeader}>
-          <span>01 — THE CHALLENGE</span>
+          <span>01 - THE CHALLENGE</span>
 
           <p>
             The redesign from the previous challenge became the
@@ -146,7 +146,7 @@ export default function RyanairProject() {
 
       <section className={styles.visualSectionLight}>
         <div className={styles.visualHeader}>
-          <span>02 — USER FLOW</span>
+          <span>02 - USER FLOW</span>
 
           <p>
             The booking journey mapped in five steps, from the
@@ -172,7 +172,7 @@ export default function RyanairProject() {
 
       <section className={styles.visualSectionDark}>
         <div className={styles.visualHeader}>
-          <span>03 — SKETCHES</span>
+          <span>03 - SKETCHES</span>
 
           <p>
             Hand-drawn wireframes with numbered annotations that
@@ -197,7 +197,7 @@ export default function RyanairProject() {
 
       <section className={styles.visualSectionLight}>
         <div className={styles.visualHeader}>
-          <span>04 — STARTING POINT</span>
+          <span>04 - STARTING POINT</span>
 
           <p>
             The desktop screens of the first redesign: homepage,
@@ -234,7 +234,7 @@ export default function RyanairProject() {
 
       <section className={styles.visualSectionDark}>
         <div className={styles.visualHeader}>
-          <span>05 — DESIGN SYSTEM</span>
+          <span>05 - DESIGN SYSTEM</span>
 
           <p>
             A shared style guide keeps every screen size consistent.

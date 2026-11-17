@@ -14,7 +14,7 @@ export default function RequestProject() {
 
       <section className={styles.hero}>
         <div className={styles.heroMeta}>
-          <span>01 — FEATURED PROJECT</span>
+          <span>01 - FEATURED PROJECT</span>
           <span>DIPLOMA PROJECT · 2025</span>
         </div>
 
@@ -96,7 +96,7 @@ export default function RequestProject() {
 
       <section className={styles.visualSectionDark}>
         <div className={styles.visualHeader}>
-          <span>02 — WIREFRAMES</span>
+          <span>02 - WIREFRAMES</span>
 
           <p>
             Defining structure, hierarchy and user flow before moving into
@@ -121,7 +121,7 @@ export default function RequestProject() {
         className={`${styles.visualSectionDark} ${styles.sectionLine}`}
       >
         <div className={styles.visualHeader}>
-          <span>03 — FINAL UI</span>
+          <span>03 - FINAL UI</span>
 
           <p>
             Translating the wireframes into a clear and modern interface

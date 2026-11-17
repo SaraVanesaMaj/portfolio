@@ -9,7 +9,7 @@ import styles from "../case-study.module.css";
 const PROTOTYPE_URL = "https://indigo-beginning-989691.framer.app/";
 
 export const metadata: Metadata = {
-  title: "FitMind — Sara Maj",
+  title: "FitMind - Sara Maj",
   description:
     "FitMind is a wellness app concept for water, activity, breathing and sleep, built as a Framer prototype with applied motion graphics.",
 };
@@ -56,7 +56,7 @@ const screens = [
 const details = [
   {
     title: "One navigation",
-    text: "Five tabs — Home, Activity, Water, Breathe and Rest — stay at the bottom of every screen, and the active tab is highlighted in blue.",
+    text: "Five tabs - Home, Activity, Water, Breathe and Rest - stay at the bottom of every screen, and the active tab is highlighted in blue.",
   },
   {
     title: "Progress you can see",
@@ -81,7 +81,7 @@ export default function FitMindProject() {
 
       <section className={styles.hero}>
         <div className={styles.heroMeta}>
-          <span>02 — FEATURED PROJECT</span>
+          <span>02 - FEATURED PROJECT</span>
           <span>APPLIED MOTION GRAPHICS · APP CONCEPT</span>
         </div>
 
@@ -123,7 +123,7 @@ export default function FitMindProject() {
 
       <section className={styles.visualSectionLight}>
         <div className={styles.visualHeader}>
-          <span>01 — SCREENS</span>
+          <span>01 - SCREENS</span>
 
           <p>
             Six screens of the prototype: a splash screen, the
@@ -158,7 +158,7 @@ export default function FitMindProject() {
 
       <section className={styles.visualSectionDark}>
         <div className={styles.visualHeader}>
-          <span>02 — DESIGN DETAILS</span>
+          <span>02 - DESIGN DETAILS</span>
 
           <p>
             A few decisions that hold the six screens together.
