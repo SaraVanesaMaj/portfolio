@@ -204,11 +204,37 @@ export default function RyanairProject() {
         </div>
       </section>
 
-      {/* DESIGN SYSTEM */}
+      {/* USER FLOW */}
 
       <section className={styles.visualSectionLight}>
         <div className={styles.visualHeader}>
-          <span>04 - DESIGN SYSTEM</span>
+          <span>04 - USER FLOW</span>
+
+          <p>
+            The booking journey mapped in five steps, from the
+            homepage to baggage selection. Editing the search,
+            personal details, payment and confirmation are not part
+            of the prototype.
+          </p>
+        </div>
+
+        <div className={`${styles.figure} ${styles.figureLight}`}>
+          <Image
+            src="/images/ryanair/user-flow.png"
+            alt="User flow in five steps: homepage, search flights, search results, select flight, select baggage"
+            width={904}
+            height={206}
+            className={styles.figureImage}
+            sizes="(max-width: 900px) 760px, 90vw"
+          />
+        </div>
+      </section>
+
+      {/* DESIGN SYSTEM */}
+
+      <section className={styles.visualSectionDark}>
+        <div className={styles.visualHeader}>
+          <span>05 - DESIGN SYSTEM</span>
 
           <p>
             A shared style guide keeps every screen size consistent.
@@ -276,32 +302,6 @@ export default function RyanairProject() {
               sizes="(max-width: 900px) 90vw, 40vw"
             />
           </figure>
-        </div>
-      </section>
-
-      {/* USER FLOW */}
-
-      <section className={styles.visualSectionDark}>
-        <div className={styles.visualHeader}>
-          <span>05 - USER FLOW</span>
-
-          <p>
-            The booking journey mapped in five steps, from the
-            homepage to baggage selection. Editing the search,
-            personal details, payment and confirmation are not part
-            of the prototype.
-          </p>
-        </div>
-
-        <div className={`${styles.figure} ${styles.figureLight}`}>
-          <Image
-            src="/images/ryanair/user-flow.png"
-            alt="User flow in five steps: homepage, search flights, search results, select flight, select baggage"
-            width={904}
-            height={206}
-            className={styles.figureImage}
-            sizes="(max-width: 900px) 760px, 90vw"
-          />
         </div>
       </section>
 
