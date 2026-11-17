@@ -498,7 +498,7 @@ section {
   width: min(1150px, 92%);
 
   margin-top: 60px;
-  margin-left: auto;
+  margin-left: clamp(0px, 6vw, 110px);
 }
 
 .journeyLine {
