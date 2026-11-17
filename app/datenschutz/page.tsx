@@ -7,7 +7,7 @@ import { siteInfo } from "../lib/site-info";
 import styles from "../legal.module.css";
 
 export const metadata: Metadata = {
-  title: "Datenschutz — Sara Vanesa Maj",
+  title: "Datenschutz - Sara Vanesa Maj",
   description:
     "Datenschutzerklärung der Portfolio-Website von Sara Vanesa Maj.",
 };
@@ -144,7 +144,7 @@ export default function Datenschutz() {
               Wenn Sie der Meinung sind, dass die Verarbeitung Ihrer
               Daten gegen das Datenschutzrecht verstößt, können Sie
               sich bei der Datenschutzbehörde beschweren: Barichgasse
-              40–42, 1030 Wien, E-Mail{" "}
+              40-42, 1030 Wien, E-Mail{" "}
               <a href="mailto:dsb@dsb.gv.at">dsb@dsb.gv.at</a>,{" "}
               <a
                 href="https://www.dsb.gv.at/"

@@ -7,7 +7,7 @@ import SiteNav from "../components/SiteNav";
 import styles from "./lab.module.css";
 
 export const metadata: Metadata = {
-  title: "The Lab — Sara Maj",
+  title: "The Lab - Sara Maj",
   description:
     "A small gallery of animation, film, sound, 3D and graphics by Sara Maj.",
 };
@@ -76,14 +76,16 @@ const items: Item[] = [
   },
   /* column 2 */
   {
-    title: "Toy model: Stitch",
-    text: "A stylised toy figure sculpted and rendered in Blender.",
-    tag: "BLENDER",
-    kind: "image",
+    title: "Mixed realities",
+    text: "A camera gliding through a virtual corridor of images and type.",
+    tag: "MOTION",
+    kind: "video",
     col: 0,
-    src: "/images/lab/blender-stitch.webp",
-    width: 1100,
-    height: 619,
+    src: "/videos/lab-mixed.mp4",
+    poster: "/images/lab/poster-mixed.jpg",
+    width: 1280,
+    height: 720,
+    href: "https://youtu.be/gbbmmURtCF0",
   },
   {
     title: "Sound design",
@@ -133,19 +135,6 @@ const items: Item[] = [
   },
   /* column 3 */
   {
-    title: "High-poly headphones",
-    text: "A detailed high-poly model of over-ear headphones, modelled and rendered in Blender.",
-    tag: "BLENDER",
-    kind: "mosaic",
-    col: 1,
-    layout: "stack",
-    images: [
-      "/images/lab/blender-headphones-light.webp",
-      "/images/lab/blender-headphones-dark1.webp",
-      "/images/lab/blender-headphones-dark2.webp",
-    ],
-  },
-  {
     title: "Rolex - brand animation",
     text: "An animated product film for a watch, built from type, particles and motion.",
     tag: "MOTION",
@@ -184,16 +173,17 @@ const items: Item[] = [
     ],
   },
   {
-    title: "Mixed realities",
-    text: "A camera gliding through a virtual corridor of images and type.",
-    tag: "MOTION",
-    kind: "video",
+    title: "High-poly headphones",
+    text: "A detailed high-poly model of over-ear headphones, modelled and rendered in Blender.",
+    tag: "BLENDER",
+    kind: "mosaic",
     col: 2,
-    src: "/videos/lab-mixed.mp4",
-    poster: "/images/lab/poster-mixed.jpg",
-    width: 1280,
-    height: 720,
-    href: "https://youtu.be/gbbmmURtCF0",
+    layout: "stack",
+    images: [
+      "/images/lab/blender-headphones-light.webp",
+      "/images/lab/blender-headphones-dark1.webp",
+      "/images/lab/blender-headphones-dark2.webp",
+    ],
   },
   {
     title: "Type & shape animation",
@@ -206,16 +196,6 @@ const items: Item[] = [
     width: 1280,
     height: 720,
     href: "https://youtu.be/dI1vxlD5_oQ",
-  },
-  {
-    title: "Toon rocket",
-    text: "A stylised toon rocket with a glowing flame, modelled and lit in Blender.",
-    tag: "BLENDER",
-    kind: "image",
-    col: 2,
-    src: "/images/lab/blender-rocket.webp",
-    width: 540,
-    height: 960,
   },
   {
     title: "Sendung ohne Namen",
@@ -237,7 +217,7 @@ export default function Lab() {
       <SiteNav />
 
       <div className={styles.meta}>
-        <span>03 — THE LAB</span>
+        <span>03 - THE LAB</span>
         <span>CREATIVE ARCHIVE</span>
       </div>
 

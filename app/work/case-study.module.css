@@ -810,6 +810,13 @@
   align-items: start;
 }
 
+.duoSmall {
+  max-width: 760px;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .duoFrame {
   overflow: hidden;
 

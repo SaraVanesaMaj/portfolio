@@ -7,7 +7,7 @@ import SiteNav from "../../components/SiteNav";
 import styles from "../case-study.module.css";
 
 export const metadata: Metadata = {
-  title: "VSA — Sara Maj",
+  title: "VSA - Sara Maj",
   description:
     "VSA is a UX/UI design project for a universal platform that manages digital assets such as social media accounts and crypto wallets after a user's death.",
 };
@@ -83,8 +83,8 @@ export default function VsaProject() {
 
       <section className={styles.hero}>
         <div className={styles.heroMeta}>
-          <span>04 — FEATURED PROJECT</span>
-          <span>UX/UI DESIGN · NOV 2023 – MAY 2024</span>
+          <span>04 - FEATURED PROJECT</span>
+          <span>UX/UI DESIGN · NOV 2023 - MAY 2024</span>
         </div>
 
         <div className={styles.heroTitle}>
@@ -112,7 +112,7 @@ export default function VsaProject() {
 
       <section className={styles.visualSectionDark}>
         <div className={styles.visualHeader}>
-          <span>01 — THE CHALLENGE</span>
+          <span>01 - THE CHALLENGE</span>
 
           <p>
             The market sees a steady rise in digital products and
@@ -122,42 +122,8 @@ export default function VsaProject() {
             transfer solutions, they are often product-specific. This
             project aims to provide a universal solution for managing
             digital assets, addressing the issue comprehensively.
-          </p>
-        </div>
-
-        <div className={styles.duo}>
-          {landing.map((item) => (
-            <figure key={item.src} className={styles.screen}>
-              <div className={styles.duoFrame}>
-                <Image
-                  src={item.src}
-                  alt={item.alt}
-                  width={item.width}
-                  height={item.height}
-                  className={styles.figureImage}
-                  sizes="(max-width: 900px) 100vw, 45vw"
-                />
-              </div>
-
-              <figcaption className={styles.screenCaption}>
-                <span>{item.title}</span>
-                <span>{item.note}</span>
-              </figcaption>
-            </figure>
-          ))}
-        </div>
-      </section>
-
-      {/* SCREENS */}
-
-      <section className={styles.visualSectionLight}>
-        <div className={styles.visualHeader}>
-          <span>02 — MORE SCREENS</span>
-
-          <p>
-            Contact, pricing and sign-in pages, designed in a light
-            and a dark mode with one shared header, footer and chat
-            button. Some screens are shown in browser mockups.
+            Contact, pricing and sign-in pages show the shared header,
+            footer and chat button in light and dark mode.
           </p>
         </div>
 
@@ -184,11 +150,47 @@ export default function VsaProject() {
         </div>
       </section>
 
+      {/* SCREENS */}
+
+      <section className={styles.visualSectionLight}>
+        <div className={styles.visualHeader}>
+          <span>02 - LANDING PAGE</span>
+
+          <p>
+            The landing page in a light and a dark mode, with the
+            headline, featured solutions, product spotlight, mission,
+            security and FAQ sections.
+          </p>
+        </div>
+
+        <div className={`${styles.duo} ${styles.duoSmall}`}>
+          {landing.map((item) => (
+            <figure key={item.src} className={styles.screen}>
+              <div className={styles.duoFrame}>
+                <Image
+                  src={item.src}
+                  alt={item.alt}
+                  width={item.width}
+                  height={item.height}
+                  className={styles.figureImage}
+                  sizes="(max-width: 900px) 100vw, 45vw"
+                />
+              </div>
+
+              <figcaption className={styles.screenCaption}>
+                <span>{item.title}</span>
+                <span>{item.note}</span>
+              </figcaption>
+            </figure>
+          ))}
+        </div>
+      </section>
+
       {/* TOOLS */}
 
       <section className={styles.visualSectionDark}>
         <div className={styles.visualHeader}>
-          <span>03 — TOOLS &amp; SKILLS</span>
+          <span>03 - TOOLS &amp; SKILLS</span>
 
           <p>
             What I worked with and learned in this project.

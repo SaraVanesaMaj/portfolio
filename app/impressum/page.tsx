@@ -7,7 +7,7 @@ import { siteInfo } from "../lib/site-info";
 import styles from "../legal.module.css";
 
 export const metadata: Metadata = {
-  title: "Impressum — Sara Vanesa Maj",
+  title: "Impressum - Sara Vanesa Maj",
   description:
     "Impressum und Offenlegung nach § 25 Mediengesetz der Portfolio-Website von Sara Vanesa Maj.",
 };

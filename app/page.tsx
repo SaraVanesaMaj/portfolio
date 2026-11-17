@@ -20,7 +20,7 @@ gsap.registerPlugin(ScrollTrigger, useGSAP);
 
 const journey = [
   {
-    date: "SEP 2025 — PRESENT",
+    date: "SEP 2025 - PRESENT",
     type: "EDUCATION",
     title: "University of Applied Sciences Upper Austria",
     subtitle: "BSc Media Technology & Design",
@@ -30,7 +30,7 @@ const journey = [
   },
 
   {
-    date: "DEC 2023 — PRESENT",
+    date: "DEC 2023 - PRESENT",
     type: "EXPERIENCE",
     title: "Automix GmbH",
     subtitle: "IT Services & Administrative Assistance",
@@ -60,7 +60,7 @@ const journey = [
   },
 
   {
-    date: "SEP 2020 — JUL 2025",
+    date: "SEP 2020 - JUL 2025",
     type: "EDUCATION",
     title: "TGM Vienna",
     subtitle: "Higher Technical College (HTL)",
@@ -571,7 +571,7 @@ export default function Home() {
         <div className="sectionHeader workHeader">
 
           <span>
-            01 — FEATURED WORK
+            01 - FEATURED WORK
           </span>
 
           <span>
@@ -699,7 +699,7 @@ export default function Home() {
         <div className="sectionHeader sectionReveal">
 
           <span>
-            02 — ABOUT
+            02 - ABOUT
           </span>
 
           <span>
@@ -746,7 +746,7 @@ export default function Home() {
             <p>
               I enjoy working on projects where
               technical thinking, interaction and
-              visual storytelling come together —
+              visual storytelling come together -
               from software and games to UX/UI,
               motion and 3D.
             </p>
@@ -886,7 +886,7 @@ export default function Home() {
 
         <span className="sectionNumber sectionReveal">
 
-          03 — CONTACT
+          03 - CONTACT
 
         </span>
 

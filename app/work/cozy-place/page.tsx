@@ -7,7 +7,7 @@ import SiteNav from "../../components/SiteNav";
 import styles from "../case-study.module.css";
 
 export const metadata: Metadata = {
-  title: "Cozy Place — Sara Maj",
+  title: "Cozy Place - Sara Maj",
   description:
     "Cozy Place is a 3D interior scene with a sunset render, a wireframe of the whole room and wireframe-to-render views of the furniture.",
 };
@@ -59,7 +59,7 @@ export default function CozyPlaceProject() {
 
       <section className={styles.hero}>
         <div className={styles.heroMeta}>
-          <span>05 — FEATURED PROJECT</span>
+          <span>05 - FEATURED PROJECT</span>
           <span>3D MODELLING · WINTER SEMESTER 2025/26</span>
         </div>
 
@@ -89,7 +89,7 @@ export default function CozyPlaceProject() {
 
       <section className={styles.visualSectionDark}>
         <div className={styles.visualHeader}>
-          <span>01 — THE ROOM</span>
+          <span>01 - THE ROOM</span>
 
           <p>
             The final render: a soft sunset over the sea, warm lamps,
@@ -120,7 +120,7 @@ export default function CozyPlaceProject() {
 
       <section className={styles.visualSectionLight}>
         <div className={styles.visualHeader}>
-          <span>02 — TOPOLOGY</span>
+          <span>02 - TOPOLOGY</span>
 
           <p>
             The whole scene as a wireframe. It shows the mesh behind
@@ -146,7 +146,7 @@ export default function CozyPlaceProject() {
 
       <section className={styles.visualSectionDark}>
         <div className={styles.visualHeader}>
-          <span>03 — THE OBJECTS</span>
+          <span>03 - THE OBJECTS</span>
 
           <p>
             Selected pieces of furniture, shown as a wireframe next to
