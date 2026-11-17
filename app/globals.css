@@ -206,34 +206,34 @@ section {
 }
 
 .hero::before {
-  top: -25%;
-  left: -20%;
+  top: -10%;
+  left: -8%;
 
-  width: 80vmax;
-  height: 80vmax;
+  width: 46vmax;
+  height: 46vmax;
 
   background: radial-gradient(
     circle,
-    rgba(200, 255, 50, 0.26) 0%,
-    rgba(200, 255, 50, 0.1) 40%,
-    rgba(200, 255, 50, 0) 70%
+    rgba(200, 255, 50, 0.34) 0%,
+    rgba(200, 255, 50, 0.12) 35%,
+    rgba(200, 255, 50, 0) 65%
   );
 
   animation: heroGlowA 11s ease-in-out infinite alternate;
 }
 
 .hero::after {
-  bottom: -35%;
-  right: -25%;
+  bottom: -20%;
+  right: -10%;
 
-  width: 70vmax;
-  height: 70vmax;
+  width: 40vmax;
+  height: 40vmax;
 
   background: radial-gradient(
     circle,
-    rgba(200, 255, 50, 0.18) 0%,
-    rgba(200, 255, 50, 0.06) 40%,
-    rgba(200, 255, 50, 0) 70%
+    rgba(200, 255, 50, 0.26) 0%,
+    rgba(200, 255, 50, 0.08) 35%,
+    rgba(200, 255, 50, 0) 65%
   );
 
   animation: heroGlowB 14s ease-in-out infinite alternate;
@@ -245,7 +245,7 @@ section {
   }
 
   100% {
-    transform: translate3d(32%, 28%, 0) scale(1.15);
+    transform: translate3d(120%, 60%, 0) scale(1.2);
   }
 }
 
@@ -255,7 +255,7 @@ section {
   }
 
   100% {
-    transform: translate3d(-34%, -26%, 0) scale(0.9);
+    transform: translate3d(-110%, -55%, 0) scale(0.9);
   }
 }
 
@@ -352,7 +352,7 @@ section {
   position: absolute;
 
   left: 46%;
-  bottom: calc(-40px - 5vh);
+  bottom: calc(-40px - 14vh);
 
   transform: translateX(-50%);
 
@@ -1106,7 +1106,7 @@ section {
   .heroPortrait {
     left: 50%;
 
-    bottom: -15px;
+    bottom: calc(-15px - 4vh);
 
     width: 70vw;
 
@@ -1232,7 +1232,7 @@ section {
 
     height: 52vh;
 
-    bottom: -5px;
+    bottom: calc(-5px - 4vh);
   }
 
   /* SARA sits right below the menu, MAJ stays on the sweater */
