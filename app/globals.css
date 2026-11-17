@@ -281,6 +281,35 @@ section {
   will-change: transform, opacity;
 }
 
+/* soft studio light behind the portrait, so the black parts of the
+   sweater read against the black background */
+.heroPortrait::before {
+  content: "";
+
+  position: absolute;
+
+  inset: -12% -42% -4%;
+
+  z-index: -1;
+
+  pointer-events: none;
+
+  background: radial-gradient(
+    ellipse 50% 48% at 50% 46%,
+    rgba(243, 241, 236, 0.1000) 0%,
+    rgba(243, 241, 236, 0.0967) 10%,
+    rgba(243, 241, 236, 0.0873) 20%,
+    rgba(243, 241, 236, 0.0736) 30%,
+    rgba(243, 241, 236, 0.0580) 40%,
+    rgba(243, 241, 236, 0.0427) 50%,
+    rgba(243, 241, 236, 0.0294) 60%,
+    rgba(243, 241, 236, 0.0189) 70%,
+    rgba(243, 241, 236, 0.0113) 80%,
+    rgba(243, 241, 236, 0.0064) 90%,
+    rgba(243, 241, 236, 0.0000) 100%
+  );
+}
+
 .heroPortraitImage {
   object-fit: contain;
 
@@ -997,8 +1026,6 @@ section {
     width: 70vw;
 
     height: 58vh;
-
-    opacity: 0.9;
   }
 
 
