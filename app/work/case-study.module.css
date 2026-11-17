@@ -801,7 +801,7 @@
 }
 
 /* =========================
-   3D CASE STUDY (renders, sketch, pairs)
+   3D CASE STUDY (renders, pairs)
 ========================= */
 
 .screenFigure {
@@ -818,12 +818,6 @@
 
 .screenFigure .screenCaption span:last-child {
   color: var(--grey);
-}
-
-.sketch {
-  max-width: 560px;
-
-  margin: 65px 0 0;
 }
 
 .pairs {
@@ -850,6 +844,56 @@
 
 @media (max-width: 900px) {
   .pairs {
+    gap: 40px;
+  }
+}
+
+.visualSectionDark .pair .screenCaption span:last-child {
+  color: var(--grey);
+}
+
+/* =========================
+   VSA (two-column screens)
+========================= */
+
+.duo {
+  margin-top: 65px;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 55px 30px;
+
+  align-items: start;
+}
+
+.duoFrame {
+  overflow: hidden;
+
+  border: 1px solid #333;
+}
+
+.duoFrame .figureImage {
+  min-width: 0;
+}
+
+.visualSectionLight .duoFrame {
+  border-color: #c4c1ba;
+}
+
+.visualSectionDark .duo .screenCaption span:last-child {
+  color: var(--grey);
+}
+
+
+.toolPills {
+  margin-top: 30px;
+}
+
+@media (max-width: 900px) {
+  .duo {
+    grid-template-columns: 1fr;
+
     gap: 40px;
   }
 }
