@@ -212,10 +212,6 @@ const items: Item[] = [
   },
 ];
 
-const moreVideos = [
-  { title: "ZIB Magazin", href: "https://youtu.be/_8GSJ_rrisc" },
-];
-
 export default function Lab() {
   return (
     <main className={styles.page}>
@@ -305,24 +301,6 @@ export default function Lab() {
         ))}
           </div>
         ))}
-      </div>
-
-      <div className={styles.more}>
-        <span className={styles.moreLabel}>MORE ON YOUTUBE</span>
-
-        <div className={styles.moreList}>
-          {moreVideos.map((video) => (
-            <a
-              key={video.href}
-              href={video.href}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <span>{video.title}</span>
-              <span>↗</span>
-            </a>
-          ))}
-        </div>
       </div>
 
       <div className={styles.footer}>
