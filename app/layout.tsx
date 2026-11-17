@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   description:
     "Portfolio of Sara Maj, Media Technology & Design student in Austria. UX/UI design, branding, motion and development.",
   openGraph: {
-    title: "Sara Maj - UX/UI & Product Design",
+    title: "Sara Maj - Portfolio",
     description:
       "Portfolio of Sara Maj, Media Technology & Design student in Vienna.",
     type: "website",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Sara Maj - UX/UI & Product Design",
+    title: "Sara Maj - Portfolio",
   },
 };
 
