@@ -35,41 +35,67 @@ export default function SiteNav() {
   const close = () => setOpen(false);
 
   return (
-    <nav className="siteNav" aria-label="Main navigation">
-      <Link href="/" className="siteLogo" onClick={close}>
-        SARA MAJ
-      </Link>
+    <>
+      <nav className="siteNav" aria-label="Main navigation">
+        <Link href="/" className="siteLogo" onClick={close}>
+          SARA MAJ
+        </Link>
 
-      <button
-        type="button"
-        className="siteNavToggle"
-        aria-expanded={open}
-        aria-controls="site-nav-links"
-        onClick={() => setOpen((value) => !value)}
-      >
-        {open ? "CLOSE" : "MENU"}
-      </button>
-
-      <div
-        id="site-nav-links"
-        className={`siteNavLinks${open ? " isOpen" : ""}`}
-      >
-        {links.map((link) => (
-          <Link key={link.href} href={link.href} onClick={close}>
-            {link.label}
-          </Link>
-        ))}
-
-        <a
-          href="/cv/Sara-Maj-CV.pdf"
-          target="_blank"
-          rel="noreferrer"
-          className={`siteNavCv${highlightCv ? " isHighlight" : ""}`}
-          onClick={close}
+        <button
+          type="button"
+          className="siteNavToggle"
+          aria-expanded={open}
+          aria-controls="site-menu"
+          onClick={() => setOpen((value) => !value)}
         >
-          CV ↓
-        </a>
-      </div>
-    </nav>
+          {open ? "CLOSE" : "MENU"}
+        </button>
+
+        {/* desktop links */}
+        <div id="site-nav-links" className="siteNavLinks">
+          {links.map((link) => (
+            <Link key={link.href} href={link.href} onClick={close}>
+              {link.label}
+            </Link>
+          ))}
+
+          <a
+            href="/cv/Sara-Maj-CV.pdf"
+            target="_blank"
+            rel="noreferrer"
+            className={`siteNavCv${highlightCv ? " isHighlight" : ""}`}
+            onClick={close}
+          >
+            CV ↓
+          </a>
+        </div>
+      </nav>
+
+      {/* phone menu: its own fixed layer, independent from the nav bar */}
+      {open && (
+        <div
+          id="site-menu"
+          className="siteMenu"
+          role="dialog"
+          aria-label="Menu"
+        >
+          {links.map((link) => (
+            <Link key={link.href} href={link.href} onClick={close}>
+              {link.label}
+            </Link>
+          ))}
+
+          <a
+            href="/cv/Sara-Maj-CV.pdf"
+            target="_blank"
+            rel="noreferrer"
+            className="siteMenuCv"
+            onClick={close}
+          >
+            CV ↓
+          </a>
+        </div>
+      )}
+    </>
   );
 }

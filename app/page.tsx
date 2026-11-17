@@ -208,20 +208,26 @@ export default function Home() {
       /* the browser bar on phones must not make the pinned hero jump */
       ScrollTrigger.config({ ignoreMobileResize: true });
 
+      /* On phones the hero is completely static: no pin, no movement.
+         The timeline stays paused and is never played. */
       const heroTimeline = gsap.timeline({
-        scrollTrigger: {
-          trigger: ".hero",
+        paused: !isDesktop,
 
-          start: "top top",
+        scrollTrigger: isDesktop
+          ? {
+              trigger: ".hero",
 
-          end: "+=55%",
+              start: "top top",
 
-          scrub: 1,
+              end: "+=55%",
 
-          pin: true,
+              scrub: 1,
 
-          anticipatePin: 1,
-        },
+              pin: true,
+
+              anticipatePin: 1,
+            }
+          : undefined,
       });
 
 

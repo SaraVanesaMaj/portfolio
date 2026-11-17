@@ -169,6 +169,22 @@ section {
   opacity: 0.45;
 }
 
+.siteMenu {
+  display: none;
+}
+
+@keyframes siteMenuIn {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
 .siteNavToggle {
   display: none;
 
@@ -1023,55 +1039,67 @@ section {
     display: block;
   }
 
+  /* desktop links are replaced by the phone menu below */
   .siteNavLinks {
-    position: absolute;
+    display: none;
+  }
 
-    top: calc(100% + 8px);
-    left: 0;
-    right: 0;
+  .siteMenu {
+    position: fixed;
 
-    padding: 8px 22px 12px;
+    top: 72px;
+    left: 12px;
+    right: 12px;
 
+    z-index: 999;
+
+    padding: 8px 22px 16px;
+
+    display: flex;
     flex-direction: column;
+    align-items: center;
 
-    gap: 0;
-
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.12);
 
     border-radius: 28px;
 
-    /* solid background: a backdrop-filter inside the nav's own
-       backdrop-filter renders nothing on iPhones */
     background: #0b0b0b;
 
-    opacity: 0;
-    visibility: hidden;
+    color: var(--white);
 
-    transform: translateY(-6px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
 
-    transition:
-      opacity 0.25s ease,
-      transform 0.25s ease,
-      visibility 0.25s;
+    animation: siteMenuIn 0.2s ease-out;
   }
 
-  .siteNavLinks.isOpen {
-    opacity: 1;
-    visibility: visible;
+  .siteMenu a {
+    width: 100%;
 
-    transform: none;
-  }
-
-  .siteNavLinks a {
     padding: 18px 0;
 
     border-bottom: 1px solid var(--line);
 
+    text-align: center;
+
     font-size: 14px;
+
+    letter-spacing: 0.13em;
   }
 
-  .siteNavLinks a:last-child {
-    border-bottom: 0;
+  .siteMenu a.siteMenuCv {
+    width: auto;
+
+    margin-top: 16px;
+    padding: 12px 26px;
+
+    border: 0;
+    border-radius: 100px;
+
+    background: var(--accent);
+    color: #090909;
+
+    font-size: 12px;
+    font-weight: 700;
   }
 
 
