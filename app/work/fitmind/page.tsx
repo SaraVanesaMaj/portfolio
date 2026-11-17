@@ -14,13 +14,6 @@ export const metadata: Metadata = {
     "FitMind is a wellness app concept for water, activity, breathing and sleep, built as a Framer prototype with applied motion graphics.",
 };
 
-const pillars = [
-  "Drink water",
-  "Stay active",
-  "Breathe",
-  "Sleep better",
-];
-
 const screens = [
   {
     src: "/images/fitmind/splash.jpg",
@@ -97,11 +90,23 @@ export default function FitMindProject() {
         </div>
 
         <div className={styles.heroBottom}>
-          <p>
-            An all-in-one wellness app for a healthy body and a
-            clear mind, with gentle animations and clear statistics
-            for water, activity, breathing and sleep.
-          </p>
+          <div className={styles.heroText}>
+            <p>
+              An all-in-one wellness app for a healthy body and a
+              clear mind, with gentle animations and clear statistics
+              for water, activity, breathing and sleep.
+            </p>
+
+            <a
+              href={PROTOTYPE_URL}
+              target="_blank"
+              rel="noreferrer"
+              className={styles.heroLink}
+            >
+              <span>OPEN THE PROTOTYPE</span>
+              <span>↗</span>
+            </a>
+          </div>
 
           <div className={styles.skills}>
             <span>Motion Design</span>
@@ -114,51 +119,11 @@ export default function FitMindProject() {
         </div>
       </section>
 
-      {/* ABOUT */}
+      {/* SCREENS */}
 
       <section className={styles.visualSectionLight}>
         <div className={styles.visualHeader}>
-          <span>01 — THE APP</span>
-
-          <p>
-            FitMind helps you keep your daily habits in view, from
-            drinking water, steps and workouts to breathing
-            exercises and meditation. With clear statistics, gentle
-            animations and motivating goals, it supports you in
-            being the best version of yourself every day.
-          </p>
-        </div>
-
-        <div className={styles.dsGrid}>
-          <div>
-            <span className={styles.dsLabel}>FOUR HABITS</span>
-
-            <div className={styles.pills}>
-              {pillars.map((pillar) => (
-                <span key={pillar}>{pillar}</span>
-              ))}
-            </div>
-
-            <div className={styles.protoWrap}>
-              <a
-                href={PROTOTYPE_URL}
-                target="_blank"
-                rel="noreferrer"
-                className={styles.back}
-              >
-                <span>OPEN THE PROTOTYPE</span>
-                <span>↗</span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* SCREENS */}
-
-      <section className={styles.visualSectionDark}>
-        <div className={styles.visualHeader}>
-          <span>02 — SCREENS</span>
+          <span>01 — SCREENS</span>
 
           <p>
             Six screens of the prototype: a splash screen, the
@@ -191,9 +156,9 @@ export default function FitMindProject() {
 
       {/* DESIGN DETAILS */}
 
-      <section className={styles.visualSectionLight}>
+      <section className={styles.visualSectionDark}>
         <div className={styles.visualHeader}>
-          <span>03 — DESIGN DETAILS</span>
+          <span>02 — DESIGN DETAILS</span>
 
           <p>
             A few decisions that hold the six screens together.
