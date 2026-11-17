@@ -1129,6 +1129,19 @@ section {
 ========================================= */
 
 @media (max-width: 600px) {
+  .aboutIntro h2 {
+    font-size: 13.5vw;
+  }
+
+  .contactMain h2 {
+    font-size: 14vw;
+  }
+
+  .sara,
+  .maj {
+    font-size: clamp(60px, 21vw, 120px);
+  }
+
   .heroPortrait {
     width: 82vw;
 
