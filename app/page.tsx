@@ -26,7 +26,7 @@ const journey = [
     subtitle: "BSc Media Technology & Design",
     description:
       "Studying at the intersection of software development, interactive media, design and digital production.",
-    detail: "Expected graduation: Sep 2028",
+    detail: "Expected graduation: 2028",
   },
 
   {
